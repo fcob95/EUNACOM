@@ -13,6 +13,10 @@ import { Label } from "@/components/ui/label";
 import { useProfile } from "@/features/auth-rut/ProfileProvider";
 import { formatRut } from "@/lib/rut";
 import { cn } from "@/lib/utils";
+import { InstallAppButton } from "@/components/InstallAppButton";
+import { ExportExcelButton } from "@/components/ExportExcelButton";
+import { useContent } from "@/features/content/useContent";
+import { useProgressMap } from "@/features/progress/useProgress";
 
 const THEME_OPTIONS = [
   { value: "light", label: "Claro", icon: Sun },
@@ -26,6 +30,8 @@ export default function ProfilePage() {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
   const [signingOut, setSigningOut] = useState(false);
+  const content = useContent();
+  const progress = useProgressMap();
 
   useEffect(() => setMounted(true), []);
 
@@ -87,6 +93,18 @@ export default function ProfilePage() {
             );
           })}
         </div>
+      </section>
+
+      {/* instalar app */}
+      <section className="rounded-2xl border border-border bg-surface p-5 shadow-card">
+        <Label className="mb-2.5 block">Instalar app</Label>
+        <InstallAppButton />
+      </section>
+
+      {/* exportar */}
+      <section className="rounded-2xl border border-border bg-surface p-5 shadow-card">
+        <Label className="mb-2.5 block">Exportar</Label>
+        <ExportExcelButton content={content.data} progressMap={progress.data} />
       </section>
 
       {/* sesión */}
