@@ -90,8 +90,9 @@ export function ProfileProvider({ children }: { children: ReactNode }) {
       if (!sessionData.session) {
         const { error } = await supabase.auth.signInAnonymously();
         if (error) {
+          console.error("[EunaTrack] signInAnonymously failed:", error);
           throw new Error(
-            "No se pudo iniciar sesión. Verifica que 'Anonymous sign-ins' esté habilitado en Supabase.",
+            `No se pudo iniciar sesión (${error.status ?? "?"}: ${error.message}). Revisa 'Anonymous sign-ins' en Supabase y que NEXT_PUBLIC_SUPABASE_URL/ANON_KEY apunten al proyecto correcto.`,
           );
         }
       }
@@ -100,10 +101,11 @@ export function ProfileProvider({ children }: { children: ReactNode }) {
         p_rut: normalizeRut(parsed),
       });
       if (error || !data) {
+        console.error("[EunaTrack] login_with_rut failed:", error);
         throw new Error(
           error?.message.includes("INVALID_RUT")
             ? "RUT inválido. Revisa el dígito verificador."
-            : "No se pudo ingresar. Intenta de nuevo.",
+            : `No se pudo ingresar${error ? ` (${error.message})` : ""}. Intenta de nuevo.`,
         );
       }
       const prof = data as Profile;

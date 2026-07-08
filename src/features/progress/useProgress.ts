@@ -44,14 +44,15 @@ export function useUpdateProgress() {
   return useMutation({
     mutationFn: async (vars: { itemId: number; patch: ProgressPatch }) => {
       if (!profile) throw new Error("Sin sesión");
-      const current = queryClient
-        .getQueryData<ProgressMap>(key)
-        ?.get(vars.itemId);
-      const base = current ?? emptyProgress(profile.id, vars.itemId);
-      const { updated_at: _updated, ...row } = { ...base, ...vars.patch };
+      // Solo las columnas que cambiaron: en conflicto, Postgres actualiza
+      // únicamente estas — evita pisar otras dimensiones si dos toggles
+      // se disparan antes de que la primera vuelva de Supabase.
       const { error } = await getSupabase()
         .from("item_progress")
-        .upsert(row, { onConflict: "profile_id,item_id" });
+        .upsert(
+          { profile_id: profile.id, item_id: vars.itemId, ...vars.patch },
+          { onConflict: "profile_id,item_id" },
+        );
       if (error) throw new Error(error.message);
     },
     onMutate: async (vars) => {
