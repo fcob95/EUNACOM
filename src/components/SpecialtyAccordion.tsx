@@ -24,7 +24,7 @@ interface SpecialtyAccordionProps {
   value: string[];
   onValueChange: (value: string[]) => void;
   onOpenItem: (item: Item) => void;
-  onToggleStudied: (item: Item, progress: ItemProgress | undefined) => void;
+  onAdvanceProgress: (item: Item, progress: ItemProgress | undefined) => void;
   onCycleMastery: (item: Item, progress: ItemProgress | undefined) => void;
 }
 
@@ -34,7 +34,7 @@ export function SpecialtyAccordion({
   value,
   onValueChange,
   onOpenItem,
-  onToggleStudied,
+  onAdvanceProgress,
   onCycleMastery,
 }: SpecialtyAccordionProps) {
   return (
@@ -86,7 +86,7 @@ export function SpecialtyAccordion({
                           item={item}
                           progress={progress}
                           onOpen={() => onOpenItem(item)}
-                          onToggleStudied={() => onToggleStudied(item, progress)}
+                          onAdvanceProgress={() => onAdvanceProgress(item, progress)}
                           onCycleMastery={() => onCycleMastery(item, progress)}
                         />
                       </li>

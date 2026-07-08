@@ -32,6 +32,19 @@ export function dimsDone(p: ItemProgress | undefined): number {
   return PROGRESS_DIMS.reduce((acc, d) => acc + (p[d] ? 1 : 0), 0);
 }
 
+/**
+ * Primera dimensión (en orden fijo PROGRESS_DIMS) aún no marcada, o null si
+ * las 5 están completas. Recorre buscando la primera en false — NO indexa
+ * por dimsDone(p), porque el popup de detalle permite marcarlas fuera de
+ * orden (ej. cases_done=true con studied=false).
+ */
+export function nextIncompleteDim(p: ItemProgress | undefined): ProgressDim | null {
+  for (const dim of PROGRESS_DIMS) {
+    if (!(p?.[dim] ?? false)) return dim;
+  }
+  return null;
+}
+
 /** % de avance de un ítem: 0, 20, 40, 60, 80 o 100. */
 export function itemPct(p: ItemProgress | undefined): number {
   return dimsDone(p) * 20;

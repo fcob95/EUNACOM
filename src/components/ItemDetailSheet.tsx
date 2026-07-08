@@ -25,11 +25,8 @@ import {
   useUpdateProgress,
   type ProgressPatch,
 } from "@/features/progress/useProgress";
-import { todayISO, addDaysISO } from "@/lib/utils";
-import {
-  REVIEW_INTERVAL_AFTER_STUDY,
-  REVIEW_INTERVAL_AFTER_R1,
-} from "@/features/planner/model";
+import { todayISO } from "@/lib/utils";
+import { nextReviewPatch } from "@/features/planner/model";
 import { useEffect, useState } from "react";
 
 interface ItemDetailSheetProps {
@@ -65,13 +62,7 @@ export function ItemDetailSheet({
     // Repaso espaciado automático (planner/model.ts):
     if (value) {
       patch.last_studied_at = todayISO();
-      if (dim === "studied" && !progress?.review1) {
-        patch.next_review_at = addDaysISO(todayISO(), REVIEW_INTERVAL_AFTER_STUDY);
-      } else if (dim === "review1" && !progress?.review2) {
-        patch.next_review_at = addDaysISO(todayISO(), REVIEW_INTERVAL_AFTER_R1);
-      } else if (dim === "review2") {
-        patch.next_review_at = null;
-      }
+      Object.assign(patch, nextReviewPatch(dim, progress));
     }
     save(patch);
   };

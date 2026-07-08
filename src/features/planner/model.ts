@@ -11,11 +11,34 @@
  *  estudiado → +7 días · 1er repaso → +21 días · 2º repaso → sin próximo.
  */
 import type { ContentTree } from "@/features/content/useContent";
-import type { Item } from "@/types/domain";
-import { itemPct, type ProgressMap } from "@/features/progress/model";
+import type { Item, ItemProgress } from "@/types/domain";
+import { itemPct, type ProgressDim, type ProgressMap } from "@/features/progress/model";
+import { addDaysISO, todayISO } from "@/lib/utils";
 
 export const REVIEW_INTERVAL_AFTER_STUDY = 7;
 export const REVIEW_INTERVAL_AFTER_R1 = 21;
+
+/**
+ * Próxima fecha de repaso al marcar `dim` en true, según el intervalo
+ * espaciado (estudiado → +7 días, 1er repaso → +21 días, 2º repaso → sin
+ * próximo). Usado tanto por el popup de detalle como por el avance rápido
+ * del panel, para no duplicar la regla en dos lugares.
+ */
+export function nextReviewPatch(
+  dim: ProgressDim,
+  p: ItemProgress | undefined,
+): { next_review_at?: string | null } {
+  if (dim === "studied" && !p?.review1) {
+    return { next_review_at: addDaysISO(todayISO(), REVIEW_INTERVAL_AFTER_STUDY) };
+  }
+  if (dim === "review1" && !p?.review2) {
+    return { next_review_at: addDaysISO(todayISO(), REVIEW_INTERVAL_AFTER_R1) };
+  }
+  if (dim === "review2") {
+    return { next_review_at: null };
+  }
+  return {};
+}
 
 export type PlanEntryKind = "repaso" | "nuevo";
 

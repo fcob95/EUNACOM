@@ -25,11 +25,13 @@ import { useProgressMap, useUpdateProgress } from "@/features/progress/useProgre
 import {
   aggregate,
   itemStatus,
+  nextIncompleteDim,
+  PROGRESS_DIMS,
   type ProgressMap,
 } from "@/features/progress/model";
 import type { Item, ItemProgress } from "@/types/domain";
-import { todayISO, addDaysISO } from "@/lib/utils";
-import { REVIEW_INTERVAL_AFTER_STUDY } from "@/features/planner/model";
+import { todayISO } from "@/lib/utils";
+import { nextReviewPatch } from "@/features/planner/model";
 
 /** Búsqueda sin tildes ni mayúsculas. */
 function norm(s: string): string {
@@ -85,19 +87,21 @@ export default function PanelPage() {
     [content.data, progressMap],
   );
 
-  const toggleStudied = (item: Item, p: ItemProgress | undefined) => {
-    const next = !(p?.studied ?? false);
+  const advanceProgress = (item: Item, p: ItemProgress | undefined) => {
+    const dim = nextIncompleteDim(p);
+    if (dim === null) {
+      // 5/5 -> reinicia las 5 dimensiones (ciclo completo).
+      const reset = Object.fromEntries(PROGRESS_DIMS.map((d) => [d, false]));
+      update.mutate({ itemId: item.id, patch: reset });
+      return;
+    }
     update.mutate({
       itemId: item.id,
-      patch: next
-        ? {
-            studied: true,
-            last_studied_at: todayISO(),
-            ...(p?.review1
-              ? {}
-              : { next_review_at: addDaysISO(todayISO(), REVIEW_INTERVAL_AFTER_STUDY) }),
-          }
-        : { studied: false },
+      patch: {
+        [dim]: true,
+        last_studied_at: todayISO(),
+        ...nextReviewPatch(dim, p),
+      },
     });
   };
 
@@ -209,7 +213,7 @@ export default function PanelPage() {
           value={accordionValue}
           onValueChange={setExpanded}
           onOpenItem={setOpenItem}
-          onToggleStudied={toggleStudied}
+          onAdvanceProgress={advanceProgress}
           onCycleMastery={cycleMastery}
         />
       )}

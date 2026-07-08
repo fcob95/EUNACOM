@@ -4,14 +4,17 @@
  * <ItemCard> — tarjeta de ítem del panel maestro.
  * Dot semáforo + título + badge EXAMEN + ProgressBar thin con "n/5 · pct%"
  * + chip de dominio (tap sube nivel) + MatrixChips (móvil: solo activos)
- * + toggle rápido "Estudiado". Tap en la card abre el detalle.
+ * + avance rápido (cada tap marca la siguiente dimensión pendiente, cicla
+ * a 0/5 al llegar a completo). Tap en la card abre el detalle.
  */
 import { Check } from "lucide-react";
 import type { Item, ItemProgress } from "@/types/domain";
 import {
+  DIM_LABELS,
   dimsDone,
   itemPct,
   itemStatus,
+  nextIncompleteDim,
   type ItemStatus,
 } from "@/features/progress/model";
 import { ProgressBar, ProgressLabel } from "@/components/ProgressBar";
@@ -35,7 +38,7 @@ interface ItemCardProps {
   item: Item;
   progress: ItemProgress | undefined;
   onOpen: () => void;
-  onToggleStudied: () => void;
+  onAdvanceProgress: () => void;
   onCycleMastery: () => void;
 }
 
@@ -43,12 +46,17 @@ export function ItemCard({
   item,
   progress,
   onOpen,
-  onToggleStudied,
+  onAdvanceProgress,
   onCycleMastery,
 }: ItemCardProps) {
   const pct = itemPct(progress);
   const status = itemStatus(progress);
-  const studied = progress?.studied ?? false;
+  const done = dimsDone(progress);
+  const nextDim = nextIncompleteDim(progress);
+  const advanceLabel =
+    nextDim === null
+      ? "Completado (5/5). Toca para reiniciar."
+      : `Marcar "${DIM_LABELS[nextDim]}" (${done}/5). Toca para avanzar.`;
 
   return (
     <div
@@ -82,19 +90,17 @@ export function ItemCard({
 
         <DomainChip value={progress?.mastery ?? null} onCycle={onCycleMastery} />
 
-        {/* toggle rápido Estudiado (≥44px) */}
+        {/* avance rápido: cada tap marca la siguiente dimensión pendiente (≥44px) */}
         <button
           type="button"
           onClick={(e) => {
             e.stopPropagation();
-            onToggleStudied();
+            onAdvanceProgress();
           }}
-          role="checkbox"
-          aria-checked={studied}
-          aria-label={studied ? "Estudiado: sí. Desmarcar." : "Marcar como estudiado"}
+          aria-label={advanceLabel}
           className={cn(
             "pressable flex size-11 shrink-0 items-center justify-center rounded-xl border",
-            studied
+            done >= 5
               ? "border-transparent bg-primary text-white"
               : "border-border bg-surface-2 text-faint",
           )}
