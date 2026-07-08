@@ -1,0 +1,23 @@
+# deps
+node_modules/
+
+# next
+.next/
+out/
+next-env.d.ts
+
+# env — NUNCA commitear secretos
+.env
+.env.*
+!.env.example
+
+# misc
+.DS_Store
+*.pem
+*.log
+.vercel
+*.tsbuildinfo
+
+# supabase local
+supabase/.temp/
+supabase/.branches/

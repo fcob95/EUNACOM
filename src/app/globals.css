@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Tokens EunaTrack — importados 1:1 desde claude-design/Guía de Estilo
+   Nunca usar hex hardcodeado en componentes: siempre estas variables.
+   ───────────────────────────────────────────────────────────────────────── */
+:root {
+  --background: #f8fafc; /* slate-50 */
+  --surface: #ffffff;
+  --surface-2: #f1f5f9; /* slate-100 */
+  --foreground: #1e293b; /* slate-800 */
+  --muted: #64748b; /* slate-500 */
+  --faint: #94a3b8; /* slate-400 */
+  --border: #e2e8f0; /* slate-200 */
+  --track: #e2e8f0;
+  --input-bg: #f8fafc;
+  --primary: #0f766e; /* teal-700 */
+  --primary-soft: #f0fdfa; /* teal-50 */
+  --primary-text: #0f766e;
+  --neutral-dot: #cbd5e1; /* slate-300 · estado no iniciado */
+  --done: #10b981; /* emerald-500 · completado */
+  --in-progress: #fbbf24; /* amber-400 · en progreso */
+  --domain-1: #fb7185; /* rose-400 */
+  --domain-2: #fb923c; /* orange-400 */
+  --domain-3: #fbbf24; /* amber-400 */
+  --domain-4: #84cc16; /* lime-500 */
+  --domain-5: #059669; /* emerald-600 */
+  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sheet: 0 -8px 30px rgba(15, 23, 42, 0.12);
+}
+
+.dark {
+  --background: #020617; /* slate-950 */
+  --surface: #0f172a; /* slate-900 */
+  --surface-2: #1e293b; /* slate-800 */
+  --foreground: #e2e8f0; /* slate-200 */
+  --muted: #94a3b8;
+  --faint: #64748b;
+  --border: #1e293b;
+  --track: #1e293b;
+  --input-bg: #020617;
+  --primary: #0f766e;
+  --primary-soft: rgba(15, 118, 110, 0.16);
+  --primary-text: #5eead4; /* teal-300 — contraste AA sobre fondo oscuro */
+  --neutral-dot: #334155; /* slate-700 */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-sheet: 0 -8px 30px rgba(0, 0, 0, 0.5);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-border: var(--border);
+  --color-track: var(--track);
+  --color-input-bg: var(--input-bg);
+  --color-primary: var(--primary);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-text: var(--primary-text);
+  --color-neutral-dot: var(--neutral-dot);
+  --color-done: var(--done);
+  --color-in-progress: var(--in-progress);
+  --color-domain-1: var(--domain-1);
+  --color-domain-2: var(--domain-2);
+  --color-domain-3: var(--domain-3);
+  --color-domain-4: var(--domain-4);
+  --color-domain-5: var(--domain-5);
+  --shadow-card: var(--shadow-card);
+  --shadow-sheet: var(--shadow-sheet);
+  --font-sans: "Inter", system-ui, sans-serif;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --animate-slide-up: slide-up 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-fade-in: fade-in 0.2s ease-out;
+
+  @keyframes slide-up {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Foco visible teal en todo elemento interactivo (accesibilidad) */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Barras de progreso: animación canónica del diseño */
+.progress-fill {
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Anillo de progreso animado */
+.ring-fill {
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Press-state táctil del diseño */
+.pressable {
+  transition: transform 0.12s ease;
+}
+.pressable:active {
+  transform: scale(0.95);
+}
+
+/* Skeleton shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--surface-2) 25%,
+    var(--border) 50%,
+    var(--surface-2) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.4s infinite linear;
+}

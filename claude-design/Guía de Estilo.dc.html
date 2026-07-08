@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#F8FAFC;}
+*{box-sizing:border-box;}
+a{color:#0F766E;text-decoration:none;} a:hover{color:#115E59;text-decoration:underline;}
+</style>
+</helmet>
+<div data-screen-label="Guía de Estilo" style="font-family:'Inter',system-ui,sans-serif;background:#F8FAFC;color:#1E293B;min-height:100vh;padding:48px 24px 80px;line-height:1.55">
+  <div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+
+    <header style="display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="width:44px;height:44px;border-radius:12px;background:#0F766E;display:flex;align-items:center;justify-content:center">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 12 7 12 10 5 14 19 17 12 21 12"></polyline></svg>
+        </div>
+        <h1 style="margin:0;font-size:30px;font-weight:800;letter-spacing:-0.8px">EunaTrack · Guía de estilo</h1>
+      </div>
+      <p style="margin:0;font-size:15px;color:#64748B;max-width:640px">Tokens, componentes y comportamiento responsive para implementar 1:1 en Next.js 15 + Tailwind + shadcn/ui. El prototipo interactivo vive en <a href="EunaTrack.dc.html">EunaTrack.dc.html</a>.</p>
+    </header>
+
+    <!-- COLOR -->
+    <section style="display:flex;flex-direction:column;gap:16px">
+      <h2 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.4px">1 · Color</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px">
+        <div style="border:1px solid #E2E8F0;border-radius:14px;overflow:hidden;background:#fff"><div style="height:64px;background:#0F766E"></div><div style="padding:10px 12px"><div style="font-size:13px;font-weight:700">Primario</div><div style="font-size:12px;color:#64748B;font-family:ui-monospace,monospace">teal-700 · #0F766E</div><div style="font-size:11.5px;color:#94A3B8">Acciones, barras, foco</div></div></div>
+        <div style="border:1px solid #E2E8F0;border-radius:14px;overflow:hidden;background:#fff"><div style="height:64px;background:#F0FDFA"></div><div style="padding:10px 12px"><div style="font-size:13px;font-weight:700">Primario suave</div><div style="font-size:12px;color:#64748B;font-family:ui-monospace,monospace">teal-50 · #F0FDFA</div><div style="font-size:11.5px;color:#94A3B8">Fondos activos, chips</div></div></div>
+        <div style="border:1px solid #E2E8F0;border-radius:14px;overflow:hidden;background:#fff"><div style="height:64px;background:#F8FAFC;border-bottom:1px solid #E2E8F0"></div><div style="padding:10px 12px"><div style="font-size:13px;font-weight:700">Fondo</div><div style="font-size:12px;color:#64748B;font-family:ui-monospace,monospace">slate-50 · #F8FAFC</div><div style="font-size:11.5px;color:#94A3B8">dark: slate-950 #020617</div></div></div>
+        <div style="border:1px solid #E2E8F0;border-radius:14px;overflow:hidden;background:#fff"><div style="height:64px;background:#FFFFFF;border-bottom:1px solid #E2E8F0"></div><div style="padding:10px 12px"><div style="font-size:13px;font-weight:700">Superficie</div><div style="font-size:12px;color:#64748B;font-family:ui-monospace,monospace">white · #FFFFFF</div><div style="font-size:11.5px;color:#94A3B8">dark: slate-900 #0F172A</div></div></div>
+        <div style="border:1px solid #E2E8F0;border-radius:14px;overflow:hidden;background:#fff"><div style="height:64px;background:#1E293B"></div><div style="padding:10px 12px"><div style="font-size:13px;font-weight:700">Texto</div><div style="font-size:12px;color:#64748B;font-family:ui-monospace,monospace">slate-800 · #1E293B</div><div style="font-size:11.5px;color:#94A3B8">Muted: slate-500 #64748B</div></div></div>
+        <div style="border:1px solid #E2E8F0;border-radius:14px;overflow:hidden;background:#fff"><div style="height:64px;background:#E2E8F0"></div><div style="padding:10px 12px"><div style="font-size:13px;font-weight:700">Borde / track</div><div style="font-size:12px;color:#64748B;font-family:ui-monospace,monospace">slate-200 · #E2E8F0</div><div style="font-size:11.5px;color:#94A3B8">dark: slate-800 #1E293B</div></div></div>
+      </div>
+
+      <h3 style="margin:8px 0 0;font-size:15px;font-weight:700">Semáforo de estado</h3>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #E2E8F0;border-radius:20px;padding:8px 14px;font-size:13px;font-weight:600;white-space:nowrap"><span style="width:12px;height:12px;border-radius:50%;background:#CBD5E1"></span>No iniciado · slate-300</div>
+        <div style="display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #E2E8F0;border-radius:20px;padding:8px 14px;font-size:13px;font-weight:600;white-space:nowrap"><span style="width:12px;height:12px;border-radius:50%;background:#FBBF24"></span>En progreso · amber-400</div>
+        <div style="display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #E2E8F0;border-radius:20px;padding:8px 14px;font-size:13px;font-weight:600;white-space:nowrap"><span style="width:12px;height:12px;border-radius:50%;background:#10B981"></span>Completado · emerald-500</div>
+      </div>
+
+      <h3 style="margin:8px 0 0;font-size:15px;font-weight:700">Escala de dominio (1–5)</h3>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;max-width:640px">
+        <div style="border-radius:12px;overflow:hidden;border:1px solid #E2E8F0;background:#fff"><div style="height:44px;background:#FB7185;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px">1</div><div style="padding:7px 8px;font-size:11px;font-weight:600;text-align:center">No lo conozco<div style="color:#94A3B8;font-family:ui-monospace,monospace;font-weight:500">rose-400</div></div></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid #E2E8F0;background:#fff"><div style="height:44px;background:#FB923C;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px">2</div><div style="padding:7px 8px;font-size:11px;font-weight:600;text-align:center">Muy básico<div style="color:#94A3B8;font-family:ui-monospace,monospace;font-weight:500">orange-400</div></div></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid #E2E8F0;background:#fff"><div style="height:44px;background:#FBBF24;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px">3</div><div style="padding:7px 8px;font-size:11px;font-weight:600;text-align:center">Aceptable<div style="color:#94A3B8;font-family:ui-monospace,monospace;font-weight:500">amber-400</div></div></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid #E2E8F0;background:#fff"><div style="height:44px;background:#84CC16;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px">4</div><div style="padding:7px 8px;font-size:11px;font-weight:600;text-align:center">Bueno<div style="color:#94A3B8;font-family:ui-monospace,monospace;font-weight:500">lime-500</div></div></div>
+        <div style="border-radius:12px;overflow:hidden;border:1px solid #E2E8F0;background:#fff"><div style="height:44px;background:#059669;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px">5</div><div style="padding:7px 8px;font-size:11px;font-weight:600;text-align:center">Lo manejo muy bien<div style="color:#94A3B8;font-family:ui-monospace,monospace;font-weight:500">emerald-600</div></div></div>
+      </div>
+    </section>
+
+    <!-- TIPOGRAFÍA -->
+    <section style="display:flex;flex-direction:column;gap:14px">
+      <h2 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.4px">2 · Tipografía — Inter</h2>
+      <div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px">
+        <div><div style="font-size:24px;font-weight:800;letter-spacing:-0.5px">Título de pantalla</div><div style="font-size:12px;color:#94A3B8;font-family:ui-monospace,monospace">text-2xl · font-extrabold · tracking-tight</div></div>
+        <div><div style="font-size:16px;font-weight:800">Título de sección / card</div><div style="font-size:12px;color:#94A3B8;font-family:ui-monospace,monospace">text-base · font-extrabold</div></div>
+        <div><div style="font-size:14.5px;font-weight:600">Título de ítem (ItemCard)</div><div style="font-size:12px;color:#94A3B8;font-family:ui-monospace,monospace">text-sm/[1.4] · font-semibold</div></div>
+        <div><div style="font-size:13px;color:#64748B">Texto secundario y metadatos</div><div style="font-size:12px;color:#94A3B8;font-family:ui-monospace,monospace">text-[13px] · text-slate-500</div></div>
+        <div><div style="font-size:12px;font-weight:800;letter-spacing:.6px;color:#94A3B8">ETIQUETA DE GRUPO</div><div style="font-size:12px;color:#94A3B8;font-family:ui-monospace,monospace">text-xs · font-extrabold · tracking-wider · uppercase</div></div>
+        <div><div style="font-size:11.5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#64748B;background:#F1F5F9;display:inline-block;padding:2px 8px;border-radius:6px">1.01.2.004</div><div style="font-size:12px;color:#94A3B8;font-family:ui-monospace,monospace;margin-top:2px">Códigos EUNACOM: font-mono · text-[11.5px]</div></div>
+      </div>
+    </section>
+
+    <!-- FORMA -->
+    <section style="display:flex;flex-direction:column;gap:14px">
+      <h2 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.4px">3 · Forma, sombra y táctil</h2>
+      <div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px;font-size:14px">
+        <div>· Cards y sheets: <strong>rounded-2xl</strong> (16px) — botones e inputs: <strong>rounded-xl</strong> (12px) — chips: <strong>rounded-full</strong></div>
+        <div>· Sombra sutil <span style="font-family:ui-monospace,monospace;font-size:12.5px;background:#F1F5F9;padding:2px 6px;border-radius:6px">shadow-sm</span> en cards; sheets y dialogs con <span style="font-family:ui-monospace,monospace;font-size:12.5px;background:#F1F5F9;padding:2px 6px;border-radius:6px">shadow-2xl</span></div>
+        <div>· Targets táctiles ≥ 44px en todo control (toggle estudiado, chip de dominio, nav, checkboxes, chips de filtro)</div>
+        <div>· Animaciones: barras con <span style="font-family:ui-monospace,monospace;font-size:12.5px;background:#F1F5F9;padding:2px 6px;border-radius:6px">transition-[width] duration-500 ease-[cubic-bezier(.22,1,.36,1)]</span>; sheets slide-up 300ms; press-state scale(.95)</div>
+        <div>· Accesibilidad: contraste AA, foco visible teal, estado nunca solo por color (siempre texto "3/5 · 60%" junto a la barra)</div>
+      </div>
+    </section>
+
+    <!-- COMPONENTES -->
+    <section style="display:flex;flex-direction:column;gap:14px">
+      <h2 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.4px">4 · Inventario de componentes</h2>
+      <div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;overflow:hidden;font-size:13.5px">
+        <div style="display:grid;grid-template-columns:200px 1fr;gap:0;padding:12px 18px;border-bottom:1px solid #E2E8F0;background:#F8FAFC;font-weight:800;font-size:12px;letter-spacing:.5px;color:#94A3B8"><span>COMPONENTE</span><span>BASE SHADCN / NOTAS</span></div>
+        <div style="display:grid;grid-template-columns:200px 1fr;padding:11px 18px;border-bottom:1px solid #F1F5F9"><span style="font-family:ui-monospace,monospace;font-weight:600;color:#0F766E">&lt;ProgressBar&gt;</span><span>Progress. Variantes <em>thin</em> (h-1.5, ItemCard) y <em>thick</em> (h-3, encabezados/detalle). Fill teal → emerald al 100%. Siempre acompañada de "3/5 · 60%".</span></div>
+        <div style="display:grid;grid-template-columns:200px 1fr;padding:11px 18px;border-bottom:1px solid #F1F5F9"><span style="font-family:ui-monospace,monospace;font-weight:600;color:#0F766E">&lt;ProgressRing&gt;</span><span>SVG radial. Tamaños 56px (header) y 172px (dashboard). stroke-dashoffset animado.</span></div>
+        <div style="display:grid;grid-template-columns:200px 1fr;padding:11px 18px;border-bottom:1px solid #F1F5F9"><span style="font-family:ui-monospace,monospace;font-weight:600;color:#0F766E">&lt;ItemCard&gt;</span><span>Card. Dot semáforo + título + badge EXAMEN + ProgressBar thin + chip dominio (tap = subir nivel) + MatrixChips (móvil: solo activos) + toggle rápido Estudiado. Tap abre detalle.</span></div>
+        <div style="display:grid;grid-template-columns:200px 1fr;padding:11px 18px;border-bottom:1px solid #F1F5F9"><span style="font-family:ui-monospace,monospace;font-weight:600;color:#0F766E">&lt;SpecialtyAccordion&gt;</span><span>Accordion. Nombre + "8/24 completados" + ProgressBar agregada + chevron. Auto-expande cuando hay búsqueda/filtros.</span></div>
+        <div style="display:grid;grid-template-columns:200px 1fr;padding:11px 18px;border-bottom:1px solid #F1F5F9"><span style="font-family:ui-monospace,monospace;font-weight:600;color:#0F766E">&lt;DomainSelector&gt;</span><span>Segmented 1–5, botones 48px con color propio al activarse + etiqueta ("Aceptable"). En detalle de ítem.</span></div>
+        <div style="display:grid;grid-template-columns:200px 1fr;padding:11px 18px;border-bottom:1px solid #F1F5F9"><span style="font-family:ui-monospace,monospace;font-weight:600;color:#0F766E">&lt;MatrixChips&gt;</span><span>Badge row de la exigencia del internado (9 ejes). Activos: teal suave con check; inactivos: outline atenuado.</span></div>
+        <div style="display:grid;grid-template-columns:200px 1fr;padding:11px 18px;border-bottom:1px solid #F1F5F9"><span style="font-family:ui-monospace,monospace;font-weight:600;color:#0F766E">&lt;ItemDetailSheet&gt;</span><span>Sheet (móvil, bottom) / Dialog (desktop, 580px). Toggles de seguimiento, DomainSelector, DatePickers, textarea. Autosave + Toast; ProgressBar en vivo.</span></div>
+        <div style="display:grid;grid-template-columns:200px 1fr;padding:11px 18px;border-bottom:1px solid #F1F5F9"><span style="font-family:ui-monospace,monospace;font-weight:600;color:#0F766E">&lt;FilterSheet&gt; / &lt;FilterChips&gt;</span><span>Sheet en móvil (estado, tipo, dominio, especialidad); fila de chips en desktop. Badge contador de filtros activos.</span></div>
+        <div style="display:grid;grid-template-columns:200px 1fr;padding:11px 18px;border-bottom:1px solid #F1F5F9"><span style="font-family:ui-monospace,monospace;font-weight:600;color:#0F766E">&lt;RutInput&gt;</span><span>Input con formato automático 12.345.678-9 y validación de dígito verificador (mód. 11), error inline.</span></div>
+        <div style="display:grid;grid-template-columns:200px 1fr;padding:11px 18px;border-bottom:1px solid #F1F5F9"><span style="font-family:ui-monospace,monospace;font-weight:600;color:#0F766E">&lt;KpiCard&gt;</span><span>Card compacta valor + label. Grid 2 col (móvil) / 5 col (desktop).</span></div>
+        <div style="display:grid;grid-template-columns:200px 1fr;padding:11px 18px;border-bottom:1px solid #F1F5F9"><span style="font-family:ui-monospace,monospace;font-weight:600;color:#0F766E">&lt;SpecialtyBarChart&gt; / &lt;DomainDistChart&gt;</span><span>Recharts BarChart horizontal / distribución por nivel con colores de dominio.</span></div>
+        <div style="display:grid;grid-template-columns:200px 1fr;padding:11px 18px;border-bottom:1px solid #F1F5F9"><span style="font-family:ui-monospace,monospace;font-weight:600;color:#0F766E">&lt;PlannerToday&gt; / &lt;UpcomingReviews&gt;</span><span>Lista de hoy con tags REPASO/NUEVO y check 44px; próximos repasos con fecha. Slider ítems/día recalcula el plan.</span></div>
+        <div style="display:grid;grid-template-columns:200px 1fr;padding:11px 18px"><span style="font-family:ui-monospace,monospace;font-weight:600;color:#0F766E">&lt;BottomNav&gt; / &lt;Sidebar&gt;</span><span>4 destinos, lucide + label. Activo: fondo teal suave + texto teal. Sidebar: rail 68px (tablet) / 224px (desktop).</span></div>
+      </div>
+    </section>
+
+    <!-- RESPONSIVE -->
+    <section style="display:flex;flex-direction:column;gap:14px">
+      <h2 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.4px">5 · Responsive</h2>
+      <div style="background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px;font-size:14px">
+        <div>· <strong>Móvil &lt;640px</strong> — bottom tab bar; filtros en Sheet; detalle en bottom sheet; MatrixChips resumidos (solo activos); dashboard apilado (KPI 2 col); planificador en lista.</div>
+        <div>· <strong>Tablet 640–1024px</strong> — sidebar rail solo iconos (68px); chips de filtro visibles; dashboard 1 col de charts; semana visible en planificador.</div>
+        <div>· <strong>Desktop &gt;1024px</strong> — sidebar completa (224px); detalle como Dialog centrado; dashboard 2 col; contenido max-w de 960px centrado.</div>
+        <div>· Todo estado tiene versión <strong>cargando</strong> (Skeleton shimmer), <strong>vacío</strong> (sin resultados / día libre / sin repasos) y <strong>con datos</strong>.</div>
+      </div>
+    </section>
+
+    <footer style="font-size:12.5px;color:#94A3B8">EunaTrack — Medicina Interna · 9 especialidades · 153 ítems reales del temario cargados desde CONTENIDOS-MED-INT.xlsx</footer>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

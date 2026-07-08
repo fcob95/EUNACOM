@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#F8FAFC;}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+input,textarea,select,button{font-family:inherit;}
+button{cursor:pointer;}
+:focus-visible{outline:2px solid #0F766E;outline-offset:2px;border-radius:6px;}
+a{color:#0F766E;text-decoration:none;}
+a:hover{color:#115E59;text-decoration:underline;}
+@keyframes et-shimmer{0%{opacity:.5}50%{opacity:1}100%{opacity:.5}}
+@keyframes et-spin{to{transform:rotate(360deg)}}
+@keyframes et-slideup{from{transform:translateY(32px);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes et-fadein{from{opacity:0}to{opacity:1}}
+@keyframes et-pop{from{transform:translateY(10px) scale(.97);opacity:0}to{transform:translateY(0) scale(1);opacity:1}}
+</style>
+</helmet>
+<div data-screen-label="EunaTrack" style="position:fixed;inset:0;display:flex;flex-direction:column;overflow:hidden;font-family:'Inter',system-ui,sans-serif;font-size:15px;line-height:1.5;background:var(--bg,#F8FAFC);color:var(--tx,#1E293B);{{ themeVars }}">
+
+  <!-- ============ LOGIN ============ -->
+  <sc-if value="{{ isLogin }}" hint-placeholder-val="{{ true }}">
+    <div data-screen-label="Login" style="flex:1;display:flex;align-items:center;justify-content:center;padding:24px;background:var(--bg,#F8FAFC)">
+      <div style="width:100%;max-width:360px;display:flex;flex-direction:column;align-items:center;gap:0;animation:et-fadein .4s ease">
+        <div style="width:56px;height:56px;border-radius:16px;background:var(--pri,#0F766E);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(15,118,110,.5)">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 12 7 12 10 5 14 19 17 12 21 12"></polyline></svg>
+        </div>
+        <div style="margin-top:16px;font-size:26px;font-weight:800;letter-spacing:-0.5px">EunaTrack</div>
+        <div style="margin-top:4px;font-size:14px;color:var(--tx2,#64748B);text-align:center">Tu avance al EUNACOM, de un vistazo.</div>
+        <div style="margin-top:28px;width:100%;background:var(--sf,#ffffff);border:1px solid var(--bd,#E2E8F0);border-radius:16px;padding:24px;box-shadow:var(--shadow,0 1px 3px rgba(15,23,42,.06));display:flex;flex-direction:column;gap:14px">
+          <label for="et-rut" style="font-size:13px;font-weight:600;color:var(--tx2,#64748B)">RUT</label>
+          <input id="et-rut" type="text" inputmode="text" autocomplete="off" placeholder="12.345.678-9" value="{{ rutValue }}" onChange="{{ onRutInput }}" onKeyDown="{{ onRutKey }}" style="width:100%;height:52px;padding:0 16px;font-size:18px;font-weight:600;letter-spacing:.5px;border:1.5px solid {{ rutBorder }};border-radius:12px;background:var(--in,#F8FAFC);color:var(--tx,#1E293B);outline:none"></input>
+          <sc-if value="{{ hasRutErr }}" hint-placeholder-val="{{ false }}">
+            <div role="alert" style="display:flex;align-items:center;gap:6px;font-size:13px;color:#E11D48;margin-top:-6px">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              {{ rutErr }}
+            </div>
+          </sc-if>
+          <button onClick="{{ onLogin }}" style="height:52px;border:none;border-radius:12px;background:var(--pri,#0F766E);color:#ffffff;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:10px;transition:filter .15s" style-hover="filter:brightness(1.08)" style-active="transform:scale(.985)">
+            <sc-if value="{{ validating }}" hint-placeholder-val="{{ false }}">
+              <span style="width:18px;height:18px;border:2.5px solid rgba(255,255,255,.35);border-top-color:#ffffff;border-radius:50%;display:inline-block;animation:et-spin .7s linear infinite"></span>
+            </sc-if>
+            {{ loginBtnLabel }}
+          </button>
+        </div>
+        <div style="margin-top:20px;font-size:12px;color:var(--tx3,#94A3B8)">Sin contraseña · acceso por RUT</div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ============ APP SHELL ============ -->
+  <sc-if value="{{ isApp }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:1;display:flex;flex-direction:row;min-height:0">
+
+      <!-- Sidebar (tablet: rail / desktop: full) -->
+      <sc-if value="{{ showSidebar }}" hint-placeholder-val="{{ false }}">
+        <nav aria-label="Navegación principal" style="width:{{ sidebarW }};flex-shrink:0;display:flex;flex-direction:column;gap:4px;padding:20px 12px;border-right:1px solid var(--bd,#E2E8F0);background:var(--sf,#ffffff)">
+          <div style="display:flex;align-items:center;gap:10px;padding:4px 8px;margin-bottom:20px">
+            <div style="width:34px;height:34px;flex-shrink:0;border-radius:10px;background:var(--pri,#0F766E);display:flex;align-items:center;justify-content:center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 12 7 12 10 5 14 19 17 12 21 12"></polyline></svg>
+            </div>
+            <sc-if value="{{ sidebarWide }}" hint-placeholder-val="{{ false }}"><span style="font-size:17px;font-weight:800;letter-spacing:-0.3px">EunaTrack</span></sc-if>
+          </div>
+          <sc-for list="{{ navItems }}" as="nv" hint-placeholder-count="4">
+            <button onClick="{{ nv.go }}" aria-label="{{ nv.label }}" style="display:flex;align-items:center;gap:12px;height:44px;padding:0 12px;border:none;border-radius:10px;background:{{ nv.bg }};color:{{ nv.fg }};font-size:14px;font-weight:600;transition:background .15s" style-hover="background:var(--sf2,#F1F5F9)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="{{ nv.icon }}"></path></svg>
+              <sc-if value="{{ sidebarWide }}" hint-placeholder-val="{{ false }}"><span>{{ nv.label }}</span></sc-if>
+            </button>
+          </sc-for>
+          <div style="flex:1"></div>
+          <button onClick="{{ onDarkToggle }}" aria-label="Cambiar tema" style="display:flex;align-items:center;gap:12px;height:44px;padding:0 12px;border:none;border-radius:10px;background:transparent;color:var(--tx2,#64748B);font-size:14px;font-weight:600" style-hover="background:var(--sf2,#F1F5F9)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="{{ themeIcon }}"></path></svg>
+            <sc-if value="{{ sidebarWide }}" hint-placeholder-val="{{ false }}"><span>{{ themeLabel }}</span></sc-if>
+          </button>
+        </nav>
+      </sc-if>
+
+      <!-- Main scroll area -->
+      <main style="flex:1;min-width:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch">
+        <div style="max-width:960px;margin:0 auto;padding:{{ mainPad }}">
+
+          <!-- ======== PANEL MAESTRO ======== -->
+          <sc-if value="{{ isPanel }}" hint-placeholder-val="{{ false }}">
+            <div data-screen-label="Panel Maestro" style="display:flex;flex-direction:column;gap:16px;animation:et-fadein .3s ease">
+              <header style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+                <div style="min-width:0">
+                  <div style="font-size:13px;color:var(--tx2,#64748B);font-weight:500">{{ todayLabel }}</div>
+                  <h1 style="margin:2px 0 0;font-size:24px;font-weight:800;letter-spacing:-0.5px">{{ greeting }}</h1>
+                </div>
+                <div role="img" aria-label="{{ globalAria }}" style="position:relative;width:56px;height:56px;flex-shrink:0">
+                  <svg width="56" height="56" viewBox="0 0 56 56" style="transform:rotate(-90deg)">
+                    <circle cx="28" cy="28" r="24" fill="none" stroke="var(--trk,#E2E8F0)" stroke-width="6"></circle>
+                    <circle cx="28" cy="28" r="24" fill="none" stroke="var(--pri,#0F766E)" stroke-width="6" stroke-linecap="round" stroke-dasharray="150.8" stroke-dashoffset="{{ miniRingOffset }}" style="transition:stroke-dashoffset .8s cubic-bezier(.22,1,.36,1)"></circle>
+                  </svg>
+                  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--priTx,#0F766E)">{{ globalPctLabel }}</div>
+                </div>
+              </header>
+
+              <!-- Search + filters -->
+              <div style="display:flex;gap:8px;align-items:center">
+                <div style="flex:1;position:relative">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--tx3,#94A3B8)" stroke-width="2" stroke-linecap="round" style="position:absolute;left:14px;top:50%;transform:translateY(-50%)"><circle cx="11" cy="11" r="7"></circle><line x1="20" y1="20" x2="16.5" y2="16.5"></line></svg>
+                  <input type="search" placeholder="Buscar temas o exámenes…" value="{{ searchValue }}" onChange="{{ onSearch }}" aria-label="Buscar" style="width:100%;height:46px;padding:0 14px 0 42px;font-size:15px;border:1px solid var(--bd,#E2E8F0);border-radius:12px;background:var(--sf,#ffffff);color:var(--tx,#1E293B);outline:none"></input>
+                </div>
+                <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+                  <button onClick="{{ onOpenFilters }}" aria-label="Filtros" style="position:relative;width:46px;height:46px;flex-shrink:0;border:1px solid var(--bd,#E2E8F0);border-radius:12px;background:var(--sf,#ffffff);color:var(--tx2,#64748B);display:flex;align-items:center;justify-content:center">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"></line><circle cx="9" cy="7" r="2.2" fill="var(--sf,#fff)"></circle><line x1="4" y1="15" x2="20" y2="15"></line><circle cx="15" cy="15" r="2.2" fill="var(--sf,#fff)"></circle></svg>
+                    <sc-if value="{{ hasActiveFilters }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;border-radius:9px;background:var(--pri,#0F766E);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 4px">{{ activeFilterCount }}</span></sc-if>
+                  </button>
+                </sc-if>
+              </div>
+
+              <!-- Desktop filter chip row -->
+              <sc-if value="{{ notMobile }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+                  <sc-for list="{{ allChips }}" as="c" hint-placeholder-count="8">
+                    <button onClick="{{ c.go }}" style="height:34px;padding:0 14px;border:1px solid {{ c.bd }};border-radius:17px;background:{{ c.bg }};color:{{ c.fg }};font-size:13px;font-weight:600;transition:all .15s;display:flex;align-items:center;gap:6px;white-space:nowrap">{{ c.label }}</button>
+                  </sc-for>
+                </div>
+              </sc-if>
+
+              <!-- Skeletons -->
+              <sc-if value="{{ loading }}" hint-placeholder-val="{{ true }}">
+                <div style="display:flex;flex-direction:column;gap:12px" aria-hidden="true">
+                  <div style="height:72px;border-radius:16px;background:var(--sf2,#F1F5F9);animation:et-shimmer 1.4s ease infinite"></div>
+                  <div style="height:72px;border-radius:16px;background:var(--sf2,#F1F5F9);animation:et-shimmer 1.4s ease .15s infinite"></div>
+                  <div style="height:72px;border-radius:16px;background:var(--sf2,#F1F5F9);animation:et-shimmer 1.4s ease .3s infinite"></div>
+                  <div style="height:72px;border-radius:16px;background:var(--sf2,#F1F5F9);animation:et-shimmer 1.4s ease .45s infinite"></div>
+                </div>
+              </sc-if>
+
+              <!-- Specialty accordions -->
+              <sc-if value="{{ ready }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;flex-direction:column;gap:10px">
+                  <sc-for list="{{ specialties }}" as="esp" hint-placeholder-count="3">
+                    <section style="background:var(--sf,#ffffff);border:1px solid var(--bd,#E2E8F0);border-radius:16px;box-shadow:var(--shadow,0 1px 3px rgba(15,23,42,.05));overflow:hidden">
+                      <button onClick="{{ esp.toggle }}" aria-expanded="{{ esp.open }}" style="width:100%;display:flex;align-items:center;gap:12px;padding:14px 16px;border:none;background:transparent;color:inherit;text-align:left;min-height:64px">
+                        <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:7px">
+                          <div style="display:flex;align-items:baseline;gap:10px">
+                            <span style="font-size:15px;font-weight:700;letter-spacing:-0.2px">{{ esp.name }}</span>
+                            <span style="font-size:12px;color:var(--tx2,#64748B);font-weight:500;white-space:nowrap">{{ esp.countLabel }}</span>
+                          </div>
+                          <div style="display:flex;align-items:center;gap:10px">
+                            <div style="flex:1;height:8px;border-radius:4px;background:var(--trk,#E2E8F0);overflow:hidden">
+                              <div style="height:100%;width:{{ esp.pctW }};border-radius:4px;background:{{ esp.barColor }};transition:width .6s cubic-bezier(.22,1,.36,1)"></div>
+                            </div>
+                            <span style="font-size:12px;font-weight:700;color:var(--tx2,#64748B);width:34px;text-align:right">{{ esp.pctLabel }}</span>
+                          </div>
+                        </div>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--tx3,#94A3B8)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:rotate({{ esp.chev }});transition:transform .25s"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                      </button>
+                      <sc-if value="{{ esp.open }}" hint-placeholder-val="{{ false }}">
+                        <div style="display:flex;flex-direction:column;gap:8px;padding:2px 10px 12px">
+                          <sc-for list="{{ esp.items }}" as="item" hint-placeholder-count="2">
+                            <article onClick="{{ item.openDetail }}" style="background:var(--bg,#F8FAFC);border:1px solid var(--bd,#E2E8F0);border-radius:12px;padding:12px 12px 12px 14px;display:flex;flex-direction:column;gap:9px;cursor:pointer;transition:border-color .15s" style-hover="border-color:var(--pri,#0F766E)">
+                              <div style="display:flex;align-items:center;gap:10px">
+                                <span aria-label="{{ item.statusAria }}" style="width:9px;height:9px;border-radius:50%;background:{{ item.statusColor }};flex-shrink:0"></span>
+                                <span style="flex:1;min-width:0;font-size:14.5px;font-weight:600;letter-spacing:-0.1px">{{ item.titulo }}</span>
+                                <sc-if value="{{ item.isExam }}" hint-placeholder-val="{{ false }}">
+                                  <span style="flex-shrink:0;font-size:10.5px;font-weight:700;color:#7C3AED;background:rgba(124,58,237,.1);border-radius:6px;padding:3px 7px;display:flex;align-items:center;gap:4px;white-space:nowrap">
+                                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="3 12 7 12 10 5 14 19 17 12 21 12"></polyline></svg>EXAMEN
+                                  </span>
+                                </sc-if>
+                                <button onClick="{{ item.quickEst }}" aria-label="{{ item.estAria }}" aria-pressed="{{ item.estudiado }}" style="width:38px;height:38px;margin:-6px -4px -6px 0;flex-shrink:0;border:none;border-radius:10px;background:transparent;color:{{ item.estColor }};display:flex;align-items:center;justify-content:center;transition:color .15s,transform .1s" style-active="transform:scale(.88)">
+                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="{{ item.estFill }}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"></circle><polyline points="8 12.2 11 15 16 9.5" stroke="{{ item.estCheck }}"></polyline></svg>
+                                </button>
+                              </div>
+                              <div style="display:flex;align-items:center;gap:10px">
+                                <div role="progressbar" aria-valuenow="{{ item.pct }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ item.progressAria }}" style="flex:1;height:6px;border-radius:3px;background:var(--trk,#E2E8F0);overflow:hidden">
+                                  <div style="height:100%;width:{{ item.pctW }};border-radius:3px;background:{{ item.barColor }};transition:width .5s cubic-bezier(.22,1,.36,1)"></div>
+                                </div>
+                                <span style="font-size:11.5px;font-weight:700;color:var(--tx2,#64748B);white-space:nowrap">{{ item.fracLabel }}</span>
+                              </div>
+                              <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                                <button onClick="{{ item.cycleDom }}" aria-label="{{ item.domAria }}" style="height:26px;padding:0 10px;border:none;border-radius:13px;background:{{ item.domBg }};color:{{ item.domFg }};font-size:11.5px;font-weight:700;display:flex;align-items:center;gap:5px;white-space:nowrap" style-active="transform:scale(.95)">
+                                  <span style="width:7px;height:7px;border-radius:50%;background:{{ item.domDot }}"></span>{{ item.domLabel }}
+                                </button>
+                                <sc-for list="{{ item.chips }}" as="ch" hint-placeholder-count="3">
+                                  <span style="height:22px;padding:0 8px;border-radius:11px;border:1px solid {{ ch.bd }};background:{{ ch.bg }};color:{{ ch.fg }};font-size:10.5px;font-weight:600;display:flex;align-items:center;white-space:nowrap">{{ ch.label }}</span>
+                                </sc-for>
+                              </div>
+                            </article>
+                          </sc-for>
+                        </div>
+                      </sc-if>
+                    </section>
+                  </sc-for>
+
+                  <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+                    <div style="padding:56px 24px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center">
+                      <div style="width:56px;height:56px;border-radius:50%;background:var(--sf2,#F1F5F9);display:flex;align-items:center;justify-content:center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--tx3,#94A3B8)" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="20" y1="20" x2="16.5" y2="16.5"></line></svg>
+                      </div>
+                      <div style="font-size:15px;font-weight:700">Sin resultados</div>
+                      <div style="font-size:13.5px;color:var(--tx2,#64748B);max-width:260px">Ningún ítem coincide con tu búsqueda o filtros.</div>
+                      <button onClick="{{ onClearFilters }}" style="margin-top:4px;height:40px;padding:0 18px;border:1px solid var(--bd,#E2E8F0);border-radius:10px;background:var(--sf,#ffffff);color:var(--priTx,#0F766E);font-size:13.5px;font-weight:700">Limpiar filtros</button>
+                    </div>
+                  </sc-if>
+                </div>
+              </sc-if>
+            </div>
+          </sc-if>
+
+          <!-- ======== DASHBOARD ======== -->
+          <sc-if value="{{ isDash }}" hint-placeholder-val="{{ false }}">
+            <div data-screen-label="Dashboard" style="display:flex;flex-direction:column;gap:16px;animation:et-fadein .3s ease">
+              <h1 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-0.5px">Dashboard</h1>
+              <div style="display:grid;grid-template-columns:{{ heroCols }};gap:12px">
+                <div style="background:var(--sf,#ffffff);border:1px solid var(--bd,#E2E8F0);border-radius:16px;box-shadow:var(--shadow,0 1px 3px rgba(15,23,42,.05));padding:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px">
+                  <div role="img" aria-label="{{ globalAria }}" style="position:relative;width:172px;height:172px">
+                    <svg width="172" height="172" viewBox="0 0 172 172" style="transform:rotate(-90deg)">
+                      <circle cx="86" cy="86" r="74" fill="none" stroke="var(--trk,#E2E8F0)" stroke-width="14"></circle>
+                      <circle cx="86" cy="86" r="74" fill="none" stroke="var(--pri,#0F766E)" stroke-width="14" stroke-linecap="round" stroke-dasharray="464.9" stroke-dashoffset="{{ ringOffset }}" style="transition:stroke-dashoffset 1s cubic-bezier(.22,1,.36,1)"></circle>
+                    </svg>
+                    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+                      <span style="font-size:38px;font-weight:800;letter-spacing:-1.5px;color:var(--priTx,#0F766E)">{{ globalPctLabel }}</span>
+                      <span style="font-size:12px;font-weight:600;color:var(--tx2,#64748B)">avance global</span>
+                    </div>
+                  </div>
+                  <div style="font-size:13px;color:var(--tx2,#64748B)">{{ globalSub }}</div>
+                </div>
+                <div style="background:linear-gradient(135deg,var(--pri,#0F766E),color-mix(in oklab,var(--pri,#0F766E),#022c26 35%));border-radius:16px;padding:24px;color:#ffffff;display:flex;flex-direction:column;justify-content:center;gap:12px">
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <span style="font-size:11px;font-weight:800;letter-spacing:1px;background:rgba(255,255,255,.16);border-radius:6px;padding:4px 8px">PRIORIDAD DEL INTERNADO</span>
+                  </div>
+                  <div style="font-size:22px;font-weight:800;letter-spacing:-0.4px">Medicina Interna</div>
+                  <div style="display:flex;flex-direction:column;gap:8px">
+                    <div style="height:12px;border-radius:6px;background:rgba(255,255,255,.22);overflow:hidden">
+                      <div style="height:100%;width:{{ globalPctLabel }};border-radius:6px;background:#ffffff;transition:width .8s cubic-bezier(.22,1,.36,1)"></div>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;opacity:.92">
+                      <span>{{ miDone }}</span><span>{{ globalPctLabel }}</span>
+                    </div>
+                  </div>
+                  <div style="font-size:12.5px;opacity:.8">{{ miNext }}</div>
+                </div>
+              </div>
+
+              <div style="display:grid;grid-template-columns:{{ kpiCols }};gap:10px">
+                <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+                  <div style="background:var(--sf,#ffffff);border:1px solid var(--bd,#E2E8F0);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:2px">
+                    <span style="font-size:22px;font-weight:800;letter-spacing:-0.5px;color:{{ k.color }}">{{ k.value }}</span>
+                    <span style="font-size:12px;font-weight:600;color:var(--tx2,#64748B)">{{ k.label }}</span>
+                  </div>
+                </sc-for>
+              </div>
+
+              <div style="display:grid;grid-template-columns:{{ chartCols }};gap:12px">
+                <div style="background:var(--sf,#ffffff);border:1px solid var(--bd,#E2E8F0);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:14px">
+                  <h2 style="margin:0;font-size:15px;font-weight:700">Avance por especialidad</h2>
+                  <div style="display:flex;flex-direction:column;gap:11px">
+                    <sc-for list="{{ specBars }}" as="sb" hint-placeholder-count="5">
+                      <div style="display:flex;align-items:center;gap:10px">
+                        <span style="width:118px;flex-shrink:0;font-size:12px;font-weight:600;color:var(--tx2,#64748B);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ sb.name }}</span>
+                        <div style="flex:1;height:9px;border-radius:5px;background:var(--trk,#E2E8F0);overflow:hidden">
+                          <div style="height:100%;width:{{ sb.pctW }};border-radius:5px;background:{{ sb.color }};transition:width .7s cubic-bezier(.22,1,.36,1)"></div>
+                        </div>
+                        <span style="width:34px;text-align:right;font-size:12px;font-weight:700">{{ sb.pctLabel }}</span>
+                      </div>
+                    </sc-for>
+                  </div>
+                </div>
+                <div style="background:var(--sf,#ffffff);border:1px solid var(--bd,#E2E8F0);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:14px">
+                  <h2 style="margin:0;font-size:15px;font-weight:700">Distribución de dominio</h2>
+                  <div style="display:flex;flex-direction:column;gap:10px">
+                    <sc-for list="{{ domDist }}" as="dd" hint-placeholder-count="6">
+                      <div style="display:flex;align-items:center;gap:10px">
+                        <span style="width:7px;height:22px;border-radius:4px;background:{{ dd.color }};flex-shrink:0"></span>
+                        <span style="width:130px;flex-shrink:0;font-size:12px;font-weight:600;color:var(--tx2,#64748B)">{{ dd.label }}</span>
+                        <div style="flex:1;height:9px;border-radius:5px;background:var(--trk,#E2E8F0);overflow:hidden">
+                          <div style="height:100%;width:{{ dd.w }};border-radius:5px;background:{{ dd.color }};transition:width .7s cubic-bezier(.22,1,.36,1)"></div>
+                        </div>
+                        <span style="width:28px;text-align:right;font-size:12px;font-weight:700">{{ dd.count }}</span>
+                      </div>
+                    </sc-for>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+
+          <!-- ======== PLANIFICADOR ======== -->
+          <sc-if value="{{ isPlan }}" hint-placeholder-val="{{ false }}">
+            <div data-screen-label="Planificador" style="display:flex;flex-direction:column;gap:16px;animation:et-fadein .3s ease">
+              <h1 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-0.5px">Planificador</h1>
+
+              <div style="background:var(--sf,#ffffff);border:1px solid var(--bd,#E2E8F0);border-radius:16px;padding:16px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+                <div style="flex:1;min-width:200px;display:flex;flex-direction:column;gap:8px">
+                  <div style="display:flex;justify-content:space-between;align-items:baseline">
+                    <label for="et-perday" style="font-size:13.5px;font-weight:700">Ítems nuevos por día</label>
+                    <span style="font-size:12px;color:var(--tx2,#64748B)">{{ planEta }}</span>
+                  </div>
+                  <input id="et-perday" type="range" min="1" max="10" step="1" value="{{ perDay }}" onChange="{{ onPerDay }}" style="width:100%;accent-color:var(--pri,#0F766E);height:32px"></input>
+                </div>
+                <div style="width:52px;height:52px;border-radius:14px;background:var(--priSoft,#F0FDFA);color:var(--priTx,#0F766E);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800">{{ perDay }}</div>
+              </div>
+
+              <sc-if value="{{ notMobile }}" hint-placeholder-val="{{ false }}">
+                <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:8px">
+                  <sc-for list="{{ week }}" as="wd" hint-placeholder-count="7">
+                    <div style="background:{{ wd.bg }};border:1px solid {{ wd.bd }};border-radius:12px;padding:10px 8px;display:flex;flex-direction:column;align-items:center;gap:3px">
+                      <span style="font-size:11px;font-weight:700;color:{{ wd.fg2 }};text-transform:uppercase">{{ wd.dow }}</span>
+                      <span style="font-size:17px;font-weight:800;color:{{ wd.fg }}">{{ wd.num }}</span>
+                      <span style="font-size:10.5px;font-weight:600;color:{{ wd.fg2 }}">{{ wd.sub }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+              </sc-if>
+
+              <section style="background:var(--sf,#ffffff);border:1px solid var(--bd,#E2E8F0);border-radius:16px;box-shadow:var(--shadow,0 1px 3px rgba(15,23,42,.05));overflow:hidden">
+                <div style="padding:16px 18px 12px;display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--bd,#E2E8F0)">
+                  <h2 style="margin:0;font-size:16px;font-weight:800">Hoy</h2>
+                  <span style="font-size:12.5px;color:var(--tx2,#64748B);font-weight:600">{{ todayLabel }}</span>
+                </div>
+                <sc-if value="{{ loading }}" hint-placeholder-val="{{ false }}">
+                  <div style="padding:14px;display:flex;flex-direction:column;gap:10px" aria-hidden="true">
+                    <div style="height:52px;border-radius:12px;background:var(--sf2,#F1F5F9);animation:et-shimmer 1.4s ease infinite"></div>
+                    <div style="height:52px;border-radius:12px;background:var(--sf2,#F1F5F9);animation:et-shimmer 1.4s ease .15s infinite"></div>
+                  </div>
+                </sc-if>
+                <div style="display:flex;flex-direction:column">
+                  <sc-for list="{{ todayItems }}" as="ti" hint-placeholder-count="3">
+                    <div onClick="{{ ti.openDetail }}" style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--bd,#E2E8F0);cursor:pointer" style-hover="background:var(--sf2,#F1F5F9)">
+                      <span style="flex-shrink:0;font-size:10px;font-weight:800;letter-spacing:.5px;color:{{ ti.tagFg }};background:{{ ti.tagBg }};border-radius:6px;padding:3px 7px;white-space:nowrap">{{ ti.tag }}</span>
+                      <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:5px">
+                        <span style="font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ ti.titulo }}</span>
+                        <div style="display:flex;align-items:center;gap:8px">
+                          <div style="flex:1;max-width:180px;height:5px;border-radius:3px;background:var(--trk,#E2E8F0);overflow:hidden">
+                            <div style="height:100%;width:{{ ti.pctW }};background:{{ ti.barColor }};transition:width .5s cubic-bezier(.22,1,.36,1)"></div>
+                          </div>
+                          <span style="font-size:11px;color:var(--tx2,#64748B);font-weight:600">{{ ti.esp }}</span>
+                        </div>
+                      </div>
+                      <button onClick="{{ ti.quick }}" aria-label="Marcar avance" style="width:44px;height:44px;flex-shrink:0;border:1.5px solid {{ ti.ckBd }};border-radius:12px;background:{{ ti.ckBg }};color:{{ ti.ckFg }};display:flex;align-items:center;justify-content:center;transition:all .15s" style-active="transform:scale(.9)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12.5 10 17.5 19 7"></polyline></svg>
+                      </button>
+                    </div>
+                  </sc-for>
+                </div>
+                <sc-if value="{{ todayEmpty }}" hint-placeholder-val="{{ false }}">
+                  <div style="padding:36px 20px;text-align:center;display:flex;flex-direction:column;gap:6px;align-items:center">
+                    <span style="font-size:15px;font-weight:700">Nada pendiente hoy 🎉</span>
+                    <span style="font-size:13px;color:var(--tx2,#64748B)">Marca avance en el Panel y el plan se recalcula solo.</span>
+                  </div>
+                </sc-if>
+              </section>
+
+              <section style="background:var(--sf,#ffffff);border:1px solid var(--bd,#E2E8F0);border-radius:16px;overflow:hidden">
+                <div style="padding:16px 18px 12px;border-bottom:1px solid var(--bd,#E2E8F0)">
+                  <h2 style="margin:0;font-size:16px;font-weight:800">Próximos repasos</h2>
+                </div>
+                <div style="display:flex;flex-direction:column">
+                  <sc-for list="{{ upcoming }}" as="up" hint-placeholder-count="4">
+                    <div onClick="{{ up.openDetail }}" style="display:flex;align-items:center;gap:12px;padding:11px 16px;border-bottom:1px solid var(--bd,#E2E8F0);cursor:pointer" style-hover="background:var(--sf2,#F1F5F9)">
+                      <div style="width:44px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;background:var(--sf2,#F1F5F9);border-radius:10px;padding:5px 0">
+                        <span style="font-size:15px;font-weight:800;line-height:1.1">{{ up.dnum }}</span>
+                        <span style="font-size:9.5px;font-weight:700;color:var(--tx2,#64748B);text-transform:uppercase">{{ up.dmon }}</span>
+                      </div>
+                      <div style="flex:1;min-width:0;display:flex;flex-direction:column">
+                        <span style="font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ up.titulo }}</span>
+                        <span style="font-size:11.5px;color:var(--tx2,#64748B);font-weight:500">{{ up.esp }}</span>
+                      </div>
+                      <span style="width:9px;height:9px;border-radius:50%;background:{{ up.domColor }};flex-shrink:0" aria-label="{{ up.domAria }}"></span>
+                    </div>
+                  </sc-for>
+                </div>
+                <sc-if value="{{ upcomingEmpty }}" hint-placeholder-val="{{ false }}">
+                  <div style="padding:28px 20px;text-align:center;font-size:13px;color:var(--tx2,#64748B)">Aún no agendas repasos. Fija "próximo repaso" desde el detalle de un ítem.</div>
+                </sc-if>
+              </section>
+            </div>
+          </sc-if>
+
+          <!-- ======== PERFIL ======== -->
+          <sc-if value="{{ isPerfil }}" hint-placeholder-val="{{ false }}">
+            <div data-screen-label="Perfil" style="display:flex;flex-direction:column;gap:16px;animation:et-fadein .3s ease;max-width:560px">
+              <h1 style="margin:0;font-size:24px;font-weight:800;letter-spacing:-0.5px">Perfil</h1>
+              <div style="background:var(--sf,#ffffff);border:1px solid var(--bd,#E2E8F0);border-radius:16px;padding:20px;display:flex;align-items:center;gap:16px">
+                <div style="width:56px;height:56px;border-radius:50%;background:var(--priSoft,#F0FDFA);color:var(--priTx,#0F766E);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0">M</div>
+                <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:6px">
+                  <span style="font-size:16px;font-weight:700">{{ rutShown }}</span>
+                  <div style="display:flex;align-items:center;gap:10px">
+                    <div style="flex:1;height:7px;border-radius:4px;background:var(--trk,#E2E8F0);overflow:hidden">
+                      <div style="height:100%;width:{{ globalPctLabel }};border-radius:4px;background:var(--pri,#0F766E);transition:width .6s"></div>
+                    </div>
+                    <span style="font-size:12px;font-weight:700;color:var(--tx2,#64748B)">{{ globalPctLabel }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background:var(--sf,#ffffff);border:1px solid var(--bd,#E2E8F0);border-radius:16px;overflow:hidden">
+                <button onClick="{{ onDarkToggle }}" style="width:100%;display:flex;align-items:center;gap:12px;padding:14px 18px;min-height:56px;border:none;background:transparent;color:inherit;text-align:left" style-hover="background:var(--sf2,#F1F5F9)">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--tx2,#64748B)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="{{ themeIcon }}"></path></svg>
+                  <span style="flex:1;font-size:14.5px;font-weight:600">Modo oscuro</span>
+                  <span aria-hidden="true" style="width:46px;height:28px;border-radius:14px;background:{{ switchBg }};position:relative;transition:background .2s;flex-shrink:0">
+                    <span style="position:absolute;top:3px;left:{{ switchLeft }};width:22px;height:22px;border-radius:50%;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:left .2s"></span>
+                  </span>
+                </button>
+              </div>
+
+              <div style="background:var(--sf,#ffffff);border:1px solid var(--bd,#E2E8F0);border-radius:16px;padding:6px 0">
+                <div style="padding:12px 18px 6px;font-size:12px;font-weight:800;letter-spacing:.8px;color:var(--tx3,#94A3B8)">ÁREAS DEL TEMARIO</div>
+                <div style="display:flex;align-items:center;gap:12px;padding:12px 18px">
+                  <span style="width:9px;height:9px;border-radius:50%;background:var(--pri,#0F766E)"></span>
+                  <span style="flex:1;font-size:14.5px;font-weight:600">Medicina Interna</span>
+                  <span style="font-size:12px;font-weight:700;color:var(--priTx,#0F766E)">{{ globalPctLabel }}</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;padding:12px 18px;opacity:.45">
+                  <span style="width:9px;height:9px;border-radius:50%;background:var(--tx3,#94A3B8)"></span>
+                  <span style="flex:1;font-size:14.5px;font-weight:600">Cirugía</span>
+                  <span style="font-size:11px;font-weight:700;color:var(--tx3,#94A3B8)">PRÓXIMAMENTE</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;padding:12px 18px;opacity:.45">
+                  <span style="width:9px;height:9px;border-radius:50%;background:var(--tx3,#94A3B8)"></span>
+                  <span style="flex:1;font-size:14.5px;font-weight:600">Pediatría</span>
+                  <span style="font-size:11px;font-weight:700;color:var(--tx3,#94A3B8)">PRÓXIMAMENTE</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;padding:12px 18px;opacity:.45">
+                  <span style="width:9px;height:9px;border-radius:50%;background:var(--tx3,#94A3B8)"></span>
+                  <span style="flex:1;font-size:14.5px;font-weight:600">Ginecología y Obstetricia</span>
+                  <span style="font-size:11px;font-weight:700;color:var(--tx3,#94A3B8)">PRÓXIMAMENTE</span>
+                </div>
+              </div>
+
+              <button onClick="{{ onLogout }}" style="height:48px;border:1px solid var(--bd,#E2E8F0);border-radius:12px;background:var(--sf,#ffffff);color:#E11D48;font-size:14.5px;font-weight:700" style-hover="background:rgba(225,29,72,.05)">Cerrar sesión</button>
+            </div>
+          </sc-if>
+
+        </div>
+      </main>
+    </div>
+
+    <!-- Bottom tab bar (mobile) -->
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <nav aria-label="Navegación" style="flex-shrink:0;display:flex;border-top:1px solid var(--bd,#E2E8F0);background:var(--sf,#ffffff);padding:6px 8px calc(6px + env(safe-area-inset-bottom))">
+        <sc-for list="{{ navItems }}" as="nv" hint-placeholder-count="4">
+          <button onClick="{{ nv.go }}" aria-label="{{ nv.label }}" style="flex:1;min-height:52px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border:none;border-radius:12px;background:{{ nv.bg }};color:{{ nv.fg }};font-size:10.5px;font-weight:700;transition:color .15s" style-active="transform:scale(.95)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="{{ nv.icon }}"></path></svg>
+            {{ nv.label }}
+          </button>
+        </sc-for>
+      </nav>
+    </sc-if>
+  </sc-if>
+
+  <!-- ============ FILTER SHEET (mobile) ============ -->
+  <sc-if value="{{ filterOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ onCloseFilters }}" style="position:fixed;inset:0;background:rgba(2,6,23,.45);z-index:40;animation:et-fadein .2s ease"></div>
+    <div role="dialog" aria-label="Filtros" style="position:fixed;left:0;right:0;bottom:0;z-index:41;background:var(--sf,#ffffff);border-radius:20px 20px 0 0;padding:10px 20px calc(20px + env(safe-area-inset-bottom));max-height:80dvh;overflow-y:auto;animation:et-slideup .28s cubic-bezier(.22,1,.36,1);{{ themeVars }};color:var(--tx,#1E293B);font-family:'Inter',system-ui,sans-serif">
+      <div style="width:40px;height:4px;border-radius:2px;background:var(--bd,#E2E8F0);margin:4px auto 14px"></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+        <h2 style="margin:0;font-size:17px;font-weight:800">Filtros</h2>
+        <button onClick="{{ onClearFilters }}" style="border:none;background:transparent;color:var(--priTx,#0F766E);font-size:13.5px;font-weight:700;padding:8px">Limpiar</button>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-size:12px;font-weight:800;letter-spacing:.6px;color:var(--tx3,#94A3B8)">ESTADO</span>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ estadoChips }}" as="c" hint-placeholder-count="4">
+              <button onClick="{{ c.go }}" style="height:40px;padding:0 15px;border:1px solid {{ c.bd }};border-radius:20px;background:{{ c.bg }};color:{{ c.fg }};font-size:13.5px;font-weight:600;white-space:nowrap">{{ c.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-size:12px;font-weight:800;letter-spacing:.6px;color:var(--tx3,#94A3B8)">TIPO</span>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ tipoChips }}" as="c" hint-placeholder-count="3">
+              <button onClick="{{ c.go }}" style="height:40px;padding:0 15px;border:1px solid {{ c.bd }};border-radius:20px;background:{{ c.bg }};color:{{ c.fg }};font-size:13.5px;font-weight:600;white-space:nowrap">{{ c.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-size:12px;font-weight:800;letter-spacing:.6px;color:var(--tx3,#94A3B8)">DOMINIO</span>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ domChips }}" as="c" hint-placeholder-count="4">
+              <button onClick="{{ c.go }}" style="height:40px;padding:0 15px;border:1px solid {{ c.bd }};border-radius:20px;background:{{ c.bg }};color:{{ c.fg }};font-size:13.5px;font-weight:600;white-space:nowrap">{{ c.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-size:12px;font-weight:800;letter-spacing:.6px;color:var(--tx3,#94A3B8)">ESPECIALIDAD</span>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ espChips }}" as="c" hint-placeholder-count="5">
+              <button onClick="{{ c.go }}" style="height:40px;padding:0 15px;border:1px solid {{ c.bd }};border-radius:20px;background:{{ c.bg }};color:{{ c.fg }};font-size:13.5px;font-weight:600;white-space:nowrap">{{ c.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <button onClick="{{ onCloseFilters }}" style="height:50px;border:none;border-radius:12px;background:var(--pri,#0F766E);color:#fff;font-size:15px;font-weight:700">{{ filterApplyLabel }}</button>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ============ ITEM DETAIL (sheet / dialog) ============ -->
+  <sc-if value="{{ selOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ onCloseSel }}" style="position:fixed;inset:0;background:rgba(2,6,23,.45);z-index:50;animation:et-fadein .2s ease"></div>
+    <div role="dialog" aria-label="Detalle del ítem" style="position:fixed;z-index:51;{{ sheetPos }};background:var(--sf,#ffffff);overflow-y:auto;-webkit-overflow-scrolling:touch;{{ themeVars }};color:var(--tx,#1E293B);font-family:'Inter',system-ui,sans-serif;font-size:15px;line-height:1.5">
+      <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+        <div style="position:sticky;top:0;background:var(--sf,#ffffff);padding:8px 0 0;z-index:1"><div style="width:40px;height:4px;border-radius:2px;background:var(--bd,#E2E8F0);margin:0 auto"></div></div>
+      </sc-if>
+      <div style="padding:14px 22px calc(24px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:18px">
+        <header style="display:flex;align-items:flex-start;gap:12px">
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+              <span style="font-size:10.5px;font-weight:800;letter-spacing:.5px;color:{{ sel.tagFg }};background:{{ sel.tagBg }};border-radius:6px;padding:3px 8px">{{ sel.tipoLabel }}</span>
+              <span style="font-size:12px;font-weight:600;color:var(--tx2,#64748B)">{{ sel.espName }}</span>
+            </div>
+            <h2 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.4px;line-height:1.25">{{ sel.titulo }}</h2>
+          </div>
+          <button onClick="{{ onCloseSel }}" aria-label="Cerrar" style="width:40px;height:40px;flex-shrink:0;border:none;border-radius:50%;background:var(--sf2,#F1F5F9);color:var(--tx2,#64748B);display:flex;align-items:center;justify-content:center">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg>
+          </button>
+        </header>
+
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline">
+            <span style="font-size:12px;font-weight:800;letter-spacing:.6px;color:var(--tx3,#94A3B8)">AVANCE</span>
+            <span style="font-size:14px;font-weight:800;color:{{ sel.barColor }}">{{ sel.fracLabel }}</span>
+          </div>
+          <div role="progressbar" aria-valuenow="{{ sel.pct }}" aria-valuemin="0" aria-valuemax="100" style="height:12px;border-radius:6px;background:var(--trk,#E2E8F0);overflow:hidden">
+            <div style="height:100%;width:{{ sel.pctW }};border-radius:6px;background:{{ sel.barColor }};transition:width .45s cubic-bezier(.22,1,.36,1),background .3s"></div>
+          </div>
+        </div>
+
+        <sc-if value="{{ sel.hasMatrix }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-size:12px;font-weight:800;letter-spacing:.6px;color:var(--tx3,#94A3B8)">EXIGENCIA DEL INTERNADO</span>
+            <div style="display:flex;flex-wrap:wrap;gap:7px">
+              <sc-for list="{{ sel.matrix }}" as="mx" hint-placeholder-count="6">
+                <span style="height:30px;padding:0 11px;border-radius:15px;border:1px solid {{ mx.bd }};background:{{ mx.bg }};color:{{ mx.fg }};font-size:12px;font-weight:600;display:flex;align-items:center;gap:5px;white-space:nowrap">
+                  <sc-if value="{{ mx.on }}" hint-placeholder-val="{{ false }}"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 13 10 18 19 7"></polyline></svg></sc-if>
+                  {{ mx.label }}
+                </span>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ sel.hasCodigos }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-size:12px;font-weight:800;letter-spacing:.6px;color:var(--tx3,#94A3B8)">CÓDIGOS EUNACOM</span>
+            <div style="display:flex;flex-wrap:wrap;gap:7px">
+              <sc-for list="{{ sel.codigos }}" as="cd" hint-placeholder-count="2">
+                <span style="height:26px;padding:0 10px;border-radius:8px;background:var(--sf2,#F1F5F9);color:var(--tx2,#64748B);font-size:11.5px;font-weight:600;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;display:flex;align-items:center">{{ cd.code }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-size:12px;font-weight:800;letter-spacing:.6px;color:var(--tx3,#94A3B8)">TU SEGUIMIENTO</span>
+          <div style="display:flex;flex-direction:column;border:1px solid var(--bd,#E2E8F0);border-radius:14px;overflow:hidden">
+            <sc-for list="{{ sel.dims }}" as="dm" hint-placeholder-count="5">
+              <button onClick="{{ dm.toggle }}" role="checkbox" aria-checked="{{ dm.on }}" style="display:flex;align-items:center;gap:12px;min-height:52px;padding:0 16px;border:none;border-bottom:1px solid var(--bd,#E2E8F0);background:transparent;color:inherit;text-align:left" style-hover="background:var(--sf2,#F1F5F9)">
+                <span style="width:24px;height:24px;flex-shrink:0;border-radius:8px;border:2px solid {{ dm.boxBd }};background:{{ dm.boxBg }};display:flex;align-items:center;justify-content:center;transition:all .15s">
+                  <sc-if value="{{ dm.on }}" hint-placeholder-val="{{ false }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 13 10 18 19 7"></polyline></svg></sc-if>
+                </span>
+                <span style="flex:1;font-size:14.5px;font-weight:600">{{ dm.label }}</span>
+                <span style="font-size:11.5px;font-weight:700;color:var(--tx3,#94A3B8)">{{ dm.hint }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-size:12px;font-weight:800;letter-spacing:.6px;color:var(--tx3,#94A3B8)">DOMINIO</span>
+          <div style="display:flex;gap:6px">
+            <sc-for list="{{ sel.domBtns }}" as="db" hint-placeholder-count="5">
+              <button onClick="{{ db.pick }}" aria-label="{{ db.aria }}" aria-pressed="{{ db.active }}" style="flex:1;height:48px;border:1.5px solid {{ db.bd }};border-radius:12px;background:{{ db.bg }};color:{{ db.fg }};font-size:17px;font-weight:800;transition:all .15s" style-active="transform:scale(.93)">{{ db.n }}</button>
+            </sc-for>
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--tx2,#64748B)">
+            <span style="width:8px;height:8px;border-radius:50%;background:{{ sel.domColor }}"></span>{{ sel.domLabel }}
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <label for="et-f1" style="font-size:12px;font-weight:800;letter-spacing:.6px;color:var(--tx3,#94A3B8)">ÚLTIMO ESTUDIO</label>
+            <input id="et-f1" type="date" value="{{ sel.ultimo }}" onChange="{{ onUltimo }}" style="height:46px;padding:0 12px;border:1px solid var(--bd,#E2E8F0);border-radius:10px;background:var(--in,#F8FAFC);color:var(--tx,#1E293B);font-size:14px;width:100%"></input>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <label for="et-f2" style="font-size:12px;font-weight:800;letter-spacing:.6px;color:var(--tx3,#94A3B8)">PRÓXIMO REPASO</label>
+            <input id="et-f2" type="date" value="{{ sel.proximo }}" onChange="{{ onProximo }}" style="height:46px;padding:0 12px;border:1px solid var(--bd,#E2E8F0);border-radius:10px;background:var(--in,#F8FAFC);color:var(--tx,#1E293B);font-size:14px;width:100%"></input>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <label for="et-obs" style="font-size:12px;font-weight:800;letter-spacing:.6px;color:var(--tx3,#94A3B8)">OBSERVACIONES</label>
+          <textarea id="et-obs" rows="3" placeholder="Notas, pendientes, fuentes…" value="{{ sel.obs }}" onChange="{{ onObs }}" style="padding:12px;border:1px solid var(--bd,#E2E8F0);border-radius:10px;background:var(--in,#F8FAFC);color:var(--tx,#1E293B);font-size:14px;resize:vertical;width:100%"></textarea>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:12px">
+          <span style="flex:1;font-size:12px;color:var(--tx3,#94A3B8);display:flex;align-items:center;gap:6px">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14"></polyline></svg>
+            Guardado automático
+          </span>
+          <button onClick="{{ onCloseSel }}" style="height:48px;padding:0 28px;border:none;border-radius:12px;background:var(--pri,#0F766E);color:#fff;font-size:15px;font-weight:700" style-active="transform:scale(.97)">Listo</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ============ TOAST ============ -->
+  <sc-if value="{{ hasToast }}" hint-placeholder-val="{{ false }}">
+    <div role="status" style="position:fixed;left:50%;bottom:{{ toastBottom }};transform:translateX(-50%);z-index:60;background:#0F172A;color:#F8FAFC;border-radius:12px;padding:11px 18px;font-size:13.5px;font-weight:600;font-family:'Inter',system-ui,sans-serif;box-shadow:0 8px 24px rgba(2,6,23,.35);display:flex;align-items:center;gap:8px;animation:et-pop .25s cubic-bezier(.22,1,.36,1);white-space:nowrap">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 13 10 18 19 7"></polyline></svg>
+      {{ toast }}
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;primaryColor&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#0F766E&quot;, &quot;options&quot;: [&quot;#0F766E&quot;, &quot;#0369A1&quot;, &quot;#4338CA&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Tema&quot; },
+  &quot;darkMode&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Tema&quot; },
+  &quot;startView&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;login&quot;, &quot;options&quot;: [&quot;login&quot;, &quot;panel&quot;, &quot;dashboard&quot;, &quot;plan&quot;, &quot;perfil&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Prototipo&quot; }
+}">
+class Component extends DCLogic {
+  state = {
+    view: null, dark: null, vw: 1200, loading: true, specs: null,
+    expanded: {}, search: '', fEstado: 'all', fTipo: 'all', fDom: 0, fEsp: null,
+    filterOpen: false, selId: null, toast: '', rut: '', rutErr: '', validating: false,
+    perDay: 4
+  };
+
+  DIMS = [
+    { key: 'estudiado', label: 'Estudiado', hint: '+20%' },
+    { key: 'repaso1', label: 'Primer repaso', hint: '+20%' },
+    { key: 'repaso2', label: 'Segundo repaso', hint: '+20%' },
+    { key: 'preguntas', label: 'Preguntas realizadas', hint: '+20%' },
+    { key: 'casos', label: 'Casos clínicos', hint: '+20%' }
+  ];
+  DOM_COLORS = { 1: '#FB7185', 2: '#FB923C', 3: '#FBBF24', 4: '#84CC16', 5: '#059669' };
+  DOM_LABELS = { 0: 'Sin evaluar', 1: 'No lo conozco', 2: 'Muy básico', 3: 'Aceptable', 4: 'Bueno', 5: 'Lo manejo muy bien' };
+  MATRIX = [
+    { key: 'fisiopatologia', label: 'Fisiopatología' },
+    { key: 'conocimiento', label: 'Con. general' },
+    { key: 'dx_sospecha', label: 'Dx sospecha' },
+    { key: 'dx_especifico', label: 'Dx específico' },
+    { key: 'tx_inicial', label: 'Tto inicial' },
+    { key: 'tx_completo', label: 'Tto completo' },
+    { key: 'complicaciones', label: 'Complicaciones' },
+    { key: 'seg_derivar', label: 'Derivar' },
+    { key: 'seg_cronico', label: 'Seg. crónico' }
+  ];
+  TODAY = '2026-07-07';
+
+  componentDidMount() {
+    this._onR = () => this.setState({ vw: window.innerWidth });
+    window.addEventListener('resize', this._onR);
+    this._onR();
+    try { if (localStorage.getItem('eunatrack-dark') === '1') this.setState({ dark: true }); } catch (e) {}
+    import('./eunatrack-data.js').then(m => {
+      setTimeout(() => {
+        const specs = JSON.parse(JSON.stringify(m.SPECIALTIES));
+        let saved = {};
+        try { saved = JSON.parse(localStorage.getItem('eunatrack-progress') || '{}'); } catch (e) {}
+        specs.forEach(s => this.allItems(s).forEach(it => {
+          if (saved[it.id]) Object.assign(it, saved[it.id]);
+        }));
+        this.setState({ specs, loading: false, expanded: { 'esp-0': true } });
+      }, 900);
+    });
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._onR); }
+
+  allItems(spec) { return spec.temas.concat(spec.examenes); }
+  everyItem() { const out = []; (this.state.specs || []).forEach(s => this.allItems(s).forEach(it => out.push({ it, s }))); return out; }
+  pctOf(it) { return this.DIMS.filter(d => it.track[d.key]).length / 5; }
+  persist(it) {
+    try {
+      const saved = JSON.parse(localStorage.getItem('eunatrack-progress') || '{}');
+      saved[it.id] = { track: it.track, dominio: it.dominio, ultimoEstudio: it.ultimoEstudio, proximoRepaso: it.proximoRepaso, obs: it.obs };
+      localStorage.setItem('eunatrack-progress', JSON.stringify(saved));
+    } catch (e) {}
+  }
+  mutate(id, fn, toastMsg) {
+    const specs = this.state.specs;
+    for (const s of specs) for (const it of this.allItems(s)) if (it.id === id) {
+      fn(it); this.persist(it);
+      this.setState({ specs: [...specs] });
+      if (toastMsg) this.showToast(toastMsg);
+      return;
+    }
+  }
+  showToast(msg) {
+    clearTimeout(this._tt);
+    this.setState({ toast: msg });
+    this._tt = setTimeout(() => this.setState({ toast: '' }), 1800);
+  }
+  titleCase(s) {
+    return s.trim().toLowerCase().replace(/(^|[\s(])\S/g, c => c.toUpperCase())
+      .replace(/ Y /g, ' y ').replace(/ De /g, ' de ');
+  }
+  cleanRut(v) { return (v || '').replace(/[^0-9kK]/g, '').toUpperCase(); }
+  formatRut(v) {
+    const c = this.cleanRut(v);
+    if (c.length < 2) return c;
+    const body = c.slice(0, -1), dv = c.slice(-1);
+    return body.replace(/\B(?=(\d{3})+(?!\d))/g, '.') + '-' + dv;
+  }
+  validRut(v) {
+    const c = this.cleanRut(v);
+    if (c.length < 7) return false;
+    const body = c.slice(0, -1), dv = c.slice(-1);
+    let sum = 0, mul = 2;
+    for (let i = body.length - 1; i >= 0; i--) { sum += parseInt(body[i]) * mul; mul = mul === 7 ? 2 : mul + 1; }
+    const res = 11 - (sum % 11);
+    const exp = res === 11 ? '0' : res === 10 ? 'K' : String(res);
+    return dv === exp;
+  }
+  fmtDate(iso) {
+    if (!iso) return '';
+    const [y, m, d] = iso.split('-').map(Number);
+    const mon = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+    return d + ' ' + mon[m - 1];
+  }
+
+  renderVals() {
+    const st = this.state;
+    const dark = st.dark === null ? (this.props.darkMode ?? false) : st.dark;
+    const view = st.view || this.props.startView || 'login';
+    const pri = this.props.primaryColor || '#0F766E';
+    const vw = st.vw;
+    const isMobile = vw < 640, isTablet = vw >= 640 && vw <= 1024, isDesktop = vw > 1024;
+
+    const V = dark ? {
+      bg: '#020617', sf: '#0F172A', sf2: '#1E293B', tx: '#E2E8F0', tx2: '#94A3B8', tx3: '#64748B',
+      bd: '#1E293B', trk: '#1E293B', in: '#020617',
+      priSoft: 'color-mix(in oklab,' + pri + ',transparent 84%)',
+      priTx: 'color-mix(in oklab,' + pri + ',#ffffff 35%)',
+      shadow: '0 1px 3px rgba(0,0,0,.4)', gray: '#334155'
+    } : {
+      bg: '#F8FAFC', sf: '#FFFFFF', sf2: '#F1F5F9', tx: '#1E293B', tx2: '#64748B', tx3: '#94A3B8',
+      bd: '#E2E8F0', trk: '#E2E8F0', in: '#F8FAFC',
+      priSoft: 'color-mix(in oklab,' + pri + ',#ffffff 92%)',
+      priTx: pri,
+      shadow: '0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04)', gray: '#CBD5E1'
+    };
+    const themeVars = '--bg:' + V.bg + ';--sf:' + V.sf + ';--sf2:' + V.sf2 + ';--tx:' + V.tx + ';--tx2:' + V.tx2 + ';--tx3:' + V.tx3 + ';--bd:' + V.bd + ';--trk:' + V.trk + ';--in:' + V.in + ';--pri:' + pri + ';--priSoft:' + V.priSoft + ';--priTx:' + V.priTx + ';--shadow:' + V.shadow;
+    const DONE = '#10B981', PROG = '#FBBF24';
+
+    const statusOf = p => p === 0 ? 'no' : p >= 1 ? 'done' : 'prog';
+    const statusColor = p => p === 0 ? V.gray : p >= 1 ? DONE : PROG;
+    const barColor = p => p >= 1 ? DONE : pri;
+
+    // ---------- nav ----------
+    const ICONS = {
+      panel: 'M8 6h13 M8 12h13 M8 18h13 M3.5 6h.01 M3.5 12h.01 M3.5 18h.01',
+      dash: 'M12 3a9 9 0 1 0 9 9h-9z M14 3.5a9 9 0 0 1 6.5 6.5H14z',
+      plan: 'M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z M3 9h18 M8 2.5v3 M16 2.5v3',
+      perfil: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M4 20.5c0-3.5 3.6-5.5 8-5.5s8 2 8 5.5'
+    };
+    const navDefs = [
+      { key: 'panel', label: 'Panel' }, { key: 'dashboard', label: 'Dashboard' },
+      { key: 'plan', label: 'Planificador' }, { key: 'perfil', label: 'Perfil' }
+    ];
+    const navItems = navDefs.map(n => {
+      const active = view === n.key;
+      return {
+        label: n.label, icon: ICONS[n.key],
+        bg: active ? V.priSoft : 'transparent',
+        fg: active ? V.priTx : V.tx2,
+        go: () => this.setState({ view: n.key })
+      };
+    });
+
+    // ---------- login ----------
+    const rutFormatted = this.formatRut(st.rut);
+    const doLogin = () => {
+      if (!this.validRut(st.rut)) { this.setState({ rutErr: 'RUT inválido. Revisa el dígito verificador.' }); return; }
+      this.setState({ validating: true, rutErr: '' });
+      setTimeout(() => this.setState({ validating: false, view: 'panel' }), 900);
+    };
+
+    // ---------- data & filters ----------
+    const specs = st.specs || [];
+    const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const q = norm(st.search);
+    const filterActive = !!(q || st.fEstado !== 'all' || st.fTipo !== 'all' || st.fDom > 0 || st.fEsp);
+    const activeFilterCount = (st.fEstado !== 'all' ? 1 : 0) + (st.fTipo !== 'all' ? 1 : 0) + (st.fDom > 0 ? 1 : 0) + (st.fEsp ? 1 : 0);
+
+    const matchItem = it => {
+      const p = this.pctOf(it);
+      if (q && !norm(it.titulo).includes(q)) return false;
+      if (st.fEstado !== 'all' && statusOf(p) !== st.fEstado) return false;
+      if (st.fTipo !== 'all' && it.tipo !== st.fTipo) return false;
+      if (st.fDom > 0 && it.dominio < st.fDom) return false;
+      return true;
+    };
+
+    const buildItem = (it, esp) => {
+      const p = this.pctOf(it);
+      const filled = Math.round(p * 5);
+      const dom = it.dominio || 0;
+      const domColor = dom ? this.DOM_COLORS[dom] : V.gray;
+      const activeChips = this.MATRIX.filter(m => (it.matrix || []).includes(m.key));
+      const chipSrc = isMobile ? activeChips : this.MATRIX;
+      return {
+        id: it.id, titulo: it.titulo, isExam: it.tipo === 'examen',
+        statusColor: statusColor(p),
+        statusAria: p === 0 ? 'No iniciado' : p >= 1 ? 'Completado' : 'En progreso',
+        pct: Math.round(p * 100), pctW: Math.round(p * 100) + '%',
+        barColor: barColor(p),
+        fracLabel: filled + '/5 · ' + Math.round(p * 100) + '%',
+        progressAria: 'Avance ' + Math.round(p * 100) + '%',
+        estudiado: !!it.track.estudiado,
+        estColor: it.track.estudiado ? DONE : V.tx3,
+        estFill: it.track.estudiado ? DONE : 'none',
+        estCheck: it.track.estudiado ? '#ffffff' : 'currentColor',
+        estAria: it.track.estudiado ? 'Desmarcar estudiado' : 'Marcar estudiado',
+        domBg: dom ? 'color-mix(in oklab,' + domColor + ',transparent 86%)' : V.sf2,
+        domFg: dom ? 'color-mix(in oklab,' + domColor + ',' + (dark ? '#fff' : '#000') + ' 25%)' : V.tx2,
+        domDot: domColor,
+        domLabel: dom ? 'Dominio ' + dom : 'Sin dominio',
+        domAria: 'Dominio: ' + this.DOM_LABELS[dom] + '. Tocar para subir.',
+        chips: chipSrc.map(m => {
+          const on = (it.matrix || []).includes(m.key);
+          return {
+            label: m.label,
+            bg: on ? V.priSoft : 'transparent',
+            fg: on ? V.priTx : V.tx3,
+            bd: on ? 'transparent' : V.bd
+          };
+        }),
+        openDetail: () => this.setState({ selId: it.id }),
+        quickEst: e => {
+          e.stopPropagation();
+          this.mutate(it.id, x => {
+            x.track.estudiado = !x.track.estudiado;
+            if (x.track.estudiado) x.ultimoEstudio = this.TODAY;
+          }, it.track.estudiado ? 'Estudiado desmarcado' : '¡Estudiado! ✓');
+        },
+        cycleDom: e => {
+          e.stopPropagation();
+          this.mutate(it.id, x => { x.dominio = (x.dominio % 5) + 1; }, 'Dominio: ' + this.DOM_LABELS[(it.dominio % 5) + 1]);
+        }
+      };
+    };
+
+    const specialties = specs
+      .filter(s => !st.fEsp || s.id === st.fEsp)
+      .map(s => {
+        const all = this.allItems(s);
+        const matched = all.filter(matchItem);
+        if (filterActive && matched.length === 0) return null;
+        const agg = all.reduce((a, it) => a + this.pctOf(it), 0) / (all.length || 1);
+        const doneCount = all.filter(it => this.pctOf(it) >= 1).length;
+        const open = filterActive ? true : !!st.expanded[s.id];
+        return {
+          id: s.id, name: this.titleCase(s.nombre), open,
+          chev: open ? '180deg' : '0deg',
+          pctW: Math.round(agg * 100) + '%',
+          pctLabel: Math.round(agg * 100) + '%',
+          barColor: agg >= 1 ? DONE : pri,
+          countLabel: doneCount + '/' + all.length + ' completados',
+          toggle: () => this.setState({ expanded: { ...st.expanded, [s.id]: !st.expanded[s.id] } }),
+          items: open ? matched.map(it => buildItem(it, s)) : []
+        };
+      }).filter(Boolean);
+
+    const noResults = !st.loading && filterActive && specialties.length === 0;
+
+    // ---------- chips ----------
+    const chip = (label, active, go) => ({
+      label, go,
+      bg: active ? V.priSoft : V.sf,
+      fg: active ? V.priTx : V.tx2,
+      bd: active ? 'color-mix(in oklab,' + pri + ',transparent 55%)' : V.bd
+    });
+    const estadoChips = [
+      chip('Todos', st.fEstado === 'all', () => this.setState({ fEstado: 'all' })),
+      chip('No iniciado', st.fEstado === 'no', () => this.setState({ fEstado: 'no' })),
+      chip('En progreso', st.fEstado === 'prog', () => this.setState({ fEstado: 'prog' })),
+      chip('Completado', st.fEstado === 'done', () => this.setState({ fEstado: 'done' }))
+    ];
+    const tipoChips = [
+      chip('Todo', st.fTipo === 'all', () => this.setState({ fTipo: 'all' })),
+      chip('Temas', st.fTipo === 'tema', () => this.setState({ fTipo: 'tema' })),
+      chip('Exámenes', st.fTipo === 'examen', () => this.setState({ fTipo: 'examen' }))
+    ];
+    const domChips = [chip('Todos', st.fDom === 0, () => this.setState({ fDom: 0 }))]
+      .concat([1, 2, 3, 4, 5].map(n => chip('≥ ' + n, st.fDom === n, () => this.setState({ fDom: n }))));
+    const espChips = [chip('Todas', !st.fEsp, () => this.setState({ fEsp: null }))]
+      .concat(specs.map(s => chip(this.titleCase(s.nombre), st.fEsp === s.id, () => this.setState({ fEsp: st.fEsp === s.id ? null : s.id }))));
+    const allChips = estadoChips.concat(tipoChips.slice(1)).concat(domChips.slice(1, 4));
+    const clearFilters = () => this.setState({ fEstado: 'all', fTipo: 'all', fDom: 0, fEsp: null, search: '' });
+
+    // ---------- global stats ----------
+    const every = this.everyItem();
+    const total = every.length || 1;
+    const globalPct = every.reduce((a, e) => a + this.pctOf(e.it), 0) / total;
+    const gp = Math.round(globalPct * 100);
+    const doneItems = every.filter(e => this.pctOf(e.it) >= 1).length;
+
+    // ---------- dashboard ----------
+    const pctBy = key => Math.round(every.filter(e => e.it.track[key]).length / total * 100) + '%';
+    const kpis = [
+      { label: 'Repasado (1er)', value: pctBy('repaso1'), color: V.priTx },
+      { label: 'Con preguntas', value: pctBy('preguntas'), color: V.priTx },
+      { label: 'Con casos clínicos', value: pctBy('casos'), color: V.priTx },
+      { label: 'Completados', value: String(doneItems), color: DONE },
+      { label: 'Pendientes', value: String(total - doneItems), color: V.tx }
+    ];
+    const specBars = specs.map(s => {
+      const all = this.allItems(s);
+      const agg = all.reduce((a, it) => a + this.pctOf(it), 0) / (all.length || 1);
+      return { name: this.titleCase(s.nombre), pctW: Math.round(agg * 100) + '%', pctLabel: Math.round(agg * 100) + '%', color: agg >= 1 ? DONE : pri };
+    }).sort((a, b) => parseInt(b.pctLabel) - parseInt(a.pctLabel));
+    const domCounts = [0, 0, 0, 0, 0, 0];
+    every.forEach(e => domCounts[e.it.dominio || 0]++);
+    const maxDom = Math.max(...domCounts, 1);
+    const domDist = [5, 4, 3, 2, 1, 0].map(n => ({
+      label: n === 0 ? 'Sin evaluar' : n + ' · ' + this.DOM_LABELS[n],
+      color: n === 0 ? V.gray : this.DOM_COLORS[n],
+      count: domCounts[n],
+      w: Math.round(domCounts[n] / maxDom * 100) + '%'
+    }));
+    const nextUp = every.filter(e => this.pctOf(e.it) < 1).sort((a, b) => this.pctOf(a.it) - this.pctOf(b.it))[0];
+
+    // ---------- planner ----------
+    const due = every.filter(e => e.it.proximoRepaso && e.it.proximoRepaso <= this.TODAY)
+      .sort((a, b) => a.it.proximoRepaso < b.it.proximoRepaso ? -1 : 1);
+    const fresh = every.filter(e => this.pctOf(e.it) < 1 && !e.it.track.estudiado)
+      .sort((a, b) => (a.it.dominio || 0) - (b.it.dominio || 0));
+    const todayList = due.slice(0, 8).map(e => ({ ...e, kind: 'repaso' }))
+      .concat(fresh.slice(0, st.perDay).map(e => ({ ...e, kind: 'nuevo' })));
+    const todayItems = todayList.map(e => {
+      const p = this.pctOf(e.it);
+      const done = e.kind === 'repaso' ? e.it.track.repaso1 && e.it.track.repaso2 : e.it.track.estudiado;
+      return {
+        titulo: e.it.titulo, esp: this.titleCase(e.s.nombre),
+        tag: e.kind === 'repaso' ? 'REPASO' : 'NUEVO',
+        tagBg: e.kind === 'repaso' ? 'rgba(251,191,36,.15)' : V.priSoft,
+        tagFg: e.kind === 'repaso' ? '#B45309' : V.priTx,
+        pctW: Math.round(p * 100) + '%', barColor: barColor(p),
+        ckBd: done ? DONE : V.bd, ckBg: done ? DONE : 'transparent', ckFg: done ? '#fff' : V.tx3,
+        openDetail: () => this.setState({ selId: e.it.id }),
+        quick: ev => {
+          ev.stopPropagation();
+          this.mutate(e.it.id, x => {
+            if (e.kind === 'nuevo') { x.track.estudiado = true; x.ultimoEstudio = this.TODAY; }
+            else if (!x.track.repaso1) x.track.repaso1 = true;
+            else x.track.repaso2 = true;
+            if (e.kind === 'repaso') x.proximoRepaso = null;
+          }, e.kind === 'nuevo' ? '¡Estudiado! ✓' : 'Repaso completado ✓');
+        }
+      };
+    });
+    const upcoming = every.filter(e => e.it.proximoRepaso && e.it.proximoRepaso > this.TODAY)
+      .sort((a, b) => a.it.proximoRepaso < b.it.proximoRepaso ? -1 : 1).slice(0, 6)
+      .map(e => ({
+        titulo: e.it.titulo, esp: this.titleCase(e.s.nombre),
+        dnum: e.it.proximoRepaso.split('-')[2],
+        dmon: this.fmtDate(e.it.proximoRepaso).split(' ')[1],
+        domColor: e.it.dominio ? this.DOM_COLORS[e.it.dominio] : V.gray,
+        domAria: 'Dominio ' + (e.it.dominio || 0),
+        openDetail: () => this.setState({ selId: e.it.id })
+      }));
+    const week = [];
+    const dows = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+    for (let i = 0; i < 7; i++) {
+      const d = new Date(2026, 6, 7 + i);
+      const iso = d.toISOString().slice(0, 10);
+      const count = every.filter(e => e.it.proximoRepaso === iso).length + (i === 0 ? Math.min(st.perDay, fresh.length) : st.perDay);
+      const isToday = i === 0;
+      week.push({
+        dow: dows[d.getDay()], num: String(d.getDate()),
+        sub: count + ' ítems',
+        bg: isToday ? V.priSoft : V.sf, bd: isToday ? 'color-mix(in oklab,' + pri + ',transparent 55%)' : V.bd,
+        fg: isToday ? V.priTx : V.tx, fg2: isToday ? V.priTx : V.tx2
+      });
+    }
+    const pending = every.filter(e => this.pctOf(e.it) < 1).length;
+    const etaDays = Math.ceil(pending / st.perDay);
+
+    // ---------- detail ----------
+    let sel = null;
+    if (st.selId) {
+      for (const s of specs) for (const it of this.allItems(s)) if (it.id === st.selId) {
+        const p = this.pctOf(it);
+        const filled = Math.round(p * 5);
+        const dom = it.dominio || 0;
+        sel = {
+          titulo: it.titulo, espName: this.titleCase(s.nombre),
+          tipoLabel: it.tipo === 'examen' ? 'EXAMEN COMPLEMENTARIO' : 'TEMA',
+          tagBg: it.tipo === 'examen' ? 'rgba(124,58,237,.1)' : V.priSoft,
+          tagFg: it.tipo === 'examen' ? '#7C3AED' : V.priTx,
+          pct: Math.round(p * 100), pctW: Math.round(p * 100) + '%',
+          barColor: barColor(p),
+          fracLabel: filled + '/5 · ' + Math.round(p * 100) + '%',
+          hasMatrix: (it.matrix || []).length > 0,
+          matrix: this.MATRIX.map(m => {
+            const on = (it.matrix || []).includes(m.key);
+            return { label: m.label, on, bg: on ? V.priSoft : 'transparent', fg: on ? V.priTx : V.tx3, bd: on ? 'transparent' : V.bd };
+          }),
+          hasCodigos: (it.codigos || []).length > 0,
+          codigos: (it.codigos || []).map(c => ({ code: c })),
+          dims: this.DIMS.map(d => {
+            const on = !!it.track[d.key];
+            return {
+              label: d.label, hint: d.hint, on,
+              boxBd: on ? pri : V.bd, boxBg: on ? pri : 'transparent',
+              toggle: () => this.mutate(it.id, x => {
+                x.track[d.key] = !x.track[d.key];
+                if (d.key === 'estudiado' && x.track.estudiado) x.ultimoEstudio = this.TODAY;
+              }, 'Guardado ✓')
+            };
+          }),
+          domBtns: [1, 2, 3, 4, 5].map(n => {
+            const c = this.DOM_COLORS[n], active = dom === n;
+            return {
+              n: String(n), active, aria: n + ': ' + this.DOM_LABELS[n],
+              bg: active ? c : 'transparent',
+              fg: active ? '#ffffff' : V.tx2,
+              bd: active ? c : V.bd,
+              pick: () => this.mutate(it.id, x => { x.dominio = n; }, 'Dominio: ' + this.DOM_LABELS[n])
+            };
+          }),
+          domLabel: this.DOM_LABELS[dom], domColor: dom ? this.DOM_COLORS[dom] : V.gray,
+          ultimo: it.ultimoEstudio || '', proximo: it.proximoRepaso || '', obs: it.obs || ''
+        };
+        break;
+      }
+    }
+    const sheetPos = isMobile
+      ? 'left:0;right:0;bottom:0;border-radius:20px 20px 0 0;max-height:88dvh;animation:et-slideup .3s cubic-bezier(.22,1,.36,1);box-shadow:0 -8px 40px rgba(2,6,23,.25)'
+      : 'left:50%;top:50%;transform:translate(-50%,-50%);width:min(580px,92vw);border-radius:20px;max-height:86vh;animation:et-pop .25s cubic-bezier(.22,1,.36,1);box-shadow:0 24px 60px rgba(2,6,23,.35)';
+
+    return {
+      themeVars,
+      // routing
+      isLogin: view === 'login', isApp: view !== 'login',
+      isPanel: view === 'panel', isDash: view === 'dashboard', isPlan: view === 'plan', isPerfil: view === 'perfil',
+      isMobile, notMobile: !isMobile,
+      showSidebar: !isMobile, sidebarWide: isDesktop,
+      sidebarW: isDesktop ? '224px' : '68px',
+      mainPad: isMobile ? '18px 16px 28px' : isTablet ? '24px 24px 40px' : '32px 36px 48px',
+      // login
+      rutValue: rutFormatted,
+      rutBorder: st.rutErr ? '#FB7185' : V.bd,
+      onRutInput: e => this.setState({ rut: this.cleanRut(e.target.value), rutErr: '' }),
+      onRutKey: e => { if (e.key === 'Enter') doLogin(); },
+      onLogin: doLogin,
+      rutErr: st.rutErr, hasRutErr: !!st.rutErr,
+      validating: st.validating,
+      loginBtnLabel: st.validating ? 'Validando…' : 'Entrar',
+      // nav
+      navItems,
+      themeIcon: dark ? 'M12 2v2 M12 20v2 M4.9 4.9l1.4 1.4 M17.7 17.7l1.4 1.4 M2 12h2 M20 12h2 M4.9 19.1l1.4-1.4 M17.7 6.3l1.4-1.4 M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10z' : 'M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z',
+      themeLabel: dark ? 'Modo claro' : 'Modo oscuro',
+      onDarkToggle: () => {
+        const nd = !dark;
+        try { localStorage.setItem('eunatrack-dark', nd ? '1' : '0'); } catch (e) {}
+        this.setState({ dark: nd });
+      },
+      switchBg: dark ? pri : V.gray,
+      switchLeft: dark ? '21px' : '3px',
+      // header
+      greeting: 'Hola, Matías 👋'.replace(' 👋', ''),
+      todayLabel: 'Martes 7 de julio',
+      globalPctLabel: gp + '%',
+      globalAria: 'Avance global ' + gp + '%',
+      miniRingOffset: String((150.8 * (1 - globalPct)).toFixed(1)),
+      ringOffset: String((464.9 * (1 - globalPct)).toFixed(1)),
+      globalSub: doneItems + ' de ' + total + ' ítems completados',
+      // panel
+      searchValue: st.search,
+      onSearch: e => this.setState({ search: e.target.value }),
+      onOpenFilters: () => this.setState({ filterOpen: true }),
+      onCloseFilters: () => this.setState({ filterOpen: false }),
+      filterOpen: st.filterOpen,
+      filterApplyLabel: 'Ver resultados',
+      hasActiveFilters: activeFilterCount > 0,
+      activeFilterCount: String(activeFilterCount),
+      estadoChips, tipoChips, domChips, espChips, allChips,
+      onClearFilters: () => { clearFilters(); },
+      loading: st.loading, ready: !st.loading,
+      specialties, noResults,
+      // dashboard
+      heroCols: isMobile ? '1fr' : '1fr 1fr',
+      kpiCols: isMobile ? '1fr 1fr' : 'repeat(5,1fr)',
+      chartCols: isDesktop ? '1fr 1fr' : '1fr',
+      kpis, specBars, domDist,
+      miDone: doneItems + ' de ' + total + ' ítems',
+      miNext: nextUp ? 'Siguiente sugerido: ' + nextUp.it.titulo : 'Todo completado 🎉',
+      // planner
+      perDay: String(st.perDay),
+      onPerDay: e => this.setState({ perDay: parseInt(e.target.value) }),
+      planEta: '~' + etaDays + ' días para terminar',
+      todayItems, todayEmpty: !st.loading && todayItems.length === 0,
+      upcoming, upcomingEmpty: !st.loading && upcoming.length === 0,
+      week,
+      // perfil
+      rutShown: st.rut ? this.formatRut(st.rut) : '12.345.678-5',
+      onLogout: () => this.setState({ view: 'login', rut: '', rutErr: '' }),
+      // detail
+      selOpen: !!sel, sel: sel || {}, sheetPos,
+      onCloseSel: () => this.setState({ selId: null }),
+      onUltimo: e => this.mutate(st.selId, x => { x.ultimoEstudio = e.target.value || null; }, 'Guardado ✓'),
+      onProximo: e => this.mutate(st.selId, x => { x.proximoRepaso = e.target.value || null; }, 'Repaso agendado ✓'),
+      onObs: e => this.mutate(st.selId, x => { x.obs = e.target.value; }),
+      // toast
+      toast: st.toast, hasToast: !!st.toast,
+      toastBottom: isMobile ? 'calc(84px + env(safe-area-inset-bottom))' : '28px'
+    };
+  }
+}
+</script>
+</body>
+</html>

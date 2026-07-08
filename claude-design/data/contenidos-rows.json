@@ -1,0 +1,2093 @@
+[
+ {
+  "_r": 2,
+  "B": "CARDIOLOGÍA"
+ },
+ {
+  "_r": 3,
+  "B": "Patología",
+  "D": "Fisiopatología",
+  "E": "Conocimiento General",
+  "F": "Diagnóstico",
+  "H": "Tratamiento",
+  "J": "Estudio Complicaciones",
+  "K": "Seguimiento"
+ },
+ {
+  "_r": 4,
+  "F": "Sospecha",
+  "G": "Específico",
+  "H": "Inicial",
+  "I": "Completo",
+  "K": "Derivar",
+  "L": "Crónico"
+ },
+ {
+  "_r": 5,
+  "B": "Angina Estable",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 6,
+  "B": "Síndrome Coronario Agudo",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 8,
+  "B": "Insuficiencia Cardíaca Crónica Descompensada",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 10,
+  "B": "Valvulopatías",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 11,
+  "B": "Fibrilación Auricular",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "L": "X"
+ },
+ {
+  "_r": 13,
+  "B": "Enfermedades del Pericardio",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 15,
+  "B": "Miocardiopatías (Hipertrófica-Dilatada)",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 17,
+  "B": "Enfermedad Tromboembólica",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "L": "X"
+ },
+ {
+  "_r": 19,
+  "B": "Farmacología Cardiovascular",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 22,
+  "B": "Enfermedad del Sistema Excito Conductor",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 27,
+  "B": "Exámenes complementarios a saber interpretar:",
+  "G": "Fármacología Cardiovascular"
+ },
+ {
+  "_r": 28,
+  "B": "● Electrocardiograma"
+ },
+ {
+  "_r": 29,
+  "B": "● Radiografía de Tórax",
+  "G": "● Uso de fármacos en patología cardiaca frecunte"
+ },
+ {
+  "_r": 30,
+  "B": "● Enzimas y péptidos cardiacos",
+  "G": "ICC, Angina estable, SCA, etc"
+ },
+ {
+  "_r": 31,
+  "B": "● Ecocardiograma"
+ },
+ {
+  "_r": 32,
+  "B": "Indicación, interpretación de informe."
+ },
+ {
+  "_r": 33,
+  "B": "● Estudidos Funcionales y Anatómicos para Angina"
+ },
+ {
+  "_r": 34,
+  "B": "Indicación de estudio."
+ },
+ {
+  "_r": 35,
+  "B": "● Dispositivos cardíacos (marcapasos, resincronizador, DAI)"
+ },
+ {
+  "_r": 36,
+  "B": "Indicaciones"
+ },
+ {
+  "_r": 38,
+  "B": "NEFROLOGÍA"
+ },
+ {
+  "_r": 39,
+  "B": "Patología",
+  "D": "Fisiopatología",
+  "E": "Conocimiento General",
+  "F": "Diagnóstico",
+  "H": "Tratamiento",
+  "J": "Estudio Complicaciones",
+  "K": "Seguimiento"
+ },
+ {
+  "_r": 40,
+  "F": "Sospecha",
+  "G": "Específico",
+  "H": "Inicial",
+  "I": "Completo",
+  "K": "Derivar",
+  "L": "Crónico"
+ },
+ {
+  "_r": 41,
+  "B": "Trastornos del Potasio",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 42,
+  "B": "Trastornos del sodio y agua",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 44,
+  "B": "Trastornos ácido-base",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 45,
+  "B": "Injuria Renal Aguda",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 46,
+  "B": "Enfermedad Renal Crónica",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "L": "X"
+ },
+ {
+  "_r": 47,
+  "B": "Hipertensión Arterial Esencial",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "L": "X"
+ },
+ {
+  "_r": 49,
+  "B": "Hipertensión Secundaria",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 50,
+  "B": "Sindrome Nefrótico",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 51,
+  "B": "Glomerulonefritis",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 52,
+  "B": "Diálisis y complicaciones",
+  "E": "X"
+ },
+ {
+  "_r": 53,
+  "B": "Trasplante Renal (indicaciones)",
+  "E": "X"
+ },
+ {
+  "_r": 55,
+  "B": "Interacciones farmacológicas y riñón (más frecuentes)",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 58,
+  "B": "Complicaciones renales de patologías sistémicas",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 63,
+  "B": "Exámenes complementarios a saber interpretar:"
+ },
+ {
+  "_r": 64,
+  "B": "● Ecografía renal (significado de tamaño renal, asimetrías, hidronefrosis etc...)"
+ },
+ {
+  "_r": 65,
+  "B": "● Electrolitos urinarios y creatininuria"
+ },
+ {
+  "_r": 66,
+  "B": "● Albuminuria y Proteinuria"
+ },
+ {
+  "_r": 67,
+  "B": "● Examen de Orina Completa y Urocultivo"
+ },
+ {
+  "_r": 68,
+  "B": "● Biopsia Renal"
+ },
+ {
+  "_r": 69,
+  "B": "Indicación. Valor de Microscopía electrónica, inmnunofluorescencia y microscopía de luz."
+ },
+ {
+  "_r": 72,
+  "B": "GASTROENTEROLOGÍA"
+ },
+ {
+  "_r": 73,
+  "B": "Patología",
+  "D": "Fisiopatología",
+  "E": "Conocimiento General",
+  "F": "Diagnóstico",
+  "H": "Tratamiento",
+  "J": "Estudio Complicaciones",
+  "K": "Seguimiento"
+ },
+ {
+  "_r": 74,
+  "F": "Sospecha",
+  "G": "Específico",
+  "H": "Inicial",
+  "I": "Completo",
+  "K": "Derivar",
+  "L": "Crónico"
+ },
+ {
+  "_r": 75,
+  "B": "Cirrosis (DHC)",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 76,
+  "B": "Complicaciones DHC",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 77,
+  "B": "Hepatitis virales",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 78,
+  "B": "DILI/HILI (Drug & herb induced liver injury)",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 79,
+  "B": "Enfermedades Hepáticas Autoinmunes",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 80,
+  "B": "Enfermedad higado graso asociada a Disf Metabólica",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 81,
+  "B": "Insuficiencia hepática aguda",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 82,
+  "B": "LOES hepáticas",
+  "E": "X",
+  "F": "X",
+  "K": "X"
+ },
+ {
+  "_r": 83,
+  "B": "Pancreatitis aguda",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 84,
+  "B": "Pancreatitis crónica",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 85,
+  "B": "Cancer de Pancreas",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 86,
+  "B": "ERGE",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "L": "X"
+ },
+ {
+  "_r": 87,
+  "B": "Dispepsia",
+  "G": "X",
+  "I": "X",
+  "L": "X"
+ },
+ {
+  "_r": 88,
+  "B": "Enfermedad Úlcero Péptica",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "L": "X"
+ },
+ {
+  "_r": 89,
+  "B": "Alteración del laboratorio hepático (sintomático y asintomático)",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 90,
+  "B": "Cáncer Gástrico",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 91,
+  "B": "Hemorragia digestiva Alta",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 92,
+  "B": "Diarrea aguda",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "L": "X"
+ },
+ {
+  "_r": 93,
+  "B": "Diarrea Crónica",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 94,
+  "B": "Enfermedad Celiaca",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "L": "X"
+ },
+ {
+  "_r": 95,
+  "B": "Síndromes Malabsortivos",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 96,
+  "B": "Parasitosis Intestinales",
+  "G": "X",
+  "I": "X",
+  "L": "X"
+ },
+ {
+  "_r": 97,
+  "B": "Enfermedad Inflamatoria Intestinal",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 98,
+  "B": "Síndrome de Intestino Irritable",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "L": "X"
+ },
+ {
+  "_r": 99,
+  "B": "Cáncer de colon",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 100,
+  "B": "Vacunación Hepatitis A y B",
+  "E": "X"
+ },
+ {
+  "_r": 101,
+  "B": "Epidemiología de Cánceres y tamizaje de Tumores Digestivos",
+  "E": "X"
+ },
+ {
+  "_r": 104,
+  "B": "Exámenes complementarios:",
+  "E": "Procedimientos:"
+ },
+ {
+  "_r": 105,
+  "B": "Indicación e Interpretación de ecografía abdominal",
+  "E": "Paracentesis diagnostica y evacuadora"
+ },
+ {
+  "_r": 106,
+  "B": "Estudio de perfil y función hepática"
+ },
+ {
+  "_r": 108,
+  "B": "NEUROLOGÍA"
+ },
+ {
+  "_r": 109,
+  "B": "Patología",
+  "D": "Fisiopatología",
+  "E": "Conocimiento General",
+  "F": "Diagnóstico",
+  "H": "Tratamiento",
+  "J": "Estudio Complicaciones",
+  "K": "Seguimiento"
+ },
+ {
+  "_r": 110,
+  "F": "Sospecha",
+  "G": "Específico",
+  "H": "Inicial",
+  "I": "Completo",
+  "K": "Derivar",
+  "L": "Crónico"
+ },
+ {
+  "_r": 111,
+  "B": "Compromiso de conciencia",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "L": "X"
+ },
+ {
+  "_r": 112,
+  "B": "ACV isquémico",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "L": "X"
+ },
+ {
+  "_r": 113,
+  "B": "ACV hemorrágico",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 114,
+  "B": "Síndrome Convulsivo",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 115,
+  "B": "Cefaleas Tensional",
+  "G": "X",
+  "I": "X",
+  "L": "X"
+ },
+ {
+  "_r": 116,
+  "B": "Migraña",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 117,
+  "B": "Cefaleas secundarias",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 118,
+  "B": "Enfrentamiento al mareo",
+  "F": "X",
+  "H": "X",
+  "J": "X"
+ },
+ {
+  "_r": 119,
+  "B": "Demencias",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 120,
+  "B": "Infección del Sistema Nerviosos Central",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 121,
+  "B": "Enfermedad de Parkinson",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 122,
+  "B": "Parkinsonismos",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 123,
+  "B": "Temblor",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 124,
+  "B": "Mono y polineuropatias. Radiculopatias",
+  "E": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 125,
+  "B": "Sd. Miopático",
+  "E": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 127,
+  "B": "Exámenes complementarios:"
+ },
+ {
+  "_r": 128,
+  "B": "Realizar e interpretar examen neurológico"
+ },
+ {
+  "_r": 129,
+  "B": "Indicaciones e interpretación de neuroimágenes (TAC, RM)"
+ },
+ {
+  "_r": 130,
+  "B": "Indicaciones de Electroencefalograma"
+ },
+ {
+  "_r": 131,
+  "B": "Indicaciones de Punción Lumbar e Interpretación de estudio de liquido cefaloraquideo"
+ },
+ {
+  "_r": 133,
+  "B": "GERIATRÍA"
+ },
+ {
+  "_r": 134,
+  "B": "Patología",
+  "D": "Fisiopatología",
+  "E": "Conocimiento General",
+  "F": "Diagnóstico",
+  "H": "Tratamiento",
+  "J": "Estudio Complicaciones",
+  "K": "Seguimiento"
+ },
+ {
+  "_r": 135,
+  "F": "Sospecha",
+  "G": "Específico",
+  "H": "Inicial",
+  "I": "Completo",
+  "K": "Derivar",
+  "L": "Crónico"
+ },
+ {
+  "_r": 136,
+  "B": "Demencias",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 137,
+  "B": "Delirium",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "K": "X"
+ },
+ {
+  "_r": 138,
+  "B": "Caídas",
+  "G": "X",
+  "I": "X",
+  "K": "X"
+ },
+ {
+  "_r": 139,
+  "B": "Constipación",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "L": "X"
+ },
+ {
+  "_r": 140,
+  "B": "Incontinencia Urinaria",
+  "G": "X",
+  "I": "X",
+  "K": "X"
+ },
+ {
+  "_r": 141,
+  "B": "Polifarmacia. Fármacos en AM",
+  "E": "X"
+ },
+ {
+  "_r": 142,
+  "B": "Fragilidad",
+  "G": "X",
+  "I": "X",
+  "L": "X"
+ },
+ {
+  "_r": 143,
+  "B": "Sd. de inmovilización",
+  "G": "X",
+  "I": "X",
+  "L": "X"
+ },
+ {
+  "_r": 145,
+  "B": "Exámenes complementarios:"
+ },
+ {
+  "_r": 146,
+  "B": "Realizar Valoración Geriátrica Integral: Valoración afectiva, cognitiva y funcional"
+ },
+ {
+  "_r": 147,
+  "B": "Valoración de la Marcha"
+ },
+ {
+  "_r": 150,
+  "B": "NUTRICIÓN Y DIABETES"
+ },
+ {
+  "_r": 151,
+  "B": "Patología",
+  "D": "Fisiopatología",
+  "E": "Conocimiento General",
+  "F": "Diagnóstico",
+  "H": "Tratamiento",
+  "J": "Estudio Complicaciones",
+  "K": "Seguimiento"
+ },
+ {
+  "_r": 152,
+  "F": "Sospecha",
+  "G": "Específico",
+  "H": "Inicial",
+  "I": "Completo",
+  "K": "Derivar",
+  "L": "Crónico"
+ },
+ {
+  "_r": 153,
+  "B": "Diabetes Mellitus Tipo 1",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 154,
+  "B": "Diabetes Mellitus Tipo 2",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "L": "X"
+ },
+ {
+  "_r": 156,
+  "B": "Daño Microvascular por DM",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 158,
+  "B": "Daño Macrovascular por DM",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 160,
+  "B": "Sd Diabético Agudo",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "L": "X"
+ },
+ {
+  "_r": 161,
+  "B": "Hiperglicemia en Paciente Hospitalizado",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 163,
+  "B": "Regímenes Dietéticos Fundamentales",
+  "E": "X"
+ },
+ {
+  "_r": 165,
+  "B": "Hipoglicemia",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 166,
+  "B": "Hipertrigliceridemia Severa",
+  "E": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 167,
+  "B": "Síndrome de Realimentación",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 170,
+  "B": "Temas complementarios a saber interpretar:"
+ },
+ {
+  "_r": 171,
+  "B": "● Farmacología Antidiabéticos orales y parenterales"
+ },
+ {
+  "_r": 172,
+  "B": "● Tipos de Insulina"
+ },
+ {
+  "_r": 174,
+  "B": "HEMATOLOGÍA"
+ },
+ {
+  "_r": 175,
+  "B": "Patología",
+  "D": "Fisiopatología",
+  "E": "Conocimiento General",
+  "F": "Diagnóstico",
+  "H": "Tratamiento",
+  "J": "Estudio Complicaciones",
+  "K": "Seguimiento"
+ },
+ {
+  "_r": 176,
+  "F": "Sospecha",
+  "G": "Específico",
+  "H": "Inicial",
+  "I": "Completo",
+  "K": "Derivar",
+  "L": "Crónico"
+ },
+ {
+  "_r": 177,
+  "B": "Anemia ferropénica",
+  "D": "X",
+  "F": "X",
+  "G": "X",
+  "I": "X",
+  "L": "X"
+ },
+ {
+  "_r": 178,
+  "B": "Anemia Hemolítica",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 179,
+  "B": "Anemia Megaloblastica",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "L": "X"
+ },
+ {
+  "_r": 180,
+  "B": "Anemia Inflamatorias (enf crónicas)",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "L": "X"
+ },
+ {
+  "_r": 181,
+  "B": "Trombocitopenia",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 182,
+  "B": "Coagulopatias",
+  "E": "X",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 183,
+  "B": "Trombofilias",
+  "E": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 184,
+  "B": "Leucemias",
+  "E": "X",
+  "F": "X",
+  "K": "X"
+ },
+ {
+  "_r": 185,
+  "B": "Linfomas",
+  "E": "X",
+  "F": "X",
+  "K": "X"
+ },
+ {
+  "_r": 186,
+  "B": "Paraproteinemias",
+  "D": "X",
+  "F": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 187,
+  "B": "Síndromes Mielodisplásicos",
+  "E": "X",
+  "F": "X",
+  "K": "X"
+ },
+ {
+  "_r": 188,
+  "B": "Síndromes Mieloproliferativos crónicos",
+  "E": "X",
+  "F": "X",
+  "K": "X"
+ },
+ {
+  "_r": 189,
+  "B": "Urgencias oncológicas (SVCS, Hipercalcemia, Sd Compresión medular)",
+  "E": "X",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 190,
+  "B": "Terapia transfusional  (Gatillos transfusionales)",
+  "E": "X"
+ },
+ {
+  "_r": 192,
+  "B": "Exámenes complementarios a saber interpretar:"
+ },
+ {
+  "_r": 194,
+  "B": "● Interpretación de hemograma y las principales alteraciones del frotis de sangre periférica"
+ },
+ {
+  "_r": 195,
+  "B": "● Interpretación de estudios de coagulación básicos"
+ },
+ {
+  "_r": 196,
+  "B": "● Indicaciones del Mielograma y Biopsia de Médula Ósea"
+ },
+ {
+  "_r": 197,
+  "B": "● Indicaciones e interpretación de la Electroforesis de proteínas"
+ },
+ {
+  "_r": 199,
+  "B": "REUMATOLOGÍA"
+ },
+ {
+  "_r": 200,
+  "B": "Patología",
+  "D": "Fisiopatología",
+  "E": "Conocimiento General",
+  "F": "Diagnóstico",
+  "H": "Tratamiento",
+  "J": "Estudio Complicaciones",
+  "K": "Seguimiento"
+ },
+ {
+  "_r": 201,
+  "F": "Sospecha",
+  "G": "Específico",
+  "H": "Inicial",
+  "I": "Completo",
+  "K": "Derivar",
+  "L": "Crónico"
+ },
+ {
+  "_r": 202,
+  "B": "Monoartritis",
+  "G": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 203,
+  "B": "Poliartritis",
+  "G": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 204,
+  "B": "Artritis séptica",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 205,
+  "B": "Artrosis",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "L": "X"
+ },
+ {
+  "_r": 206,
+  "B": "Lumbago mecánico",
+  "E": "X",
+  "G": "X",
+  "I": "X",
+  "L": "X"
+ },
+ {
+  "_r": 207,
+  "B": "Lumbago Inflamatorio",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 208,
+  "B": "Artropatía por cristales",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 209,
+  "B": "Fibromialgia",
+  "E": "X",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 210,
+  "B": "Artritis Reumatoide",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 211,
+  "B": "Lupus sistémico",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 212,
+  "B": "Miopatías Inflamatorias",
+  "E": "X",
+  "F": "X",
+  "K": "X"
+ },
+ {
+  "_r": 213,
+  "B": "Esclerodermia Sistémica (CREST & Difusa)",
+  "E": "X",
+  "F": "X",
+  "K": "X"
+ },
+ {
+  "_r": 214,
+  "B": "Espondiloartropatías",
+  "E": "X",
+  "F": "X",
+  "K": "X"
+ },
+ {
+  "_r": 215,
+  "B": "Vasculitis sistémicas",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 216,
+  "B": "Terapia esteroidal",
+  "D": "X",
+  "H": "X",
+  "J": "X"
+ },
+ {
+  "_r": 218,
+  "B": "Exámenes complementarios:"
+ },
+ {
+  "_r": 220,
+  "B": "● Indicaciones e interpretación de estudio de líquido sinovial"
+ },
+ {
+  "_r": 221,
+  "B": "● Indicaciones e interpretación de principales exámenes inmunológicos para el estudio de mesenquimopatías (ANA, Anti DNA, FR, ANCA, Complemento)."
+ },
+ {
+  "_r": 223,
+  "B": "ENFERMEDADES RESPIRATORIAS"
+ },
+ {
+  "_r": 224,
+  "B": "Patología",
+  "D": "Fisiopatología",
+  "E": "Conocimiento General",
+  "F": "Diagnóstico",
+  "H": "Tratamiento",
+  "J": "Estudio Complicaciones",
+  "K": "Seguimiento"
+ },
+ {
+  "_r": 225,
+  "F": "Sospecha",
+  "G": "Específico",
+  "H": "Inicial",
+  "I": "Completo",
+  "K": "Derivar",
+  "L": "Crónico"
+ },
+ {
+  "_r": 226,
+  "B": "Asma Bronquial",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "L": "X"
+ },
+ {
+  "_r": 227,
+  "B": "EPOC",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "L": "X"
+ },
+ {
+  "_r": 228,
+  "B": "Tabaquismo",
+  "D": "X",
+  "H": "X",
+  "J": "X",
+  "L": "X"
+ },
+ {
+  "_r": 229,
+  "B": "Bronquiectasias",
+  "E": "X",
+  "F": "X",
+  "K": "X"
+ },
+ {
+  "_r": 230,
+  "B": "Cor Pulmonale",
+  "D": "X",
+  "F": "X",
+  "K": "X"
+ },
+ {
+  "_r": 231,
+  "B": "EPD",
+  "E": "X",
+  "F": "X",
+  "K": "X"
+ },
+ {
+  "_r": 232,
+  "B": "Hipertensión pulmonar",
+  "D": "X",
+  "F": "X",
+  "K": "X"
+ },
+ {
+  "_r": 233,
+  "B": "TEP",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 234,
+  "B": "Hemoptisis",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 235,
+  "B": "Tos crónica",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 236,
+  "B": "SAHOS",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 237,
+  "B": "Cáncer Pulmonar",
+  "D": "X",
+  "F": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 238,
+  "B": "Neumonía Comunitaria",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "J": "X",
+  "L": "X"
+ },
+ {
+  "_r": 239,
+  "B": "Neumonia Intrahospitalaria",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 240,
+  "B": "Neumonia Inmunosuprimidos",
+  "D": "X",
+  "F": "X",
+  "H": "X",
+  "K": "X"
+ },
+ {
+  "_r": 241,
+  "B": "TBC pulmonar",
+  "D": "X",
+  "G": "X",
+  "I": "X",
+  "L": "X"
+ },
+ {
+  "_r": 242,
+  "B": "Derrame Pleural",
+  "D": "X",
+  "G": "X",
+  "H": "X",
+  "J": "X",
+  "K": "X"
+ },
+ {
+  "_r": 244,
+  "B": "Interpretación Exámenes complementarios:"
+ },
+ {
+  "_r": 245,
+  "B": "● Radiografía de tórax"
+ },
+ {
+  "_r": 246,
+  "B": "● Espirometría"
+ },
+ {
+  "_r": 247,
+  "B": "● Test de marcha"
+ },
+ {
+  "_r": 248,
+  "B": "● Interpretación de gasometría"
+ },
+ {
+  "_r": 249,
+  "B": "● Estudio de líquido pleural"
+ },
+ {
+  "_r": 251,
+  "B": "ENDOCRINOLOGÍA ",
+  "D": " ",
+  "E": " ",
+  "F": " ",
+  "G": " ",
+  "H": " ",
+  "I": " ",
+  "J": " ",
+  "K": " "
+ },
+ {
+  "_r": 253,
+  "B": "Patología",
+  "D": "Fisiopatología",
+  "E": "Conocimiento General",
+  "F": "Diagnóstico",
+  "H": "Tratamiento",
+  "J": "Estudio Complicaciones",
+  "K": "Seguimiento"
+ },
+ {
+  "_r": 254,
+  "F": "Sospecha",
+  "G": "Específico",
+  "H": "Inicial",
+  "I": "Completo",
+  "K": "Derivar",
+  "L": "Crónico"
+ },
+ {
+  "_r": 255,
+  "B": "Hipotiroidismo",
+  "D": "✔️",
+  "G": "✔️",
+  "I": "✔️",
+  "J": "✔️",
+  "L": "✔️"
+ },
+ {
+  "_r": 256,
+  "B": "Hipertiroidismo",
+  "D": "✔️",
+  "G": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 257,
+  "B": "Nódulo tiroideo y bocio",
+  "E": "✔️",
+  "F": "✔️",
+  "G": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 258,
+  "B": "Cáncer de tiroides",
+  "E": "✔️",
+  "G": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 259,
+  "B": "Hiper e Hipocalcemia",
+  "D": "✔️",
+  "G": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 260,
+  "B": "Osteoporosis",
+  "D": "✔️",
+  "G": "✔️",
+  "I": "✔️",
+  "J": "✔️",
+  "L": "✔️"
+ },
+ {
+  "_r": 261,
+  "B": "Sd. Cushing",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 262,
+  "B": "Insuficiencia suprarrenal aguda y crónica",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 263,
+  "B": "Hipertensión arterial de origen endocrino",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 264,
+  "B": "Patología Hipofisaria",
+  "E": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 265,
+  "B": "Terapia esteroidal",
+  "D": "✔️",
+  "G": "✔️",
+  "I": "✔️",
+  "J": "✔️",
+  "L": "✔️"
+ },
+ {
+  "_r": 266,
+  "B": "Amenorrea Climaterio",
+  "E": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 267,
+  "B": "SIADH",
+  "D": "✔️",
+  "G": "✔️",
+  "I": "✔️",
+  "J": "✔️",
+  "L": "✔️"
+ },
+ {
+  "_r": 268,
+  "B": "Diabetes Insípida ",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 270,
+  "B": "URGENCIAS",
+  "C": " ",
+  "D": " ",
+  "E": " ",
+  "F": " ",
+  "G": " ",
+  "H": " ",
+  "I": " ",
+  "J": " ",
+  "K": " "
+ },
+ {
+  "_r": 271,
+  "B": "Hipercalcemia aguda ",
+  "D": "✔️",
+  "G": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 272,
+  "B": "Mixedema",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 273,
+  "B": "Insuf. Suprarrenal Aguda",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 274,
+  "B": "Tormenta Tiroidea",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 276,
+  "B": "EXÁMENES E IMÁGENES "
+ },
+ {
+  "_r": 277,
+  "D": "Interpreta y emplea"
+ },
+ {
+  "_r": 278,
+  "B": "Ecografía Tiroidea",
+  "D": "✔️"
+ },
+ {
+  "_r": 279,
+  "B": "Densitometría Ósea",
+  "D": "✔️"
+ },
+ {
+  "_r": 280,
+  "B": "TSH, T4 y T3",
+  "D": "✔️"
+ },
+ {
+  "_r": 281,
+  "B": "T4 libre ",
+  "D": "✔️"
+ },
+ {
+  "_r": 282,
+  "B": "Ac antitiroideos",
+  "D": "✔️"
+ },
+ {
+  "_r": 283,
+  "B": "Cortisol (plasmático y 24hr)",
+  "D": "✔️"
+ },
+ {
+  "_r": 284,
+  "B": "FSH, LH, estradiol, Prolactina",
+  "D": "✔️"
+ },
+ {
+  "_r": 285,
+  "B": "PTH",
+  "D": "✔️"
+ },
+ {
+  "_r": 286,
+  "B": "Calciuria",
+  "D": "✔️"
+ },
+ {
+  "_r": 288,
+  "B": "ENFERMEDADES INFECCIOSAS",
+  "E": " ",
+  "F": " ",
+  "G": " ",
+  "H": " ",
+  "I": " ",
+  "J": " ",
+  "K": " "
+ },
+ {
+  "_r": 290,
+  "B": "Patología",
+  "D": "Fisiopatología",
+  "E": "Conocimiento General",
+  "F": "Diagnóstico",
+  "H": "Tratamiento",
+  "J": "Estudio Complicaciones",
+  "K": "Seguimiento"
+ },
+ {
+  "_r": 291,
+  "F": "Sospecha",
+  "G": "Específico",
+  "H": "Inicial",
+  "I": "Completo",
+  "K": "Derivar",
+  "L": "Crónico"
+ },
+ {
+  "_r": 292,
+  "B": "Infección piel y partes blandas",
+  "D": "✔️",
+  "G": "✔️",
+  "I": "✔️",
+  "J": "✔️",
+  "L": "✔️"
+ },
+ {
+  "_r": 293,
+  "B": "Infecciones respiratorias altas",
+  "D": "✔️",
+  "G": "✔️",
+  "I": "✔️",
+  "J": "✔️",
+  "L": "✔️"
+ },
+ {
+  "_r": 294,
+  "B": "ITU",
+  "D": "✔️",
+  "G": "✔️",
+  "I": "✔️",
+  "J": "✔️",
+  "L": "✔️"
+ },
+ {
+  "_r": 295,
+  "B": "ITS (Infecciones de transmisión sexual)",
+  "D": "✔️",
+  "G": "✔️",
+  "I": "✔️",
+  "J": "✔️",
+  "L": "✔️"
+ },
+ {
+  "_r": 296,
+  "B": "Sifilis",
+  "E": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 297,
+  "B": "Infecciones osteoarticulares",
+  "E": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 298,
+  "B": "Infecciones en Inmunosuprimidos no VIH",
+  "E": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 299,
+  "B": "VIH / SIDA",
+  "D": "✔️",
+  "G": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 300,
+  "B": "Complicaciones SIDA",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 301,
+  "B": "Sepsis y Shock séptico FOD",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 302,
+  "B": "Sd. Mononucleosico Influenza",
+  "D": "✔️",
+  "G": "✔️",
+  "I": "✔️",
+  "J": "✔️",
+  "L": "✔️"
+ },
+ {
+  "_r": 303,
+  "B": "Micosis Invasoras",
+  "E": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 304,
+  "B": "Candidiasis oral y esofágica",
+  "D": "✔️",
+  "G": "✔️",
+  "I": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 305,
+  "B": "TBC extrapulmonar",
+  "E": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 306,
+  "B": "Varicela, herpes zoster, herpes simplex",
+  "E": "✔️",
+  "G": "✔️",
+  "I": "✔️",
+  "J": "✔️",
+  "L": "✔️"
+ },
+ {
+  "_r": 307,
+  "B": "Infecciones SNC",
+  "D": "✔️",
+  "F": "✔️",
+  "I": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 308,
+  "B": "Infecciones Nosocomiales",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 309,
+  "B": "Neutropenia febril",
+  "D": "✔️",
+  "G": "✔️",
+  "I": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 310,
+  "B": "Leptospirosis, brucelosis, malaria,",
+  "E": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 311,
+  "B": "Mordedura animales",
+  "D": "✔️"
+ },
+ {
+  "_r": 312,
+  "B": "Dengue, cólera",
+  "E": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 313,
+  "B": "Vacunas: neumococo, influenza, hepatitis, varicela, rabia, meningococo, PAI)",
+  "D": "✔️"
+ },
+ {
+  "_r": 314,
+  "B": "Adenitis, amigdalitis, flegmón",
+  "D": "✔️",
+  "G": "✔️",
+  "I": "✔️",
+  "J": "✔️",
+  "L": "✔️"
+ },
+ {
+  "_r": 315,
+  "B": "Diarrea asociada a ATB",
+  "D": "✔️",
+  "G": "✔️",
+  "I": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 316,
+  "B": "Infecciones asociadas a catéteres ",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 317,
+  "B": "Osteomielitis",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 318,
+  "B": "Sd febril prolongado",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 320,
+  "B": "URGENCIAS",
+  "C": " ",
+  "D": " ",
+  "E": " ",
+  "F": " ",
+  "G": " ",
+  "H": " ",
+  "I": " ",
+  "J": " ",
+  "K": " "
+ },
+ {
+  "_r": 321,
+  "B": "Absceso cerebral",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 322,
+  "B": "Encefalitis Aguda",
+  "D": "✔️",
+  "G": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 323,
+  "B": "Endocarditis bacteriana",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 324,
+  "B": "Infección invasiva de partes blandas",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 325,
+  "B": "Meningitis aguda ",
+  "D": "✔️",
+  "G": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 326,
+  "B": "Hanta",
+  "D": "✔️",
+  "F": "✔️",
+  "H": "✔️",
+  "J": "✔️",
+  "K": "✔️"
+ },
+ {
+  "_r": 328,
+  "B": "EXÁMENES E IMÁGENES "
+ },
+ {
+  "_r": 329,
+  "D": "Interpreta y emplea"
+ },
+ {
+  "_r": 330,
+  "B": "Antigenemia",
+  "D": "✔️"
+ },
+ {
+  "_r": 331,
+  "B": "Cultivos (sangre, heridas, hongos, expectoración, orina)",
+  "D": "✔️"
+ },
+ {
+  "_r": 332,
+  "B": "Antígenos en LCR y tinciones",
+  "D": "✔️"
+ },
+ {
+  "_r": 333,
+  "B": "Detección viral por inmunofluorescencia",
+  "D": "✔️"
+ },
+ {
+  "_r": 334,
+  "B": "Gram ",
+  "D": "✔️"
+ },
+ {
+  "_r": 335,
+  "B": "Hemograma y VHS",
+  "D": "✔️"
+ },
+ {
+  "_r": 336,
+  "B": "Proteína C reactiva",
+  "D": "✔️"
+ },
+ {
+  "_r": 337,
+  "B": "Pro calcitonina",
+  "D": "✔️"
+ },
+ {
+  "_r": 338,
+  "B": "Parasitologico en deposiciones ",
+  "D": "✔️"
+ },
+ {
+  "_r": 339,
+  "B": "Aglutinación en meningitis ",
+  "D": "✔️"
+ },
+ {
+  "_r": 340,
+  "B": "Reacción de polimerasa en cadena ",
+  "D": "✔️"
+ },
+ {
+  "_r": 341,
+  "B": "Serologia de enfermedades infecciosas ",
+  "D": "✔️"
+ },
+ {
+  "_r": 342,
+  "B": "Antibiograma ",
+  "D": "✔️"
+ }
+]

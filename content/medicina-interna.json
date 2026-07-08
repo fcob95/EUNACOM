@@ -1,0 +1,2788 @@
+{
+  "area": "Medicina Interna",
+  "specialties": [
+    {
+      "name": "Cardiología",
+      "sort_order": 1,
+      "items": [
+        {
+          "title": "Angina Estable",
+          "type": "tema",
+          "sort_order": 1,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.01.1.001",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Síndrome Coronario Agudo",
+          "type": "tema",
+          "sort_order": 2,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.01.2.001",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.01.2.004",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Insuficiencia Cardíaca Crónica Descompensada",
+          "type": "tema",
+          "sort_order": 3,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.01.1.018",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.01.2.005",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Valvulopatías",
+          "type": "tema",
+          "sort_order": 4,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.01.1.009",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.01.1.010",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.01.1.017",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.01.1.019",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.01.1.021",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Fibrilación Auricular",
+          "type": "tema",
+          "sort_order": 5,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.01.1.012",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.01.1.013",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Enfermedades del Pericardio",
+          "type": "tema",
+          "sort_order": 6,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.01.1.022",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.01.2.008",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Miocardiopatías (Hipertrófica-Dilatada)",
+          "type": "tema",
+          "sort_order": 7,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.01.1.020",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Enfermedad Tromboembólica",
+          "type": "tema",
+          "sort_order": 8,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.01.1.006",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Farmacología Cardiovascular",
+          "type": "tema",
+          "sort_order": 9,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": []
+        },
+        {
+          "title": "Enfermedad del Sistema Excito Conductor",
+          "type": "tema",
+          "sort_order": 10,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.01.1.002",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.01.1.011",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.01.1.014",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.01.1.024",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.01.2.009",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Electrocardiograma",
+          "type": "examen_complementario",
+          "sort_order": 11,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.01.4.007",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Radiografía de Tórax",
+          "type": "examen_complementario",
+          "sort_order": 12,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.01.4.003",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Enzimas y péptidos cardiacos",
+          "type": "examen_complementario",
+          "sort_order": 13,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.01.4.009",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Ecocardiograma",
+          "type": "examen_complementario",
+          "sort_order": 14,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.01.4.006",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Estudidos Funcionales y Anatómicos para Angina",
+          "type": "examen_complementario",
+          "sort_order": 15,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.01.4.008",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.01.4.001",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.01.4.005",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Dispositivos cardíacos (marcapasos, resincronizador, DAI)",
+          "type": "examen_complementario",
+          "sort_order": 16,
+          "requirements": [],
+          "eunacom_codes": []
+        }
+      ]
+    },
+    {
+      "name": "Nefrología",
+      "sort_order": 2,
+      "items": [
+        {
+          "title": "Trastornos del Potasio",
+          "type": "tema",
+          "sort_order": 1,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.09.2.005",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.09.2.006",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Trastornos del sodio y agua",
+          "type": "tema",
+          "sort_order": 2,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.09.1.007",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.09.1.010",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.09.2.007",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.09.2.008",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Trastornos ácido-base",
+          "type": "tema",
+          "sort_order": 3,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.09.1.002",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.09.1.003",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Injuria Renal Aguda",
+          "type": "tema",
+          "sort_order": 4,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.09.2.004",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.09.2.009",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.09.2.010",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Enfermedad Renal Crónica",
+          "type": "tema",
+          "sort_order": 5,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.09.1.012",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.09.1.017",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Hipertensión Arterial Esencial",
+          "type": "tema",
+          "sort_order": 6,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.09.1.008",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Hipertensión Secundaria",
+          "type": "tema",
+          "sort_order": 7,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.09.1.009",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Sindrome Nefrótico",
+          "type": "tema",
+          "sort_order": 8,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.09.1.022",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Glomerulonefritis",
+          "type": "tema",
+          "sort_order": 9,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.09.1.021",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.09.2.013",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Diálisis y complicaciones",
+          "type": "tema",
+          "sort_order": 10,
+          "requirements": [
+            "conocimiento_general"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.09.3.004",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Trasplante Renal (indicaciones)",
+          "type": "tema",
+          "sort_order": 11,
+          "requirements": [
+            "conocimiento_general"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.09.3.011",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Interacciones farmacológicas y riñón (más frecuentes)",
+          "type": "tema",
+          "sort_order": 12,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.09.3.001",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.09.3.007",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Complicaciones renales de patologías sistémicas",
+          "type": "tema",
+          "sort_order": 13,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.09.1.014",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.09.1.006",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Ecografía renal (significado de tamaño renal, asimetrías, hidronefrosis etc...)",
+          "type": "examen_complementario",
+          "sort_order": 14,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.09.4.005",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Electrolitos urinarios y creatininuria",
+          "type": "examen_complementario",
+          "sort_order": 15,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.09.4.016",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.09.4.009",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Albuminuria y Proteinuria",
+          "type": "examen_complementario",
+          "sort_order": 16,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.09.4.015",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Examen de Orina Completa y Urocultivo",
+          "type": "examen_complementario",
+          "sort_order": 17,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.09.4.012",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.09.4.017",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Biopsia Renal",
+          "type": "examen_complementario",
+          "sort_order": 18,
+          "requirements": [],
+          "eunacom_codes": []
+        }
+      ]
+    },
+    {
+      "name": "Gastroenterología",
+      "sort_order": 3,
+      "items": [
+        {
+          "title": "Cirrosis (DHC)",
+          "type": "tema",
+          "sort_order": 1,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.005",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.06.1.022",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Complicaciones DHC",
+          "type": "tema",
+          "sort_order": 2,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.001",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.06.2.006",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.06.2.011",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.06.2.012",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Hepatitis virales",
+          "type": "tema",
+          "sort_order": 3,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.019",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.06.1.020",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.06.1.021",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "DILI/HILI (Drug & herb induced liver injury)",
+          "type": "tema",
+          "sort_order": 4,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.020",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Enfermedades Hepáticas Autoinmunes",
+          "type": "tema",
+          "sort_order": 5,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": []
+        },
+        {
+          "title": "Enfermedad higado graso asociada a Disf Metabólica",
+          "type": "tema",
+          "sort_order": 6,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.3.006",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Insuficiencia hepática aguda",
+          "type": "tema",
+          "sort_order": 7,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.2.009",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "LOES hepáticas",
+          "type": "tema",
+          "sort_order": 8,
+          "requirements": [
+            "conocimiento_general",
+            "dx_sospecha",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.024",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Pancreatitis aguda",
+          "type": "tema",
+          "sort_order": 9,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.2.010",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Pancreatitis crónica",
+          "type": "tema",
+          "sort_order": 10,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.025",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Cancer de Pancreas",
+          "type": "tema",
+          "sort_order": 11,
+          "requirements": [
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.002",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "ERGE",
+          "type": "tema",
+          "sort_order": 12,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.027",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Dispepsia",
+          "type": "tema",
+          "sort_order": 13,
+          "requirements": [
+            "dx_especifico",
+            "tto_completo",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.014",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Enfermedad Úlcero Péptica",
+          "type": "tema",
+          "sort_order": 14,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.030",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Alteración del laboratorio hepático (sintomático y asintomático)",
+          "type": "tema",
+          "sort_order": 15,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.007",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Cáncer Gástrico",
+          "type": "tema",
+          "sort_order": 16,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.004",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Hemorragia digestiva Alta",
+          "type": "tema",
+          "sort_order": 17,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.2.007",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Diarrea aguda",
+          "type": "tema",
+          "sort_order": 18,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.2.005",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Diarrea Crónica",
+          "type": "tema",
+          "sort_order": 19,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.011",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Enfermedad Celiaca",
+          "type": "tema",
+          "sort_order": 20,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.015",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Síndromes Malabsortivos",
+          "type": "tema",
+          "sort_order": 21,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.028",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Parasitosis Intestinales",
+          "type": "tema",
+          "sort_order": 22,
+          "requirements": [
+            "dx_especifico",
+            "tto_completo",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.026",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Enfermedad Inflamatoria Intestinal",
+          "type": "tema",
+          "sort_order": 23,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.018",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Síndrome de Intestino Irritable",
+          "type": "tema",
+          "sort_order": 24,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.008",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Cáncer de colon",
+          "type": "tema",
+          "sort_order": 25,
+          "requirements": [
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.1.029",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Vacunación Hepatitis A y B",
+          "type": "tema",
+          "sort_order": 26,
+          "requirements": [
+            "conocimiento_general"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.3.001",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Epidemiología de Cánceres y tamizaje de Tumores Digestivos",
+          "type": "tema",
+          "sort_order": 27,
+          "requirements": [
+            "conocimiento_general"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.06.3.003",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.06.3.004",
+              "confidence": "suggested"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Neurología",
+      "sort_order": 4,
+      "items": [
+        {
+          "title": "Compromiso de conciencia",
+          "type": "tema",
+          "sort_order": 1,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.10.1.002",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "ACV isquémico",
+          "type": "tema",
+          "sort_order": 2,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.10.2.007",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "ACV hemorrágico",
+          "type": "tema",
+          "sort_order": 3,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.10.2.007",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.10.2.008",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Síndrome Convulsivo",
+          "type": "tema",
+          "sort_order": 4,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.10.1.007",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.10.1.022",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.10.2.003",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Cefaleas Tensional",
+          "type": "tema",
+          "sort_order": 5,
+          "requirements": [
+            "dx_especifico",
+            "tto_completo",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.10.1.001",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Migraña",
+          "type": "tema",
+          "sort_order": 6,
+          "requirements": [
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.10.1.012",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Cefaleas secundarias",
+          "type": "tema",
+          "sort_order": 7,
+          "requirements": [
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.10.2.001",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Enfrentamiento al mareo",
+          "type": "tema",
+          "sort_order": 8,
+          "requirements": [
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.10.1.024",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.10.1.025",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Demencias",
+          "type": "tema",
+          "sort_order": 9,
+          "requirements": [
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.10.1.005",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Infección del Sistema Nerviosos Central",
+          "type": "tema",
+          "sort_order": 10,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.10.2.014",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.10.2.016",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Enfermedad de Parkinson",
+          "type": "tema",
+          "sort_order": 11,
+          "requirements": [
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.10.1.006",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Parkinsonismos",
+          "type": "tema",
+          "sort_order": 12,
+          "requirements": [
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.10.1.006",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Temblor",
+          "type": "tema",
+          "sort_order": 13,
+          "requirements": [
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.10.1.026",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Mono y polineuropatias. Radiculopatias",
+          "type": "tema",
+          "sort_order": 14,
+          "requirements": [
+            "conocimiento_general",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.10.1.017",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.10.1.014",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Sd. Miopático",
+          "type": "tema",
+          "sort_order": 15,
+          "requirements": [
+            "conocimiento_general",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.10.1.021",
+              "confidence": "suggested"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Geriatría",
+      "sort_order": 5,
+      "items": [
+        {
+          "title": "Demencias",
+          "type": "tema",
+          "sort_order": 1,
+          "requirements": [
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.07.1.003",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Delirium",
+          "type": "tema",
+          "sort_order": 2,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.07.2.005",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Caídas",
+          "type": "tema",
+          "sort_order": 3,
+          "requirements": [
+            "dx_especifico",
+            "tto_completo",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.07.1.001",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Constipación",
+          "type": "tema",
+          "sort_order": 4,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.07.1.002",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Incontinencia Urinaria",
+          "type": "tema",
+          "sort_order": 5,
+          "requirements": [
+            "dx_especifico",
+            "tto_completo",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.07.1.012",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Polifarmacia. Fármacos en AM",
+          "type": "tema",
+          "sort_order": 6,
+          "requirements": [
+            "conocimiento_general"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.07.3.007",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Fragilidad",
+          "type": "tema",
+          "sort_order": 7,
+          "requirements": [
+            "dx_especifico",
+            "tto_completo",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.07.1.008",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Sd. de inmovilización",
+          "type": "tema",
+          "sort_order": 8,
+          "requirements": [
+            "dx_especifico",
+            "tto_completo",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.07.1.013",
+              "confidence": "suggested"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nutrición y Diabetes",
+      "sort_order": 6,
+      "items": [
+        {
+          "title": "Diabetes Mellitus Tipo 1",
+          "type": "tema",
+          "sort_order": 1,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.02.1.004",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Diabetes Mellitus Tipo 2",
+          "type": "tema",
+          "sort_order": 2,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.02.1.005",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Daño Microvascular por DM",
+          "type": "tema",
+          "sort_order": 3,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.02.1.011",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.02.1.015",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.02.1.010",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Daño Macrovascular por DM",
+          "type": "tema",
+          "sort_order": 4,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.02.1.019",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.02.1.008",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Sd Diabético Agudo",
+          "type": "tema",
+          "sort_order": 5,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.02.2.002",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.02.2.003",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.02.2.007",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Hiperglicemia en Paciente Hospitalizado",
+          "type": "tema",
+          "sort_order": 6,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.02.1.006",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Regímenes Dietéticos Fundamentales",
+          "type": "tema",
+          "sort_order": 7,
+          "requirements": [
+            "conocimiento_general"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.02.3.010",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Hipoglicemia",
+          "type": "tema",
+          "sort_order": 8,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.02.2.006",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Hipertrigliceridemia Severa",
+          "type": "tema",
+          "sort_order": 9,
+          "requirements": [
+            "conocimiento_general",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.02.2.005",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Síndrome de Realimentación",
+          "type": "tema",
+          "sort_order": 10,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.02.2.004",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Farmacología Antidiabéticos orales y parenterales",
+          "type": "examen_complementario",
+          "sort_order": 11,
+          "requirements": [],
+          "eunacom_codes": []
+        },
+        {
+          "title": "Tipos de Insulina",
+          "type": "examen_complementario",
+          "sort_order": 12,
+          "requirements": [],
+          "eunacom_codes": []
+        }
+      ]
+    },
+    {
+      "name": "Hematología",
+      "sort_order": 7,
+      "items": [
+        {
+          "title": "Anemia ferropénica",
+          "type": "tema",
+          "sort_order": 1,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "dx_especifico",
+            "tto_completo",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.08.1.002",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Anemia Hemolítica",
+          "type": "tema",
+          "sort_order": 2,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.08.1.003",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Anemia Megaloblastica",
+          "type": "tema",
+          "sort_order": 3,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.08.1.004",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Anemia Inflamatorias (enf crónicas)",
+          "type": "tema",
+          "sort_order": 4,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.08.1.001",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Trombocitopenia",
+          "type": "tema",
+          "sort_order": 5,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.08.1.012",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.08.2.009",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Coagulopatias",
+          "type": "tema",
+          "sort_order": 6,
+          "requirements": [
+            "conocimiento_general",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.08.1.005",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.08.1.006",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Trombofilias",
+          "type": "tema",
+          "sort_order": 7,
+          "requirements": [
+            "conocimiento_general",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.08.1.019",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Leucemias",
+          "type": "tema",
+          "sort_order": 8,
+          "requirements": [
+            "conocimiento_general",
+            "dx_sospecha",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.08.1.009",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.08.1.010",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Linfomas",
+          "type": "tema",
+          "sort_order": 9,
+          "requirements": [
+            "conocimiento_general",
+            "dx_sospecha",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.08.1.011",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Paraproteinemias",
+          "type": "tema",
+          "sort_order": 10,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.08.1.007",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Síndromes Mielodisplásicos",
+          "type": "tema",
+          "sort_order": 11,
+          "requirements": [
+            "conocimiento_general",
+            "dx_sospecha",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.08.1.017",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Síndromes Mieloproliferativos crónicos",
+          "type": "tema",
+          "sort_order": 12,
+          "requirements": [
+            "conocimiento_general",
+            "dx_sospecha",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.08.1.018",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Urgencias oncológicas (SVCS, Hipercalcemia, Sd Compresión medular)",
+          "type": "tema",
+          "sort_order": 13,
+          "requirements": [
+            "conocimiento_general",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.08.2.008",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.08.2.004",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.08.2.007",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Terapia transfusional  (Gatillos transfusionales)",
+          "type": "tema",
+          "sort_order": 14,
+          "requirements": [
+            "conocimiento_general"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.08.3.005",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.08.3.011",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Interpretación de hemograma y las principales alteraciones del frotis de sangre periférica",
+          "type": "examen_complementario",
+          "sort_order": 15,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.08.4.008",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Interpretación de estudios de coagulación básicos",
+          "type": "examen_complementario",
+          "sort_order": 16,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.08.4.005",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Indicaciones del Mielograma y Biopsia de Médula Ósea",
+          "type": "examen_complementario",
+          "sort_order": 17,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.08.4.009",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.08.4.003",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Indicaciones e interpretación de la Electroforesis de proteínas",
+          "type": "examen_complementario",
+          "sort_order": 18,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.08.4.004",
+              "confidence": "suggested"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reumatología",
+      "sort_order": 8,
+      "items": [
+        {
+          "title": "Monoartritis",
+          "type": "tema",
+          "sort_order": 1,
+          "requirements": [
+            "dx_especifico",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.11.1.015",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Poliartritis",
+          "type": "tema",
+          "sort_order": 2,
+          "requirements": [
+            "dx_especifico",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.11.1.019",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Artritis séptica",
+          "type": "tema",
+          "sort_order": 3,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.11.2.001",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Artrosis",
+          "type": "tema",
+          "sort_order": 4,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.11.1.004",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Lumbago mecánico",
+          "type": "tema",
+          "sort_order": 5,
+          "requirements": [
+            "conocimiento_general",
+            "dx_especifico",
+            "tto_completo",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.11.1.013",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Lumbago Inflamatorio",
+          "type": "tema",
+          "sort_order": 6,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.11.1.018",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Artropatía por cristales",
+          "type": "tema",
+          "sort_order": 7,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.11.1.007",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.11.2.002",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Fibromialgia",
+          "type": "tema",
+          "sort_order": 8,
+          "requirements": [
+            "conocimiento_general",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.11.1.010",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Artritis Reumatoide",
+          "type": "tema",
+          "sort_order": 9,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.11.1.003",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Lupus sistémico",
+          "type": "tema",
+          "sort_order": 10,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.11.1.014",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Miopatías Inflamatorias",
+          "type": "tema",
+          "sort_order": 11,
+          "requirements": [
+            "conocimiento_general",
+            "dx_sospecha",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.11.1.020",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Esclerodermia Sistémica (CREST & Difusa)",
+          "type": "tema",
+          "sort_order": 12,
+          "requirements": [
+            "conocimiento_general",
+            "dx_sospecha",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.11.1.009",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Espondiloartropatías",
+          "type": "tema",
+          "sort_order": 13,
+          "requirements": [
+            "conocimiento_general",
+            "dx_sospecha",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.11.1.018",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.11.1.001",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.11.1.002",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Vasculitis sistémicas",
+          "type": "tema",
+          "sort_order": 14,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.11.1.025",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Terapia esteroidal",
+          "type": "tema",
+          "sort_order": 15,
+          "requirements": [
+            "fisiopatologia",
+            "tto_inicial",
+            "estudio_complicaciones"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.11.3.002",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Indicaciones e interpretación de estudio de líquido sinovial",
+          "type": "examen_complementario",
+          "sort_order": 16,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.11.4.002",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Indicaciones e interpretación de principales exámenes inmunológicos para el estudio de mesenquimopatías (ANA, Anti DNA, FR, ANCA, Complemento).",
+          "type": "examen_complementario",
+          "sort_order": 17,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.11.4.003",
+              "confidence": "suggested"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Enfermedades Respiratorias",
+      "sort_order": 9,
+      "items": [
+        {
+          "title": "Asma Bronquial",
+          "type": "tema",
+          "sort_order": 1,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.003",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.05.1.002",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "EPOC",
+          "type": "tema",
+          "sort_order": 2,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.017",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.05.1.016",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Tabaquismo",
+          "type": "tema",
+          "sort_order": 3,
+          "requirements": [
+            "fisiopatologia",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.3.004",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Bronquiectasias",
+          "type": "tema",
+          "sort_order": 4,
+          "requirements": [
+            "conocimiento_general",
+            "dx_sospecha",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.004",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Cor Pulmonale",
+          "type": "tema",
+          "sort_order": 5,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.008",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "EPD",
+          "type": "tema",
+          "sort_order": 6,
+          "requirements": [
+            "conocimiento_general",
+            "dx_sospecha",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.018",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Hipertensión pulmonar",
+          "type": "tema",
+          "sort_order": 7,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.021",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "TEP",
+          "type": "tema",
+          "sort_order": 8,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.015",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.05.2.005",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Hemoptisis",
+          "type": "tema",
+          "sort_order": 9,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.019",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.05.2.007",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Tos crónica",
+          "type": "tema",
+          "sort_order": 10,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.035",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "SAHOS",
+          "type": "tema",
+          "sort_order": 11,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.033",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Cáncer Pulmonar",
+          "type": "tema",
+          "sort_order": 12,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.007",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.05.1.038",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Neumonía Comunitaria",
+          "type": "tema",
+          "sort_order": 13,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "estudio_complicaciones",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.027",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.05.1.028",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Neumonia Intrahospitalaria",
+          "type": "tema",
+          "sort_order": 14,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.030",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Neumonia Inmunosuprimidos",
+          "type": "tema",
+          "sort_order": 15,
+          "requirements": [
+            "fisiopatologia",
+            "dx_sospecha",
+            "tto_inicial",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.029",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "TBC pulmonar",
+          "type": "tema",
+          "sort_order": 16,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_completo",
+            "seguimiento_cronico"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.036",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.05.1.037",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Derrame Pleural",
+          "type": "tema",
+          "sort_order": 17,
+          "requirements": [
+            "fisiopatologia",
+            "dx_especifico",
+            "tto_inicial",
+            "estudio_complicaciones",
+            "seguimiento_derivar"
+          ],
+          "eunacom_codes": [
+            {
+              "code": "1.05.1.012",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.05.1.011",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.05.1.010",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.05.1.013",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Radiografía de tórax",
+          "type": "examen_complementario",
+          "sort_order": 18,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.05.4.001",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Espirometría",
+          "type": "examen_complementario",
+          "sort_order": 19,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.05.4.005",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Test de marcha",
+          "type": "examen_complementario",
+          "sort_order": 20,
+          "requirements": [],
+          "eunacom_codes": []
+        },
+        {
+          "title": "Interpretación de gasometría",
+          "type": "examen_complementario",
+          "sort_order": 21,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.05.4.010",
+              "confidence": "suggested"
+            }
+          ]
+        },
+        {
+          "title": "Estudio de líquido pleural",
+          "type": "examen_complementario",
+          "sort_order": 22,
+          "requirements": [],
+          "eunacom_codes": [
+            {
+              "code": "1.05.4.007",
+              "confidence": "suggested"
+            },
+            {
+              "code": "1.05.4.008",
+              "confidence": "suggested"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Endocrinología",
+      "sort_order": 10,
+      "items": []
+    },
+    {
+      "name": "Urgencias",
+      "sort_order": 11,
+      "items": []
+    },
+    {
+      "name": "Enfermedades Infecciosas",
+      "sort_order": 12,
+      "items": []
+    }
+  ]
+}

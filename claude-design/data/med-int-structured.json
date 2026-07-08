@@ -1,0 +1,1333 @@
+[
+ {
+  "nombre": "CARDIOLOGÍA",
+  "temas": [
+   {
+    "titulo": "Angina Estable",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Síndrome Coronario Agudo",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Insuficiencia Cardíaca Crónica Descompensada",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Valvulopatías",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Fibrilación Auricular",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Enfermedades del Pericardio",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Miocardiopatías (Hipertrófica-Dilatada)",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Enfermedad Tromboembólica",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Farmacología Cardiovascular",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Enfermedad del Sistema Excito Conductor",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   }
+  ],
+  "examenes": [
+   {
+    "titulo": "Electrocardiograma",
+    "nota": ""
+   },
+   {
+    "titulo": "Radiografía de Tórax",
+    "nota": "● Uso de fármacos en patología cardiaca frecunte"
+   },
+   {
+    "titulo": "Enzimas y péptidos cardiacos",
+    "nota": "ICC, Angina estable, SCA, etc"
+   },
+   {
+    "titulo": "Ecocardiograma",
+    "nota": ""
+   },
+   {
+    "titulo": "Estudidos Funcionales y Anatómicos para Angina",
+    "nota": ""
+   },
+   {
+    "titulo": "Dispositivos cardíacos (marcapasos, resincronizador, DAI)",
+    "nota": ""
+   }
+  ]
+ },
+ {
+  "nombre": "NEFROLOGÍA",
+  "temas": [
+   {
+    "titulo": "Trastornos del Potasio",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Trastornos del sodio y agua",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Trastornos ácido-base",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Injuria Renal Aguda",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Enfermedad Renal Crónica",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Hipertensión Arterial Esencial",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Hipertensión Secundaria",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Sindrome Nefrótico",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Glomerulonefritis",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Diálisis y complicaciones",
+    "matrix": [
+     "conocimiento"
+    ]
+   },
+   {
+    "titulo": "Trasplante Renal (indicaciones)",
+    "matrix": [
+     "conocimiento"
+    ]
+   },
+   {
+    "titulo": "Interacciones farmacológicas y riñón (más frecuentes)",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Complicaciones renales de patologías sistémicas",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   }
+  ],
+  "examenes": [
+   {
+    "titulo": "Ecografía renal (significado de tamaño renal, asimetrías, hidronefrosis etc...)",
+    "nota": ""
+   },
+   {
+    "titulo": "Electrolitos urinarios y creatininuria",
+    "nota": ""
+   },
+   {
+    "titulo": "Albuminuria y Proteinuria",
+    "nota": ""
+   },
+   {
+    "titulo": "Examen de Orina Completa y Urocultivo",
+    "nota": ""
+   },
+   {
+    "titulo": "Biopsia Renal",
+    "nota": ""
+   }
+  ]
+ },
+ {
+  "nombre": "GASTROENTEROLOGÍA",
+  "temas": [
+   {
+    "titulo": "Cirrosis (DHC)",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Complicaciones DHC",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Hepatitis virales",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "DILI/HILI (Drug & herb induced liver injury)",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Enfermedades Hepáticas Autoinmunes",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Enfermedad higado graso asociada a Disf Metabólica",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Insuficiencia hepática aguda",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "LOES hepáticas",
+    "matrix": [
+     "conocimiento",
+     "dx_sospecha",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Pancreatitis aguda",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Pancreatitis crónica",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Cancer de Pancreas",
+    "matrix": [
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "ERGE",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Dispepsia",
+    "matrix": [
+     "dx_especifico",
+     "tx_completo",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Enfermedad Úlcero Péptica",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Alteración del laboratorio hepático (sintomático y asintomático)",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Cáncer Gástrico",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Hemorragia digestiva Alta",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Diarrea aguda",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Diarrea Crónica",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Enfermedad Celiaca",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Síndromes Malabsortivos",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Parasitosis Intestinales",
+    "matrix": [
+     "dx_especifico",
+     "tx_completo",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Enfermedad Inflamatoria Intestinal",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Síndrome de Intestino Irritable",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Cáncer de colon",
+    "matrix": [
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Vacunación Hepatitis A y B",
+    "matrix": [
+     "conocimiento"
+    ]
+   },
+   {
+    "titulo": "Epidemiología de Cánceres y tamizaje de Tumores Digestivos",
+    "matrix": [
+     "conocimiento"
+    ]
+   }
+  ],
+  "examenes": []
+ },
+ {
+  "nombre": "NEUROLOGÍA",
+  "temas": [
+   {
+    "titulo": "Compromiso de conciencia",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "ACV isquémico",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "ACV hemorrágico",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Síndrome Convulsivo",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Cefaleas Tensional",
+    "matrix": [
+     "dx_especifico",
+     "tx_completo",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Migraña",
+    "matrix": [
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Cefaleas secundarias",
+    "matrix": [
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Enfrentamiento al mareo",
+    "matrix": [
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones"
+    ]
+   },
+   {
+    "titulo": "Demencias",
+    "matrix": [
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Infección del Sistema Nerviosos Central",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Enfermedad de Parkinson",
+    "matrix": [
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Parkinsonismos",
+    "matrix": [
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Temblor",
+    "matrix": [
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Mono y polineuropatias. Radiculopatias",
+    "matrix": [
+     "conocimiento",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Sd. Miopático",
+    "matrix": [
+     "conocimiento",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   }
+  ],
+  "examenes": []
+ },
+ {
+  "nombre": "GERIATRÍA",
+  "temas": [
+   {
+    "titulo": "Demencias",
+    "matrix": [
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Delirium",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Caídas",
+    "matrix": [
+     "dx_especifico",
+     "tx_completo",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Constipación",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Incontinencia Urinaria",
+    "matrix": [
+     "dx_especifico",
+     "tx_completo",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Polifarmacia. Fármacos en AM",
+    "matrix": [
+     "conocimiento"
+    ]
+   },
+   {
+    "titulo": "Fragilidad",
+    "matrix": [
+     "dx_especifico",
+     "tx_completo",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Sd. de inmovilización",
+    "matrix": [
+     "dx_especifico",
+     "tx_completo",
+     "seg_cronico"
+    ]
+   }
+  ],
+  "examenes": []
+ },
+ {
+  "nombre": "NUTRICIÓN Y DIABETES",
+  "temas": [
+   {
+    "titulo": "Diabetes Mellitus Tipo 1",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Diabetes Mellitus Tipo 2",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Daño Microvascular por DM",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Daño Macrovascular por DM",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Sd Diabético Agudo",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Hiperglicemia en Paciente Hospitalizado",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Regímenes Dietéticos Fundamentales",
+    "matrix": [
+     "conocimiento"
+    ]
+   },
+   {
+    "titulo": "Hipoglicemia",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Hipertrigliceridemia Severa",
+    "matrix": [
+     "conocimiento",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Síndrome de Realimentación",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   }
+  ],
+  "examenes": [
+   {
+    "titulo": "Farmacología Antidiabéticos orales y parenterales",
+    "nota": ""
+   },
+   {
+    "titulo": "Tipos de Insulina",
+    "nota": ""
+   }
+  ]
+ },
+ {
+  "nombre": "HEMATOLOGÍA",
+  "temas": [
+   {
+    "titulo": "Anemia ferropénica",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "dx_especifico",
+     "tx_completo",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Anemia Hemolítica",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Anemia Megaloblastica",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Anemia Inflamatorias (enf crónicas)",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Trombocitopenia",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Coagulopatias",
+    "matrix": [
+     "conocimiento",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Trombofilias",
+    "matrix": [
+     "conocimiento",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Leucemias",
+    "matrix": [
+     "conocimiento",
+     "dx_sospecha",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Linfomas",
+    "matrix": [
+     "conocimiento",
+     "dx_sospecha",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Paraproteinemias",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Síndromes Mielodisplásicos",
+    "matrix": [
+     "conocimiento",
+     "dx_sospecha",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Síndromes Mieloproliferativos crónicos",
+    "matrix": [
+     "conocimiento",
+     "dx_sospecha",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Urgencias oncológicas (SVCS, Hipercalcemia, Sd Compresión medular)",
+    "matrix": [
+     "conocimiento",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Terapia transfusional  (Gatillos transfusionales)",
+    "matrix": [
+     "conocimiento"
+    ]
+   }
+  ],
+  "examenes": [
+   {
+    "titulo": "Interpretación de hemograma y las principales alteraciones del frotis de sangre periférica",
+    "nota": ""
+   },
+   {
+    "titulo": "Interpretación de estudios de coagulación básicos",
+    "nota": ""
+   },
+   {
+    "titulo": "Indicaciones del Mielograma y Biopsia de Médula Ósea",
+    "nota": ""
+   },
+   {
+    "titulo": "Indicaciones e interpretación de la Electroforesis de proteínas",
+    "nota": ""
+   }
+  ]
+ },
+ {
+  "nombre": "REUMATOLOGÍA",
+  "temas": [
+   {
+    "titulo": "Monoartritis",
+    "matrix": [
+     "dx_especifico",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Poliartritis",
+    "matrix": [
+     "dx_especifico",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Artritis séptica",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Artrosis",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Lumbago mecánico",
+    "matrix": [
+     "conocimiento",
+     "dx_especifico",
+     "tx_completo",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Lumbago Inflamatorio",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Artropatía por cristales",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Fibromialgia",
+    "matrix": [
+     "conocimiento",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Artritis Reumatoide",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Lupus sistémico",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Miopatías Inflamatorias",
+    "matrix": [
+     "conocimiento",
+     "dx_sospecha",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Esclerodermia Sistémica (CREST & Difusa)",
+    "matrix": [
+     "conocimiento",
+     "dx_sospecha",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Espondiloartropatías",
+    "matrix": [
+     "conocimiento",
+     "dx_sospecha",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Vasculitis sistémicas",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Terapia esteroidal",
+    "matrix": [
+     "fisiopatologia",
+     "tx_inicial",
+     "complicaciones"
+    ]
+   }
+  ],
+  "examenes": [
+   {
+    "titulo": "Indicaciones e interpretación de estudio de líquido sinovial",
+    "nota": ""
+   },
+   {
+    "titulo": "Indicaciones e interpretación de principales exámenes inmunológicos para el estudio de mesenquimopatías (ANA, Anti DNA, FR, ANCA, Complemento).",
+    "nota": ""
+   }
+  ]
+ },
+ {
+  "nombre": "ENFERMEDADES RESPIRATORIAS",
+  "temas": [
+   {
+    "titulo": "Asma Bronquial",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "EPOC",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Tabaquismo",
+    "matrix": [
+     "fisiopatologia",
+     "tx_inicial",
+     "complicaciones",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Bronquiectasias",
+    "matrix": [
+     "conocimiento",
+     "dx_sospecha",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Cor Pulmonale",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "EPD",
+    "matrix": [
+     "conocimiento",
+     "dx_sospecha",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Hipertensión pulmonar",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "TEP",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Hemoptisis",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Tos crónica",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "SAHOS",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Cáncer Pulmonar",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Neumonía Comunitaria",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "complicaciones",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Neumonia Intrahospitalaria",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "Neumonia Inmunosuprimidos",
+    "matrix": [
+     "fisiopatologia",
+     "dx_sospecha",
+     "tx_inicial",
+     "seg_derivar"
+    ]
+   },
+   {
+    "titulo": "TBC pulmonar",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_completo",
+     "seg_cronico"
+    ]
+   },
+   {
+    "titulo": "Derrame Pleural",
+    "matrix": [
+     "fisiopatologia",
+     "dx_especifico",
+     "tx_inicial",
+     "complicaciones",
+     "seg_derivar"
+    ]
+   }
+  ],
+  "examenes": [
+   {
+    "titulo": "Radiografía de tórax",
+    "nota": ""
+   },
+   {
+    "titulo": "Espirometría",
+    "nota": ""
+   },
+   {
+    "titulo": "Test de marcha",
+    "nota": ""
+   },
+   {
+    "titulo": "Interpretación de gasometría",
+    "nota": ""
+   },
+   {
+    "titulo": "Estudio de líquido pleural",
+    "nota": ""
+   }
+  ]
+ },
+ {
+  "nombre": "EXÁMENES E IMÁGENES ",
+  "temas": [],
+  "examenes": []
+ },
+ {
+  "nombre": "EXÁMENES E IMÁGENES ",
+  "temas": [],
+  "examenes": []
+ }
+]
