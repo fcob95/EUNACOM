@@ -3,8 +3,11 @@
 // generate-seed.mjs — genera supabase/seed.sql desde content/*.json
 //
 // Determinista e idempotente:
-//   · IDs fijos: area = 1; specialties = sort_order (1-12); items = correlativo
-//     global recorriendo especialidades y luego ítems en sort_order.
+//   · IDs fijos: area = 1; specialties = sort_order (1-12); items = el campo
+//     "id" de cada ítem en content/medicina-interna.json (estable, nunca se
+//     recalcula por posición — evita que reordenar/insertar ítems reescriba
+//     silenciosamente el progreso guardado de otro ítem). Los ítems sin "id"
+//     reciben uno nuevo, siempre después del máximo existente.
 //   · Todo el contenido usa INSERT ... ON CONFLICT DO UPDATE (re-ejecutable).
 //   · eunacom_codes: catálogo COMPLETO (las 7 áreas), deduplicado.
 //   · item_eunacom_map: borra los 'suggested' de los ítems presentes y re-inserta;
@@ -57,14 +60,26 @@ const specialties = [...mi.specialties].sort((a, b) => a.sort_order - b.sort_ord
 const itemRows = [];      // { id, specialtyId, title, type, sortOrder }
 const reqRows = [];       // { itemId, flags:Set }
 const mapRows = [];       // { itemId, code, confidence }
-let nextItemId = 1;
+
+// IDs estables: se leen del contenido; los que falten reciben uno nuevo,
+// siempre después del máximo existente (nunca reordena los ya asignados).
+let maxExistingId = 0;
+for (const sp of specialties) {
+  for (const it of sp.items) {
+    if (typeof it.id === 'number' && it.id > maxExistingId) maxExistingId = it.id;
+  }
+}
+let nextNewId = maxExistingId + 1;
+const seenIds = new Set();
 
 for (const sp of specialties) {
   if (sp.sort_order < 1 || sp.sort_order > 12) throw new Error(`sort_order fuera de rango: ${sp.name}`);
   const items = [...sp.items].sort((a, b) => a.sort_order - b.sort_order);
   for (const it of items) {
     if (!ITEM_TYPES.has(it.type)) throw new Error(`item_type inválido "${it.type}" en ${it.title}`);
-    const id = nextItemId++;
+    const id = typeof it.id === 'number' ? it.id : nextNewId++;
+    if (seenIds.has(id)) throw new Error(`id de ítem duplicado: ${id} (${it.title})`);
+    seenIds.add(id);
     itemRows.push({ id, specialtyId: sp.sort_order, title: it.title, type: it.type, sortOrder: it.sort_order });
 
     const flags = new Set(it.requirements || []);
@@ -146,9 +161,11 @@ L.push('  followup_level = excluded.followup_level, extra_level = excluded.extra
 L.push('');
 
 // 6 · Mapeo ítem ↔ código
-L.push(`-- 6 · Mapeo ítem ↔ código EUNACOM (${mapRows.length} enlaces 'suggested').`);
+const confirmedCount = mapRows.filter((r) => r.confidence === 'confirmed').length;
+const suggestedCount = mapRows.length - confirmedCount;
+L.push(`-- 6 · Mapeo ítem ↔ código EUNACOM (${mapRows.length} enlaces: ${confirmedCount} confirmed, ${suggestedCount} suggested).`);
 L.push("--   Se borran los 'suggested' de los ítems presentes y se re-insertan;");
-L.push("--   los 'confirmed' (revisados a mano) se preservan vía ON CONFLICT DO NOTHING.");
+L.push("--   los 'confirmed' (1:1 por construcción o revisados a mano) se preservan vía ON CONFLICT DO NOTHING.");
 L.push(`delete from public.item_eunacom_map`);
 L.push(`  where confidence = 'suggested' and item_id in (${presentItemIds.join(', ')});`);
 if (mapRows.length) {
