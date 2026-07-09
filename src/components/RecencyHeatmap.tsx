@@ -4,8 +4,9 @@
  * <RecencyHeatmap> — "sin avance reciente": un cuadrito por ítem, agrupado
  * por especialidad. Mientras más tenue, más tiempo pasó desde el último
  * avance (nunca estudiado = lo más tenue). Clic en un cuadrito abre el
- * detalle de ese ítem. Celdas de 44px (target táctil) con un cuadrito
- * visual más chico adentro, para verse denso sin perder accesibilidad.
+ * detalle de ese ítem. Celdas de 44px (target táctil) pegadas entre sí, sin
+ * gap ni relleno interno — el color llena toda la celda para que se lea
+ * como mosaico continuo, no puntos sueltos.
  */
 import { cn, todayISO } from "@/lib/utils";
 import {
@@ -47,7 +48,7 @@ export function RecencyHeatmap({
               {spec.name}
             </h3>
             <div
-              className="grid gap-0.5"
+              className="grid gap-0"
               style={{ gridTemplateColumns: "repeat(auto-fill, 44px)" }}
               role="group"
               aria-label={`Avance reciente de ${spec.name}`}
@@ -61,18 +62,13 @@ export function RecencyHeatmap({
                     key={item.id}
                     type="button"
                     onClick={() => onOpenItem(item)}
-                    className="pressable flex size-11 shrink-0 items-center justify-center rounded-lg"
+                    className={cn(
+                      "pressable size-11 shrink-0 bg-primary",
+                      done && "ring-1 ring-inset ring-done",
+                    )}
+                    style={{ opacity }}
                     aria-label={`${item.title}. ${formatDaysAgo(p?.last_studied_at ?? null, today)}. Abrir detalle.`}
-                  >
-                    <span
-                      className={cn(
-                        "size-3 rounded-sm bg-primary",
-                        done && "ring-1 ring-done",
-                      )}
-                      style={{ opacity }}
-                      aria-hidden
-                    />
-                  </button>
+                  />
                 );
               })}
             </div>
