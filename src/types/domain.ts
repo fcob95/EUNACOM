@@ -2,6 +2,7 @@ import type { Database, Json } from "./supabase";
 
 export type Area = Database["public"]["Tables"]["areas"]["Row"];
 export type Specialty = Database["public"]["Tables"]["specialties"]["Row"];
+export type Topic = Database["public"]["Tables"]["topics"]["Row"];
 export type ItemRow = Database["public"]["Tables"]["items"]["Row"];
 export type ItemRequirements =
   Database["public"]["Tables"]["item_requirements"]["Row"];
@@ -42,8 +43,19 @@ export interface Item extends ItemRow {
   eunacom_codes: string[];
 }
 
-/** Especialidad con sus ítems, para el panel maestro. */
-export interface SpecialtyWithItems extends Specialty {
+/** Tema (subcapítulo) con sus ítems. */
+export interface TopicWithItems extends Topic {
+  items: Item[];
+}
+
+/**
+ * Especialidad con sus temas, para el panel maestro. Mantiene además
+ * `items` plano (todos los ítems de la especialidad, sin agrupar) para los
+ * consumidores que no necesitan la jerarquía de temas (Dashboard, export,
+ * planificador) — mismo patrón que ContentTree.items vs. specialties.
+ */
+export interface SpecialtyWithTopics extends Specialty {
+  topics: TopicWithItems[];
   items: Item[];
 }
 

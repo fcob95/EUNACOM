@@ -1,0 +1,1281 @@
+{
+  "Cardiología": [
+    {
+      "name": "Hipertensión arterial",
+      "items": [
+        "Hipertensión arterial esencial",
+        "Hipertensión arterial secundaria"
+      ]
+    },
+    {
+      "name": "Dislipidemia y síndrome metabólico",
+      "items": [
+        "Dislipidemias",
+        "Síndrome metabólico"
+      ]
+    },
+    {
+      "name": "Prevención cardiovascular: estilos de vida",
+      "items": [
+        "Alimentación saludable",
+        "Obesidad y sobrepeso",
+        "Sedentarismo vs actividad física",
+        "Tabaquismo: prevención, cesación y efectos nocivos para la salud"
+      ]
+    },
+    {
+      "name": "Endocarditis y enfermedad reumática",
+      "items": [
+        "Endocarditis infecciosa y no infecciosa",
+        "Enfermedad reumática activa",
+        "Prevención de enfermedad reumática"
+      ]
+    },
+    {
+      "name": "Emergencias cardiovasculares",
+      "items": [
+        "Disección aórtica",
+        "Embolia cardiogénica",
+        "Paro cardiorespiratorio",
+        "Shock"
+      ]
+    },
+    {
+      "name": "Cardiopatías en situaciones especiales",
+      "items": [
+        "Cardiopatía congénita en adulto",
+        "Corazón pulmonar crónico",
+        "Cardiopatía y embarazo"
+      ]
+    },
+    {
+      "name": "Terapia antitrombótica",
+      "items": [
+        "Manejo del paciente en tratamiento anticoagulante",
+        "Trombolisis"
+      ]
+    },
+    {
+      "name": "Estudios de imagen y monitorización cardiovascular",
+      "items": [
+        "Angiotac de tórax y aorta",
+        "Holter de presión arterial",
+        "Holter de ritmo"
+      ]
+    },
+    {
+      "name": "Laboratorio general y perfil lipídico",
+      "items": [
+        "Hemograma y velocidad de hemosedimentación (VHS)",
+        "Perfil bioquímico",
+        "Perfil lipídico"
+      ]
+    },
+    {
+      "name": "Procedimientos de reanimación y desfibrilación",
+      "items": [
+        "Cardioversión eléctrica",
+        "Desfibrilación",
+        "Resucitación cardiorespiratoria",
+        "Intubación traqueal"
+      ]
+    },
+    {
+      "name": "Procedimientos de acceso vascular y punción pericárdica",
+      "items": [
+        "Cateterismo venoso central",
+        "Punción pericárdica",
+        "Punción venosa"
+      ]
+    }
+  ],
+  "Nefrología": [
+    {
+      "name": "Albuminuria y Proteinuria",
+      "items": [
+        "Proteinuria (clínica)"
+      ]
+    },
+    {
+      "name": "Infecciones del tracto urinario",
+      "items": [
+        "Bacteriuria asintomática",
+        "Infección urinaria baja (cistitis)",
+        "Pielonefritis aguda no complicada",
+        "Pielonefritis aguda complicada",
+        "Higiene para prevención de infección urinaria"
+      ]
+    },
+    {
+      "name": "Urolitiasis y uropatía obstructiva",
+      "items": [
+        "Urolitiasis",
+        "Uropatía obstructiva",
+        "Cólico nefrítico, urolitiasis y complicaciones: obstrucción, sepsis, insuficiencia renal",
+        "Estudio metabólico de urolitiasis"
+      ]
+    },
+    {
+      "name": "Complicaciones de la enfermedad renal crónica",
+      "items": [
+        "Acidosis e hiperkalemia en Insuficiencia renal crónica",
+        "Anemia en nefrópata",
+        "Osteodistrofia en insuficiencia renal crónica",
+        "Desnutrición en insuficiencia renal crónica",
+        "Prevención de progresión de insuficiencia renal crónica",
+        "Síndrome urémico"
+      ]
+    },
+    {
+      "name": "Nefropatías intersticiales y quísticas",
+      "items": [
+        "Nefritis intersticial no infecciosa (aguda o crónica)",
+        "Riñón poliquístico"
+      ]
+    },
+    {
+      "name": "Síndrome edematoso",
+      "items": [
+        "Edema generalizado (anasarca)",
+        "Edema generalizado grave (anasarca)"
+      ]
+    },
+    {
+      "name": "Manejo y prevención de la hipertensión arterial",
+      "items": [
+        "Crisis hipertensivas, emergencias hipertensivas",
+        "Tratamiento no medicamentoso de la hipertensión arterial",
+        "Control de factores de riesgo de enfermedad vascular",
+        "Holter de presión arterial: conocimientos básicos",
+        "Terapia diurética"
+      ]
+    },
+    {
+      "name": "Nefropatía y embarazo",
+      "items": [
+        "Pre eclampsia",
+        "Función renal en el embarazo"
+      ]
+    },
+    {
+      "name": "Procedimientos urológicos de derivación urinaria",
+      "items": [
+        "Cistoscopia",
+        "Cistostomía de urgencia",
+        "Instalación pigtail",
+        "Instalación y cuidado de sonda Foley",
+        "Nefrostomia percutánea"
+      ]
+    },
+    {
+      "name": "Exploración física urogenital",
+      "items": [
+        "Tacto ginecológico para masas u alteraciones obstructivas",
+        "Tacto rectal para reconocimiento básico de crecimiento prostático"
+      ]
+    },
+    {
+      "name": "Estudios de imagen renal y urológica",
+      "items": [
+        "Angiografia renal",
+        "Pielo TAC",
+        "Radiografía renal y vesical simple",
+        "Ecografía vésico-prostática básica",
+        "Cintigrama renal"
+      ]
+    },
+    {
+      "name": "Laboratorio general de función renal y electrolitos",
+      "items": [
+        "Anion gap",
+        "Electrolitos plasmáticos",
+        "Nitrogeno ureico (relación bun/creatinina"
+      ]
+    }
+  ],
+  "Gastroenterología": [
+    {
+      "name": "Síndromes Malabsortivos",
+      "items": [
+        "Intolerancia a la lactosa",
+        "Laboratorio inicial de síndrome de malabsorción"
+      ]
+    },
+    {
+      "name": "Hepatitis virales",
+      "items": [
+        "Hepatitis aguda A complicada",
+        "Estudio de marcadores virales para hepatitis A, B y C"
+      ]
+    },
+    {
+      "name": "Complicaciones DHC",
+      "items": [
+        "Paracentesis"
+      ]
+    },
+    {
+      "name": "Patología biliar",
+      "items": [
+        "Cáncer de vesícula y vías biliares",
+        "Colelitiasis",
+        "Colangitis",
+        "Colecistitis aguda"
+      ]
+    },
+    {
+      "name": "Trastornos de la motilidad esofágica y deglución",
+      "items": [
+        "Disfagia",
+        "Afagia aguda"
+      ]
+    },
+    {
+      "name": "Trastornos del tránsito intestinal",
+      "items": [
+        "Constipación",
+        "Diarrea asociada a antibióticos",
+        "Diarrea en inmunosuprimidos"
+      ]
+    },
+    {
+      "name": "Enfermedad diverticular",
+      "items": [
+        "Enfermedad diverticular complicada",
+        "Enfermedad diverticular no complicada"
+      ]
+    },
+    {
+      "name": "Abdomen agudo",
+      "items": [
+        "Abdomen agudo"
+      ]
+    },
+    {
+      "name": "Manejo dietético y farmacológico en patología digestiva",
+      "items": [
+        "Manejo dietético en enfermos digestivos",
+        "Antiinflamatorios no esteroidales y tracto gastrontestinal"
+      ]
+    },
+    {
+      "name": "Estudios de imagen abdominal general",
+      "items": [
+        "Radiografía simple de abdomen",
+        "TAC abdominal",
+        "Ecotomografía abdominal"
+      ]
+    },
+    {
+      "name": "Estudios de contraste digestivo y biliar",
+      "items": [
+        "Tránsito esófago-estómago-duodeno",
+        "Enema barritada",
+        "Colangiografía endoscópica",
+        "Colangiografía por resonancia magnética"
+      ]
+    },
+    {
+      "name": "Endoscopía y biopsia digestiva",
+      "items": [
+        "Endoscopía digestiva alta y baja",
+        "Biopsia hepática"
+      ]
+    },
+    {
+      "name": "Laboratorio digestivo y hepático general",
+      "items": [
+        "Sangre oculta en deposiciones",
+        "Estudio de perfil hepático",
+        "Estudio de función hepática",
+        "Determinación toxina C difficile en deposiciones"
+      ]
+    }
+  ],
+  "Neurología": [
+    {
+      "name": "Síndrome Convulsivo",
+      "items": [
+        "Síndromes convulsivos sintomáticos (traumático, por tumores del sistema nervioso central, metabólico, urémico, etc)",
+        "Status convulsivo"
+      ]
+    },
+    {
+      "name": "Migraña",
+      "items": [
+        "Status migrañoso"
+      ]
+    },
+    {
+      "name": "Demencias",
+      "items": [
+        "Cuadros de deterioro orgánico cerebral potencialmente reversibles (hipotiroidismos, déficit de vitamina B12, etc.)",
+        "Cuadros deficitarios de funciones cerebrales superiores (afasia, apraxia, agnosia, etc)",
+        "Aplicación de tests neurocognitivos de screening (MoCA, Mini-Cog, Mini-Mental)"
+      ]
+    },
+    {
+      "name": "Mono y polineuropatias. Radiculopatias",
+      "items": [
+        "Síndromes sensitivos (polineuropatía, hemihipoestesia, dolor talámico, etc)"
+      ]
+    },
+    {
+      "name": "ACV hemorrágico",
+      "items": [
+        "Prevención de factores de riesgo cerebrovascular"
+      ]
+    },
+    {
+      "name": "Enfermedades neurológicas focales: pares craneales y desmielinizantes",
+      "items": [
+        "Esclerosis múltiple",
+        "Neuralgia esencial del trigémino",
+        "Parálisis facial periférica",
+        "Herpes zoster"
+      ]
+    },
+    {
+      "name": "Lumbago y radiculopatías mecánicas",
+      "items": [
+        "Lumbago mecánico",
+        "Lumbociáticas y cervicobraquialgias."
+      ]
+    },
+    {
+      "name": "Síndromes de debilidad y parálisis motora",
+      "items": [
+        "Parálisis (tetraparesia, hemiparesia, etc)",
+        "Paraplejia aguda",
+        "Síndrome cuadraplégico agudo",
+        "Síndrome cuadriparético fláccido (poliradiculoneurítis aguda, Guillain-Barré)"
+      ]
+    },
+    {
+      "name": "Síndromes neuromusculares y de coordinación",
+      "items": [
+        "Síndrome atáxico",
+        "Síndrome miasténico"
+      ]
+    },
+    {
+      "name": "Hipertensión endocraneana",
+      "items": [
+        "Síndrome de hipertensión endocraneana",
+        "Hipertensión endocraneana"
+      ]
+    },
+    {
+      "name": "Trastornos del sueño",
+      "items": [
+        "Trastornos del sueño"
+      ]
+    },
+    {
+      "name": "Tumores del sistema nervioso central",
+      "items": [
+        "Tumores de región sellar",
+        "Tumores primarios y metastásicos SNC"
+      ]
+    },
+    {
+      "name": "Complicaciones neurológicas por alcohol y drogas",
+      "items": [
+        "Complicaciones neurológicas de abuso de sustancias",
+        "Manifestaciones neurológicas de abuso de sustancias y alcohol"
+      ]
+    },
+    {
+      "name": "Encefalopatías y estados confusionales tóxico-metabólicos",
+      "items": [
+        "Estado confusional agudo (alcohólico, tóxico metabólico)",
+        "Encefalopatías tóxico metabólicas (urémica, hepática, etc)"
+      ]
+    },
+    {
+      "name": "Trastornos del movimiento inducidos por fármacos",
+      "items": [
+        "Distonía aguda por fármacos (ejemplo antieméticos)",
+        "Movimientos anormales inducidos por fármacos"
+      ]
+    },
+    {
+      "name": "Traumatismo craneoencefálico y raquimedular",
+      "items": [
+        "Traumatismo encéfalo craneano leve",
+        "Traumatismo encefalocraneano grave",
+        "Traumatismo raquimedular"
+      ]
+    },
+    {
+      "name": "Neuroimagen y evaluación visual",
+      "items": [
+        "TAC de encefalo y columna",
+        "Resonancia magnética de encéfalo y columna",
+        "Angiografía",
+        "Campo visual",
+        "Papiloscopia (fondo de ojo)"
+      ]
+    },
+    {
+      "name": "Estudios electrofisiológicos",
+      "items": [
+        "Electroencefalograma",
+        "Electromiografìa"
+      ]
+    },
+    {
+      "name": "Punción lumbar y estudio de LCR",
+      "items": [
+        "Examen de líquido cefaloraquídeo (citoquímico, bacteriológico)",
+        "Punción lumbar"
+      ]
+    }
+  ],
+  "Geriatría": [
+    {
+      "name": "Enfermedades crónicas prevalentes en el adulto mayor",
+      "items": [
+        "Diabetes mellitus tipo 2",
+        "Enfermedad cerebro-vascular",
+        "Hipertensión arterial",
+        "Osteoporosis"
+      ]
+    },
+    {
+      "name": "Trastornos de la marcha, temblor e hipotensión ortostática",
+      "items": [
+        "Hipotensión postural",
+        "Temblor",
+        "Trastornos de la marcha"
+      ]
+    },
+    {
+      "name": "Trastornos afectivos y conductuales en el adulto mayor",
+      "items": [
+        "Depresión",
+        "Agitación y agresividad"
+      ]
+    },
+    {
+      "name": "Termorregulación y piel",
+      "items": [
+        "Hipotermia",
+        "Alteración de la termoregulación",
+        "Escaras o úlceras por presión"
+      ]
+    },
+    {
+      "name": "Nutrición y malnutrición en el adulto mayor",
+      "items": [
+        "Malnutrición",
+        "Nutrición en las personas mayores"
+      ]
+    },
+    {
+      "name": "Urgencias médico-quirúrgicas en el adulto mayor",
+      "items": [
+        "Abdomen agudo en adulto mayor",
+        "Evento coronario en adulto mayor",
+        "Fractura de cadera"
+      ]
+    },
+    {
+      "name": "Cuidados hospitalarios y de fin de vida",
+      "items": [
+        "Complicaciones en el adulto mayor hospitalizado",
+        "Manejo, cuidado y acompañamiento de final de vida"
+      ]
+    },
+    {
+      "name": "Promoción del envejecimiento saludable",
+      "items": [
+        "Ejercicio en personas mayores",
+        "Envejecimiento saludable y promoción del autocuidado",
+        "Inmunizaciones en personas mayores",
+        "Prevención del deterioro funcional",
+        "Sexualidad en personas mayores"
+      ]
+    },
+    {
+      "name": "Entorno y derechos del adulto mayor",
+      "items": [
+        "Adecuación del entorno para personas mayores",
+        "Derecho GES a ayudas técnicas para personas de 65 años o más, como órtesis"
+      ]
+    },
+    {
+      "name": "Valoración geriátrica integral",
+      "items": [
+        "Valoración afectiva",
+        "Valoración cognitiva",
+        "Valoración de la marcha",
+        "Valoración funcional"
+      ]
+    }
+  ],
+  "Nutrición y Diabetes": [
+    {
+      "name": "Sd Diabético Agudo",
+      "items": [
+        "Acidosis láctica"
+      ]
+    },
+    {
+      "name": "Daño Microvascular por DM",
+      "items": [
+        "Insuficiencia renal y diabetes",
+        "Electromiografía",
+        "Fondo de ojo"
+      ]
+    },
+    {
+      "name": "Daño Macrovascular por DM",
+      "items": [
+        "Diabetes y riesgo cardiovascular"
+      ]
+    },
+    {
+      "name": "Diabetes y embarazo",
+      "items": [
+        "Diabetes gestacional",
+        "Diabetes mellitus pregestacional"
+      ]
+    },
+    {
+      "name": "Pie diabético e infecciones asociadas",
+      "items": [
+        "Pié diabético y otras infecciones en diabetes",
+        "Prevención de pié diabético",
+        "Curaciones básicas del pié diabético"
+      ]
+    },
+    {
+      "name": "Prevención de la diabetes y sus complicaciones",
+      "items": [
+        "Prevención de complicaciones crónicas de la diabetes",
+        "Prevención de Diabetes Mellitus tipo 2"
+      ]
+    },
+    {
+      "name": "Nutrición: desnutrición y trastornos alimentarios",
+      "items": [
+        "Desnutrición",
+        "Síndromes carenciales de vitaminas y minerales",
+        "Trastornos de conducta alimentaria",
+        "Anorexia nerviosa"
+      ]
+    },
+    {
+      "name": "Obesidad: manejo y prevención",
+      "items": [
+        "Obesidad",
+        "Obesidad mórbida",
+        "Prevención de la obesidad",
+        "Regímenes dietéticos para obesidad"
+      ]
+    },
+    {
+      "name": "Dislipidemia: manejo y prevención",
+      "items": [
+        "Dislipidemias",
+        "Prevención de dislipidemias",
+        "Regímenes dietéticos para dislipidemias"
+      ]
+    },
+    {
+      "name": "Síndrome metabólico",
+      "items": [
+        "Síndrome metabólico (clínica)",
+        "Síndrome metabólico (conocimientos)"
+      ]
+    },
+    {
+      "name": "Estilos de vida y prevención cardiovascular global",
+      "items": [
+        "Alimentación saludable",
+        "Estilos de vida saludables (hábitos y conductas)",
+        "Riesgo cardiovascular global"
+      ]
+    },
+    {
+      "name": "Estudios vasculares y cardíacos en diabetes",
+      "items": [
+        "Arteriografia extremidades inferiores",
+        "Doppler vascular periférico",
+        "Electrocardiograma",
+        "Test de esfuerzo"
+      ]
+    },
+    {
+      "name": "Laboratorio de función renal en diabetes",
+      "items": [
+        "Albúmina plasmática",
+        "Relación albuminuria / creatininuria",
+        "Creatininemia",
+        "Microalbuminuria",
+        "Nitrogeno urinario",
+        "Proteiuniria 24 horas"
+      ]
+    },
+    {
+      "name": "Examen de orina y urocultivo",
+      "items": [
+        "Examen de orina completa",
+        "Examen de orina semicuantitativa",
+        "Urocultivo y antibiograma"
+      ]
+    },
+    {
+      "name": "Monitoreo glicémico",
+      "items": [
+        "Glicemia capilar",
+        "Glicemia venosa",
+        "Hemoglobina glicosilada",
+        "Test de tolerancia a la glucosa"
+      ]
+    },
+    {
+      "name": "Cetonemia e insulinemia",
+      "items": [
+        "Cuerpos cetónicos en orina (semicuantitativo)",
+        "Cuerpos cetónicos en sangre",
+        "Insulinemia"
+      ]
+    },
+    {
+      "name": "Laboratorio metabólico general",
+      "items": [
+        "Ecotomografia abdominal",
+        "Estudio funcional hepático",
+        "Perfil lipídico"
+      ]
+    },
+    {
+      "name": "Evaluación del estado nutricional",
+      "items": [
+        "Evaluación nutricional",
+        "Evaluacion nutricional subjetiva"
+      ]
+    }
+  ],
+  "Hémato-oncología": [
+    {
+      "name": "Coagulopatias",
+      "items": [
+        "Coagulación intravascular diseminada",
+        "Coagulopatía adquirida",
+        "Coagulopatía congénita sangrante"
+      ]
+    },
+    {
+      "name": "Trombofilias",
+      "items": [
+        "Estudio de trombofilia"
+      ]
+    },
+    {
+      "name": "Trombocitopenia",
+      "items": [
+        "Estudio de trombopatías"
+      ]
+    },
+    {
+      "name": "Indicaciones del Mielograma y Biopsia de Médula Ósea",
+      "items": [
+        "Biopsia de médula ósea (procedimiento)",
+        "Mielograma (procedimiento)"
+      ]
+    },
+    {
+      "name": "Interpretación de hemograma y las principales alteraciones del frotis de sangre periférica",
+      "items": [
+        "Reacción leucemoide",
+        "Síndrome leucoeritroblástico"
+      ]
+    },
+    {
+      "name": "Urgencias oncológicas (SVCS, Hipercalcemia, Sd Compresión medular)",
+      "items": [
+        "Lisis tumoral aguda",
+        "Neutropenia febril"
+      ]
+    },
+    {
+      "name": "Anemia Hemolítica",
+      "items": [
+        "Pruebas de hemólisis"
+      ]
+    },
+    {
+      "name": "Síndromes hematológicos generales",
+      "items": [
+        "Hipofunción medular",
+        "Púrpuras vasculares",
+        "Síndrome paraneoplásico"
+      ]
+    },
+    {
+      "name": "Cuidados paliativos y manejo del dolor oncológico",
+      "items": [
+        "Manejo del dolor crónico y paliativo",
+        "Manejo del paciente terminal oncológico"
+      ]
+    },
+    {
+      "name": "Terapia oncológica: principios y toxicidad",
+      "items": [
+        "Conceptos generales de etapificación, radioterapia y quimioterapia",
+        "Efectos mielotóxicos de drogas y medicamentos"
+      ]
+    },
+    {
+      "name": "Terapia anticoagulante: manejo e interacciones",
+      "items": [
+        "Tratamiento anticoagulante",
+        "Interacción de drogas y anticoagulantes orales",
+        "Actividad física en pacientes con riesgo de trombosis"
+      ]
+    },
+    {
+      "name": "Prevención en el paciente hematológico/oncológico",
+      "items": [
+        "Alcoholismo y asociación con carencias nutricionales",
+        "Prevención de anemias por carencias nutricionales",
+        "Prevención de infecciones con énfasis en inmunosuprimidos"
+      ]
+    },
+    {
+      "name": "Estudios de imagen y medicina nuclear en oncología",
+      "items": [
+        "Radiografía de tórax",
+        "Cintigrafía ósea y cintigrafía con galio"
+      ]
+    },
+    {
+      "name": "Biopsias diagnósticas hemato-oncológicas",
+      "items": [
+        "Biopsia ganglionar",
+        "Biopsia hepática"
+      ]
+    },
+    {
+      "name": "Procedimientos de acceso vascular y punción",
+      "items": [
+        "Cateterismo venoso central",
+        "Punción venosa"
+      ]
+    },
+    {
+      "name": "Punción lumbar y quimioterapia intratecal",
+      "items": [
+        "Punción lumbar",
+        "Quimioterapia intratecal"
+      ]
+    }
+  ],
+  "Reumatología": [
+    {
+      "name": "Poliartritis",
+      "items": [
+        "Oligoartritis"
+      ]
+    },
+    {
+      "name": "Lupus sistémico",
+      "items": [
+        "Síndrome antifosfolípidos",
+        "Síndrome de Sjögren"
+      ]
+    },
+    {
+      "name": "Indicaciones e interpretación de estudio de líquido sinovial",
+      "items": [
+        "Punción articular de rodilla"
+      ]
+    },
+    {
+      "name": "Osteoporosis",
+      "items": [
+        "Osteoporosis",
+        "Densitometría ósea"
+      ]
+    },
+    {
+      "name": "Dolor de columna y lumbago",
+      "items": [
+        "Cervicalgia",
+        "Columna dolorosa",
+        "Lumbago infeccioso y tumoral"
+      ]
+    },
+    {
+      "name": "Síndromes de dolor regional de partes blandas",
+      "items": [
+        "Hombro doloroso",
+        "Epicondilalgia, epitroclealgias",
+        "Tendonitis y bursitis",
+        "Síndrome de túnel carpiano"
+      ]
+    },
+    {
+      "name": "Prevención de patología musculoesquelética laboral y deportiva",
+      "items": [
+        "Condiciones de trabajo",
+        "Riesgos deportivos"
+      ]
+    },
+    {
+      "name": "Radiografía de columna y articulaciones",
+      "items": [
+        "Radiografía de columna y articulaciones"
+      ]
+    }
+  ],
+  "Enfermedades Respiratorias": [
+    {
+      "name": "Asma Bronquial",
+      "items": [
+        "Crisis de asma bronquial"
+      ]
+    },
+    {
+      "name": "EPOC",
+      "items": [
+        "Bronquitis crónica",
+        "Enfermedad bronquial obstructiva crónica descompensada"
+      ]
+    },
+    {
+      "name": "TBC pulmonar",
+      "items": [
+        "Programa Nacional de Control de TBC",
+        "Baciloscopia y cultivo de Koch de expectoración",
+        "PPD"
+      ]
+    },
+    {
+      "name": "Interpretación de gasometría",
+      "items": [
+        "Saturometría arterial"
+      ]
+    },
+    {
+      "name": "Cáncer Pulmonar",
+      "items": [
+        "Metástasis pulmonares"
+      ]
+    },
+    {
+      "name": "Prevención de daño pulmonar ambiental y ocupacional",
+      "items": [
+        "Contaminación ambiental",
+        "Prevención de daño pulmonar por inhalantes domésticos y laborales",
+        "Neumoconiosis"
+      ]
+    },
+    {
+      "name": "Infecciones respiratorias altas, bronquitis aguda y vacunación",
+      "items": [
+        "Infecciones de las vías aéreas superiores",
+        "Bronquitis aguda",
+        "Vacunación (tuberculosis, influenza, Coronavirus SARS-CoV-2 y neumococo)"
+      ]
+    },
+    {
+      "name": "Asfixia y aspiración de cuerpo extraño",
+      "items": [
+        "Asfixia por inmersión",
+        "Aspiración de cuerpo extraño con asfixia",
+        "Aspiración de cuerpo extraño sin asfixia"
+      ]
+    },
+    {
+      "name": "Intoxicación por monóxido de carbono y gases",
+      "items": [
+        "Intoxicación leve por CO y otros gases",
+        "Intoxicación por monóxido de carbono"
+      ]
+    },
+    {
+      "name": "Traumatismo torácico",
+      "items": [
+        "Traumatismo torácico grave",
+        "Traumatismo torácico simple"
+      ]
+    },
+    {
+      "name": "Neumotórax",
+      "items": [
+        "Neumotórax moderado y grande",
+        "Neumotórax pequeño",
+        "Neumotórax hipertensivo"
+      ]
+    },
+    {
+      "name": "Insuficiencia respiratoria y ventilación mecánica",
+      "items": [
+        "Insuficiencia respiratoria crónica",
+        "Insuficiencia respiratoria aguda o crónica reagudizada que requiere ventilación mecánica",
+        "Insuficiencia respiratoria aguda o crónica reagudizada, que no requiere ventilación mecánica",
+        "Ventilación mecánica invasiva",
+        "Ventilación mecánica no invasiva"
+      ]
+    },
+    {
+      "name": "Otras enfermedades pulmonares y mediastínicas",
+      "items": [
+        "Absceso pulmonar",
+        "Hidatidosis pulmonar",
+        "Daño pulmonar secundario a drogas",
+        "Edema pulmonar no cardiogénico",
+        "Síndromes mediastínicos"
+      ]
+    },
+    {
+      "name": "Paro cardiorespiratorio y reanimación",
+      "items": [
+        "Paro cardiorespiratorio",
+        "Resucitación cardiorespiratoria"
+      ]
+    },
+    {
+      "name": "Manejo avanzado de la vía aérea",
+      "items": [
+        "Cricoidostomía",
+        "Intubación traqueal",
+        "Aspiración traqueal"
+      ]
+    },
+    {
+      "name": "Terapia inhalatoria",
+      "items": [
+        "Inhalación de aerosoles presurizados",
+        "Nebulizaciones"
+      ]
+    },
+    {
+      "name": "Procedimientos pleurales y broncoscopía",
+      "items": [
+        "Biopsia pleural",
+        "Drenaje pleural",
+        "Punción pleural",
+        "Fibrobroncoscopia"
+      ]
+    },
+    {
+      "name": "Pruebas funcionales respiratorias y alergológicas",
+      "items": [
+        "Flujo espiratorio máximo (PEF: Peak Expiratory Flow)",
+        "Prueba de provocación bronquial con fármacos",
+        "Pruebas cutáneas de alergia"
+      ]
+    },
+    {
+      "name": "Estudios de imagen y microbiología torácica avanzada",
+      "items": [
+        "TAC de tórax",
+        "Ecografía pleural",
+        "Examen microbiológico de expectoración"
+      ]
+    }
+  ],
+  "Endocrinología": [
+    {
+      "name": "Patología tiroidea funcional benigna",
+      "items": [
+        "Bocio",
+        "Hipotiroidismo",
+        "Hipertiroidismo",
+        "Tiroiditis"
+      ]
+    },
+    {
+      "name": "Nódulo tiroideo y cáncer de tiroides",
+      "items": [
+        "Nódulo tiroídeo",
+        "Cáncer del tiroides"
+      ]
+    },
+    {
+      "name": "Emergencias tiroideas",
+      "items": [
+        "Tormenta tiroidea",
+        "Mixedema"
+      ]
+    },
+    {
+      "name": "Estudio de la función tiroidea",
+      "items": [
+        "Ecografía tiroídea",
+        "TSH, T4, T3",
+        "T4 libre",
+        "Anticuerpos antitiroideos (antitiroglobulina y antiiroperoxidasa)"
+      ]
+    },
+    {
+      "name": "Patología suprarrenal",
+      "items": [
+        "Síndrome de Cushing",
+        "Insuficiencia suprarrenal crónica",
+        "Incidentaloma suprarrenal",
+        "Insuficiencia suprarrenal aguda",
+        "Hipertensión arterial de origen endocrino"
+      ]
+    },
+    {
+      "name": "Estudio y complicaciones del eje suprarrenal",
+      "items": [
+        "Cortisol plasmático",
+        "Cortisol libre 24 horas",
+        "Complicaciones del tratamiento esteroidal"
+      ]
+    },
+    {
+      "name": "Eje gonadal y trastornos reproductivos",
+      "items": [
+        "Hirsutismo",
+        "Amenorrea",
+        "Síndrome climatérico",
+        "Hipogonadismo masculino",
+        "Ginecomastia",
+        "Pubertad normal"
+      ]
+    },
+    {
+      "name": "Estudio hormonal gonadal",
+      "items": [
+        "FSH, estradiol y prolactina",
+        "LH, testosterona"
+      ]
+    },
+    {
+      "name": "Patología hipofisiaria",
+      "items": [
+        "Tumores hipofisiarios",
+        "Hipopituitarismo",
+        "Diabetes insípida",
+        "Hiperprolactinemia",
+        "Síndrome de secreción inapropiada de ADH"
+      ]
+    },
+    {
+      "name": "Metabolismo óseo: osteoporosis",
+      "items": [
+        "Osteoporosis",
+        "Osteoporosis secundaria",
+        "Prevención de osteoporosis",
+        "Densitometría ósea"
+      ]
+    },
+    {
+      "name": "Metabolismo del calcio",
+      "items": [
+        "Hipercalcemias e hipocalcemias",
+        "Hipercalcemia aguda",
+        "Tetania",
+        "PTH, calcemia",
+        "Calciuria"
+      ]
+    }
+  ],
+  "Enfermedades Infecciosas": [
+    {
+      "name": "Infecciones de piel y partes blandas",
+      "items": [
+        "Adenitis, adenoflegmón",
+        "Ántrax",
+        "Celulitis bacteriana",
+        "Flegmón submaxilar, submandibular y del piso de la boca",
+        "Infección invasiva de partes blandas: celulitis, fasceitis, miositis necrotizantes o septicémicas"
+      ]
+    },
+    {
+      "name": "Infecciones osteoarticulares y endovasculares",
+      "items": [
+        "Osteomielitis",
+        "Endocarditis bateriana",
+        "Infecciones asociadas a catéteres vasculares"
+      ]
+    },
+    {
+      "name": "Infecciones del sistema nervioso central",
+      "items": [
+        "Absceso cerebral",
+        "Encefalitis aguda",
+        "Meningitis aguda",
+        "Estudio citoquímico de LCR",
+        "Punción lumbar"
+      ]
+    },
+    {
+      "name": "Sepsis y respuesta séptica",
+      "items": [
+        "Sepsis y shock séptico",
+        "Neutropenia febril"
+      ]
+    },
+    {
+      "name": "Tétanos y profilaxis antitetánica",
+      "items": [
+        "Tétanos",
+        "Profilaxis de tétanos"
+      ]
+    },
+    {
+      "name": "Enfermedades exantemáticas y virales",
+      "items": [
+        "Enfermedades eruptivas no complicadas (varicela, herpes zoster...)",
+        "Varicela complicada: neumonitis, cerebelitis, encefalitis",
+        "Síndrome mononucleósico"
+      ]
+    },
+    {
+      "name": "COVID-19",
+      "items": [
+        "Enfermedad leve moderada por SARS Cov 2 COVID 19",
+        "Enfermedad grave por SARS Cov 2 COVID 19"
+      ]
+    },
+    {
+      "name": "Influenza y virus respiratorios emergentes",
+      "items": [
+        "Influenza",
+        "Síndrome pulmonar por Hanta Virus"
+      ]
+    },
+    {
+      "name": "Enfermedades de transmisión sexual",
+      "items": [
+        "Enfermedades de transmisión sexual",
+        "Sífilis secundaria, terciaria y congénita",
+        "Prevención de enfermedades de transmisión sexual"
+      ]
+    },
+    {
+      "name": "VIH/SIDA",
+      "items": [
+        "Infección por virus de inmunodeficiencia humana (SIDA)",
+        "Prevención de infecciones oportunistas en VIH (+)"
+      ]
+    },
+    {
+      "name": "Micosis invasoras y oportunistas",
+      "items": [
+        "Candidiasis oral y esofágica",
+        "Micosis invasora (aspergillosis, candidiasis, mucormicosis)"
+      ]
+    },
+    {
+      "name": "Enfermedades entéricas bacterianas",
+      "items": [
+        "Cólera",
+        "Fiebre tifoídea y paratifoídea",
+        "Toxicoinfección alimentaria"
+      ]
+    },
+    {
+      "name": "Diarrea asociada a antibióticos y prevención entérica",
+      "items": [
+        "Diarrea asociada a antibióticos",
+        "Prevención de enfermedades entéricas"
+      ]
+    },
+    {
+      "name": "Parasitosis y zoonosis helmínticas",
+      "items": [
+        "Parasitosis intestinales",
+        "Hidatidosis",
+        "Triquinosis",
+        "Parasitológico de deposiciones"
+      ]
+    },
+    {
+      "name": "Zoonosis bacterianas y por vectores",
+      "items": [
+        "Brucelosis",
+        "Leptospirosis",
+        "Malaria",
+        "Dengue",
+        "Mordeduras de animales"
+      ]
+    },
+    {
+      "name": "Tuberculosis extrapulmonar y su profilaxis",
+      "items": [
+        "Tuberculosis extrapulmonar",
+        "Profilaxis de tuberculosis"
+      ]
+    },
+    {
+      "name": "Síndrome febril prolongado",
+      "items": [
+        "Síndrome febril prolongado"
+      ]
+    },
+    {
+      "name": "Infecciones hospitalarias y en personal sanitario",
+      "items": [
+        "Manejo y prevención de infecciones en personal sanitario",
+        "Prevención de infecciones hospitalarias"
+      ]
+    },
+    {
+      "name": "Profilaxis antimicrobiana específica",
+      "items": [
+        "Profilaxis de endocarditis infecciosa",
+        "Profilaxis en contactos de infecciones meningocócicas",
+        "Uso y abuso de antibióticos"
+      ]
+    },
+    {
+      "name": "Inmunizaciones",
+      "items": [
+        "Vacunas especiales (neumococo, influenza, hepatitis A y B, varicela, rabia, meningococo)",
+        "Vacunas incluidas en el PNI (Plan Nacional de Inmunizaciones)"
+      ]
+    },
+    {
+      "name": "Cultivos microbiológicos",
+      "items": [
+        "Cultivo de heridas o abscesos",
+        "Cultivos de hongos",
+        "Cultivo de expectoración",
+        "Hemocultivo",
+        "Urocultivo y antibiograma",
+        "Pruebas rápidas para diagnóstico de estreptococo grupo A"
+      ]
+    },
+    {
+      "name": "Tinción de Gram y examen directo",
+      "items": [
+        "Gram",
+        "Tinción de Gram"
+      ]
+    },
+    {
+      "name": "Diagnóstico serológico, antigénico y molecular",
+      "items": [
+        "Antigenemia",
+        "Deteccción de antígeno de Cryptococcus en LCR y test de tinta china",
+        "Detección de agentes virales por inmunofluorescencia",
+        "Serología de enfermedades infecciosas",
+        "Reacción de polimerasa en cadena"
+      ]
+    },
+    {
+      "name": "Marcadores inflamatorios generales",
+      "items": [
+        "Hemograma y velocidad de hemosedimentación (VHS)",
+        "Proteína C reactiva"
+      ]
+    },
+    {
+      "name": "Toma y siembra de muestras, drenaje de abscesos",
+      "items": [
+        "Drenaje de abscesos superficiales",
+        "Sembrar muestras para cultivo"
+      ]
+    }
+  ]
+}

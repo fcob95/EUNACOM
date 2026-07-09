@@ -50,6 +50,7 @@ export default function PanelPage() {
   const [filters, setFilters] = useState<PanelFilters>(EMPTY_FILTERS);
   const [filterSheetOpen, setFilterSheetOpen] = useState(false);
   const [expanded, setExpanded] = useState<string[]>([]);
+  const [expandedTopics, setExpandedTopics] = useState<string[]>([]);
   const [openItem, setOpenItem] = useState<Item | null>(null);
 
   const progressMap: ProgressMap = useMemo(
@@ -62,25 +63,40 @@ export default function PanelPage() {
   const visible = useMemo(() => {
     if (!content.data) return [];
     const q = norm(search.trim());
+    const matchesItem = (item: Item) => {
+      if (q && !norm(item.title).includes(q)) return false;
+      if (filters.type !== "all" && item.item_type !== filters.type) return false;
+      const p = progressMap.get(item.id);
+      if (filters.status !== "all" && itemStatus(p) !== filters.status)
+        return false;
+      if (filters.mastery > 0 && (p?.mastery ?? 0) !== filters.mastery)
+        return false;
+      return true;
+    };
     return content.data.specialties.map((spec) => ({
       ...spec,
-      visibleItems: spec.items.filter((item) => {
-        if (q && !norm(item.title).includes(q)) return false;
-        if (filters.type !== "all" && item.item_type !== filters.type) return false;
-        const p = progressMap.get(item.id);
-        if (filters.status !== "all" && itemStatus(p) !== filters.status)
-          return false;
-        if (filters.mastery > 0 && (p?.mastery ?? 0) !== filters.mastery)
-          return false;
-        return true;
-      }),
+      topics: spec.topics.map((topic) => ({
+        ...topic,
+        visibleItems: topic.items.filter(matchesItem),
+      })),
     }));
   }, [content.data, search, filters, progressMap]);
 
-  // Con búsqueda/filtros: auto-expandir especialidades con resultados.
+  const hasAnyVisible = visible.some((s) =>
+    s.topics.some((t) => t.visibleItems.length > 0),
+  );
+
+  // Con búsqueda/filtros: auto-expandir especialidades y temas con resultados.
   const accordionValue = filterActive
-    ? visible.filter((s) => s.visibleItems.length > 0).map((s) => String(s.id))
+    ? visible
+        .filter((s) => s.topics.some((t) => t.visibleItems.length > 0))
+        .map((s) => String(s.id))
     : expanded;
+  const topicAccordionValue = filterActive
+    ? visible.flatMap((s) =>
+        s.topics.filter((t) => t.visibleItems.length > 0).map((t) => String(t.id)),
+      )
+    : expandedTopics;
 
   const global = useMemo(
     () => aggregate(content.data?.items ?? [], progressMap),
@@ -189,7 +205,7 @@ export default function PanelPage() {
       <FilterChips filters={filters} onChange={setFilters} />
 
       {/* lista */}
-      {visible.every((s) => s.visibleItems.length === 0) && filterActive ? (
+      {!hasAnyVisible && filterActive ? (
         <div className="rounded-2xl border border-border bg-surface p-8 text-center shadow-card">
           <p className="font-semibold">Sin resultados</p>
           <p className="mt-1 text-[13px] text-muted">
@@ -212,6 +228,8 @@ export default function PanelPage() {
           progressMap={progressMap}
           value={accordionValue}
           onValueChange={setExpanded}
+          topicValue={topicAccordionValue}
+          onTopicValueChange={setExpandedTopics}
           onOpenItem={setOpenItem}
           onAdvanceProgress={advanceProgress}
           onCycleMastery={cycleMastery}

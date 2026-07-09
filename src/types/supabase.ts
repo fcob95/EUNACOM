@@ -30,10 +30,17 @@ export interface Database {
         Update: { id?: number; area_id?: number; name?: string; sort_order?: number };
         Relationships: [];
       };
+      topics: {
+        Row: { id: number; specialty_id: number; name: string; sort_order: number };
+        Insert: { id?: number; specialty_id: number; name: string; sort_order?: number };
+        Update: Partial<{ id: number; specialty_id: number; name: string; sort_order: number }>;
+        Relationships: [];
+      };
       items: {
         Row: {
           id: number;
           specialty_id: number;
+          topic_id: number | null;
           title: string;
           item_type: ItemTypeEnum;
           sort_order: number;
@@ -42,6 +49,7 @@ export interface Database {
         Insert: {
           id?: number;
           specialty_id: number;
+          topic_id?: number | null;
           title: string;
           item_type?: ItemTypeEnum;
           sort_order?: number;
@@ -50,6 +58,7 @@ export interface Database {
         Update: Partial<{
           id: number;
           specialty_id: number;
+          topic_id: number | null;
           title: string;
           item_type: ItemTypeEnum;
           sort_order: number;

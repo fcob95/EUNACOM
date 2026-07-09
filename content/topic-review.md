@@ -1,0 +1,579 @@
+# Revisión de temas nuevos (topic_confidence: "suggested")
+
+Generado por `scripts/add-topics-medicina-interna.mjs`. Lista cada tema NUEVO (autoría de `content/topic-orphans.json`, sin equivalente en el temario viejo de 153 ítems) con sus ítems, para revisión clínica posterior. Los temas "confirmed" (heredados del temario viejo) no aparecen aquí — ver el commit `0ad094b` para su origen.
+
+## Cardiología (11 temas nuevos)
+
+- **Hipertensión arterial** (2 ítems)
+  - Hipertensión arterial esencial
+  - Hipertensión arterial secundaria
+- **Dislipidemia y síndrome metabólico** (2 ítems)
+  - Dislipidemias
+  - Síndrome metabólico
+- **Prevención cardiovascular: estilos de vida** (4 ítems)
+  - Alimentación saludable
+  - Obesidad y sobrepeso
+  - Sedentarismo vs actividad física
+  - Tabaquismo: prevención, cesación y efectos nocivos para la salud
+- **Endocarditis y enfermedad reumática** (3 ítems)
+  - Endocarditis infecciosa y no infecciosa
+  - Enfermedad reumática activa
+  - Prevención de enfermedad reumática
+- **Emergencias cardiovasculares** (4 ítems)
+  - Disección aórtica
+  - Embolia cardiogénica
+  - Paro cardiorespiratorio
+  - Shock
+- **Cardiopatías en situaciones especiales** (3 ítems)
+  - Cardiopatía congénita en adulto
+  - Corazón pulmonar crónico
+  - Cardiopatía y embarazo
+- **Terapia antitrombótica** (2 ítems)
+  - Manejo del paciente en tratamiento anticoagulante
+  - Trombolisis
+- **Estudios de imagen y monitorización cardiovascular** (3 ítems)
+  - Angiotac de tórax y aorta
+  - Holter de presión arterial
+  - Holter de ritmo
+- **Laboratorio general y perfil lipídico** (3 ítems)
+  - Hemograma y velocidad de hemosedimentación (VHS)
+  - Perfil bioquímico
+  - Perfil lipídico
+- **Procedimientos de reanimación y desfibrilación** (4 ítems)
+  - Cardioversión eléctrica
+  - Desfibrilación
+  - Resucitación cardiorespiratoria
+  - Intubación traqueal
+- **Procedimientos de acceso vascular y punción pericárdica** (3 ítems)
+  - Cateterismo venoso central
+  - Punción pericárdica
+  - Punción venosa
+
+## Nefrología (11 temas nuevos)
+
+- **Infecciones del tracto urinario** (5 ítems)
+  - Bacteriuria asintomática
+  - Infección urinaria baja (cistitis)
+  - Pielonefritis aguda no complicada
+  - Pielonefritis aguda complicada
+  - Higiene para prevención de infección urinaria
+- **Urolitiasis y uropatía obstructiva** (4 ítems)
+  - Urolitiasis
+  - Uropatía obstructiva
+  - Cólico nefrítico, urolitiasis y complicaciones: obstrucción, sepsis, insuficiencia renal
+  - Estudio metabólico de urolitiasis
+- **Complicaciones de la enfermedad renal crónica** (6 ítems)
+  - Acidosis e hiperkalemia en Insuficiencia renal crónica
+  - Anemia en nefrópata
+  - Osteodistrofia en insuficiencia renal crónica
+  - Desnutrición en insuficiencia renal crónica
+  - Prevención de progresión de insuficiencia renal crónica
+  - Síndrome urémico
+- **Nefropatías intersticiales y quísticas** (2 ítems)
+  - Nefritis intersticial no infecciosa (aguda o crónica)
+  - Riñón poliquístico
+- **Síndrome edematoso** (2 ítems)
+  - Edema generalizado (anasarca)
+  - Edema generalizado grave (anasarca)
+- **Manejo y prevención de la hipertensión arterial** (5 ítems)
+  - Crisis hipertensivas, emergencias hipertensivas
+  - Tratamiento no medicamentoso de la hipertensión arterial
+  - Control de factores de riesgo de enfermedad vascular
+  - Holter de presión arterial: conocimientos básicos
+  - Terapia diurética
+- **Nefropatía y embarazo** (2 ítems)
+  - Pre eclampsia
+  - Función renal en el embarazo
+- **Procedimientos urológicos de derivación urinaria** (5 ítems)
+  - Cistoscopia
+  - Cistostomía de urgencia
+  - Instalación pigtail
+  - Instalación y cuidado de sonda Foley
+  - Nefrostomia percutánea
+- **Exploración física urogenital** (2 ítems)
+  - Tacto ginecológico para masas u alteraciones obstructivas
+  - Tacto rectal para reconocimiento básico de crecimiento prostático
+- **Estudios de imagen renal y urológica** (5 ítems)
+  - Angiografia renal
+  - Pielo TAC
+  - Radiografía renal y vesical simple
+  - Ecografía vésico-prostática básica
+  - Cintigrama renal
+- **Laboratorio general de función renal y electrolitos** (3 ítems)
+  - Anion gap
+  - Electrolitos plasmáticos
+  - Nitrogeno ureico (relación bun/creatinina
+
+## Gastroenterología (10 temas nuevos)
+
+- **Patología biliar** (4 ítems)
+  - Cáncer de vesícula y vías biliares
+  - Colelitiasis
+  - Colangitis
+  - Colecistitis aguda
+- **Trastornos de la motilidad esofágica y deglución** (2 ítems)
+  - Disfagia
+  - Afagia aguda
+- **Trastornos del tránsito intestinal** (3 ítems)
+  - Constipación
+  - Diarrea asociada a antibióticos
+  - Diarrea en inmunosuprimidos
+- **Enfermedad diverticular** (2 ítems)
+  - Enfermedad diverticular complicada
+  - Enfermedad diverticular no complicada
+- **Abdomen agudo** (1 ítems)
+  - Abdomen agudo
+- **Manejo dietético y farmacológico en patología digestiva** (2 ítems)
+  - Manejo dietético en enfermos digestivos
+  - Antiinflamatorios no esteroidales y tracto gastrontestinal
+- **Estudios de imagen abdominal general** (3 ítems)
+  - Radiografía simple de abdomen
+  - TAC abdominal
+  - Ecotomografía abdominal
+- **Estudios de contraste digestivo y biliar** (4 ítems)
+  - Tránsito esófago-estómago-duodeno
+  - Enema barritada
+  - Colangiografía endoscópica
+  - Colangiografía por resonancia magnética
+- **Endoscopía y biopsia digestiva** (2 ítems)
+  - Endoscopía digestiva alta y baja
+  - Biopsia hepática
+- **Laboratorio digestivo y hepático general** (4 ítems)
+  - Sangre oculta en deposiciones
+  - Estudio de perfil hepático
+  - Estudio de función hepática
+  - Determinación toxina C difficile en deposiciones
+
+## Neurología (14 temas nuevos)
+
+- **Enfermedades neurológicas focales: pares craneales y desmielinizantes** (4 ítems)
+  - Esclerosis múltiple
+  - Neuralgia esencial del trigémino
+  - Parálisis facial periférica
+  - Herpes zoster
+- **Lumbago y radiculopatías mecánicas** (2 ítems)
+  - Lumbago mecánico
+  - Lumbociáticas y cervicobraquialgias.
+- **Síndromes de debilidad y parálisis motora** (4 ítems)
+  - Parálisis (tetraparesia, hemiparesia, etc)
+  - Paraplejia aguda
+  - Síndrome cuadraplégico agudo
+  - Síndrome cuadriparético fláccido (poliradiculoneurítis aguda, Guillain-Barré)
+- **Síndromes neuromusculares y de coordinación** (2 ítems)
+  - Síndrome atáxico
+  - Síndrome miasténico
+- **Hipertensión endocraneana** (2 ítems)
+  - Síndrome de hipertensión endocraneana
+  - Hipertensión endocraneana
+- **Trastornos del sueño** (1 ítems)
+  - Trastornos del sueño
+- **Tumores del sistema nervioso central** (2 ítems)
+  - Tumores de región sellar
+  - Tumores primarios y metastásicos SNC
+- **Complicaciones neurológicas por alcohol y drogas** (2 ítems)
+  - Complicaciones neurológicas de abuso de sustancias
+  - Manifestaciones neurológicas de abuso de sustancias y alcohol
+- **Encefalopatías y estados confusionales tóxico-metabólicos** (2 ítems)
+  - Estado confusional agudo (alcohólico, tóxico metabólico)
+  - Encefalopatías tóxico metabólicas (urémica, hepática, etc)
+- **Trastornos del movimiento inducidos por fármacos** (2 ítems)
+  - Distonía aguda por fármacos (ejemplo antieméticos)
+  - Movimientos anormales inducidos por fármacos
+- **Traumatismo craneoencefálico y raquimedular** (3 ítems)
+  - Traumatismo encéfalo craneano leve
+  - Traumatismo encefalocraneano grave
+  - Traumatismo raquimedular
+- **Neuroimagen y evaluación visual** (5 ítems)
+  - TAC de encefalo y columna
+  - Resonancia magnética de encéfalo y columna
+  - Angiografía
+  - Campo visual
+  - Papiloscopia (fondo de ojo)
+- **Estudios electrofisiológicos** (2 ítems)
+  - Electroencefalograma
+  - Electromiografìa
+- **Punción lumbar y estudio de LCR** (2 ítems)
+  - Examen de líquido cefaloraquídeo (citoquímico, bacteriológico)
+  - Punción lumbar
+
+## Geriatría (10 temas nuevos)
+
+- **Enfermedades crónicas prevalentes en el adulto mayor** (4 ítems)
+  - Diabetes mellitus tipo 2
+  - Enfermedad cerebro-vascular
+  - Hipertensión arterial
+  - Osteoporosis
+- **Trastornos de la marcha, temblor e hipotensión ortostática** (3 ítems)
+  - Hipotensión postural
+  - Temblor
+  - Trastornos de la marcha
+- **Trastornos afectivos y conductuales en el adulto mayor** (2 ítems)
+  - Depresión
+  - Agitación y agresividad
+- **Termorregulación y piel** (3 ítems)
+  - Hipotermia
+  - Alteración de la termoregulación
+  - Escaras o úlceras por presión
+- **Nutrición y malnutrición en el adulto mayor** (2 ítems)
+  - Malnutrición
+  - Nutrición en las personas mayores
+- **Urgencias médico-quirúrgicas en el adulto mayor** (3 ítems)
+  - Abdomen agudo en adulto mayor
+  - Evento coronario en adulto mayor
+  - Fractura de cadera
+- **Cuidados hospitalarios y de fin de vida** (2 ítems)
+  - Complicaciones en el adulto mayor hospitalizado
+  - Manejo, cuidado y acompañamiento de final de vida
+- **Promoción del envejecimiento saludable** (5 ítems)
+  - Ejercicio en personas mayores
+  - Envejecimiento saludable y promoción del autocuidado
+  - Inmunizaciones en personas mayores
+  - Prevención del deterioro funcional
+  - Sexualidad en personas mayores
+- **Entorno y derechos del adulto mayor** (2 ítems)
+  - Adecuación del entorno para personas mayores
+  - Derecho GES a ayudas técnicas para personas de 65 años o más, como órtesis
+- **Valoración geriátrica integral** (4 ítems)
+  - Valoración afectiva
+  - Valoración cognitiva
+  - Valoración de la marcha
+  - Valoración funcional
+
+## Nutrición y Diabetes (15 temas nuevos)
+
+- **Diabetes y embarazo** (2 ítems)
+  - Diabetes gestacional
+  - Diabetes mellitus pregestacional
+- **Pie diabético e infecciones asociadas** (3 ítems)
+  - Pié diabético y otras infecciones en diabetes
+  - Prevención de pié diabético
+  - Curaciones básicas del pié diabético
+- **Prevención de la diabetes y sus complicaciones** (2 ítems)
+  - Prevención de complicaciones crónicas de la diabetes
+  - Prevención de Diabetes Mellitus tipo 2
+- **Nutrición: desnutrición y trastornos alimentarios** (4 ítems)
+  - Desnutrición
+  - Síndromes carenciales de vitaminas y minerales
+  - Trastornos de conducta alimentaria
+  - Anorexia nerviosa
+- **Obesidad: manejo y prevención** (4 ítems)
+  - Obesidad
+  - Obesidad mórbida
+  - Prevención de la obesidad
+  - Regímenes dietéticos para obesidad
+- **Dislipidemia: manejo y prevención** (3 ítems)
+  - Dislipidemias
+  - Prevención de dislipidemias
+  - Regímenes dietéticos para dislipidemias
+- **Síndrome metabólico** (2 ítems)
+  - Síndrome metabólico (clínica)
+  - Síndrome metabólico (conocimientos)
+- **Estilos de vida y prevención cardiovascular global** (3 ítems)
+  - Alimentación saludable
+  - Estilos de vida saludables (hábitos y conductas)
+  - Riesgo cardiovascular global
+- **Estudios vasculares y cardíacos en diabetes** (4 ítems)
+  - Arteriografia extremidades inferiores
+  - Doppler vascular periférico
+  - Electrocardiograma
+  - Test de esfuerzo
+- **Laboratorio de función renal en diabetes** (6 ítems)
+  - Albúmina plasmática
+  - Relación albuminuria / creatininuria
+  - Creatininemia
+  - Microalbuminuria
+  - Nitrogeno urinario
+  - Proteiuniria 24 horas
+- **Examen de orina y urocultivo** (3 ítems)
+  - Examen de orina completa
+  - Examen de orina semicuantitativa
+  - Urocultivo y antibiograma
+- **Monitoreo glicémico** (4 ítems)
+  - Glicemia capilar
+  - Glicemia venosa
+  - Hemoglobina glicosilada
+  - Test de tolerancia a la glucosa
+- **Cetonemia e insulinemia** (3 ítems)
+  - Cuerpos cetónicos en orina (semicuantitativo)
+  - Cuerpos cetónicos en sangre
+  - Insulinemia
+- **Laboratorio metabólico general** (3 ítems)
+  - Ecotomografia abdominal
+  - Estudio funcional hepático
+  - Perfil lipídico
+- **Evaluación del estado nutricional** (2 ítems)
+  - Evaluación nutricional
+  - Evaluacion nutricional subjetiva
+
+## Hémato-oncología (9 temas nuevos)
+
+- **Síndromes hematológicos generales** (3 ítems)
+  - Hipofunción medular
+  - Púrpuras vasculares
+  - Síndrome paraneoplásico
+- **Cuidados paliativos y manejo del dolor oncológico** (2 ítems)
+  - Manejo del dolor crónico y paliativo
+  - Manejo del paciente terminal oncológico
+- **Terapia oncológica: principios y toxicidad** (2 ítems)
+  - Conceptos generales de etapificación, radioterapia y quimioterapia
+  - Efectos mielotóxicos de drogas y medicamentos
+- **Terapia anticoagulante: manejo e interacciones** (3 ítems)
+  - Tratamiento anticoagulante
+  - Interacción de drogas y anticoagulantes orales
+  - Actividad física en pacientes con riesgo de trombosis
+- **Prevención en el paciente hematológico/oncológico** (3 ítems)
+  - Alcoholismo y asociación con carencias nutricionales
+  - Prevención de anemias por carencias nutricionales
+  - Prevención de infecciones con énfasis en inmunosuprimidos
+- **Estudios de imagen y medicina nuclear en oncología** (2 ítems)
+  - Radiografía de tórax
+  - Cintigrafía ósea y cintigrafía con galio
+- **Biopsias diagnósticas hemato-oncológicas** (2 ítems)
+  - Biopsia ganglionar
+  - Biopsia hepática
+- **Procedimientos de acceso vascular y punción** (2 ítems)
+  - Cateterismo venoso central
+  - Punción venosa
+- **Punción lumbar y quimioterapia intratecal** (2 ítems)
+  - Punción lumbar
+  - Quimioterapia intratecal
+
+## Reumatología (5 temas nuevos)
+
+- **Osteoporosis** (2 ítems)
+  - Osteoporosis
+  - Densitometría ósea
+- **Dolor de columna y lumbago** (3 ítems)
+  - Cervicalgia
+  - Columna dolorosa
+  - Lumbago infeccioso y tumoral
+- **Síndromes de dolor regional de partes blandas** (4 ítems)
+  - Hombro doloroso
+  - Epicondilalgia, epitroclealgias
+  - Tendonitis y bursitis
+  - Síndrome de túnel carpiano
+- **Prevención de patología musculoesquelética laboral y deportiva** (2 ítems)
+  - Condiciones de trabajo
+  - Riesgos deportivos
+- **Radiografía de columna y articulaciones** (1 ítems)
+  - Radiografía de columna y articulaciones
+
+## Enfermedades Respiratorias (14 temas nuevos)
+
+- **Prevención de daño pulmonar ambiental y ocupacional** (3 ítems)
+  - Contaminación ambiental
+  - Prevención de daño pulmonar por inhalantes domésticos y laborales
+  - Neumoconiosis
+- **Infecciones respiratorias altas, bronquitis aguda y vacunación** (3 ítems)
+  - Infecciones de las vías aéreas superiores
+  - Bronquitis aguda
+  - Vacunación (tuberculosis, influenza, Coronavirus SARS-CoV-2 y neumococo)
+- **Asfixia y aspiración de cuerpo extraño** (3 ítems)
+  - Asfixia por inmersión
+  - Aspiración de cuerpo extraño con asfixia
+  - Aspiración de cuerpo extraño sin asfixia
+- **Intoxicación por monóxido de carbono y gases** (2 ítems)
+  - Intoxicación leve por CO y otros gases
+  - Intoxicación por monóxido de carbono
+- **Traumatismo torácico** (2 ítems)
+  - Traumatismo torácico grave
+  - Traumatismo torácico simple
+- **Neumotórax** (3 ítems)
+  - Neumotórax moderado y grande
+  - Neumotórax pequeño
+  - Neumotórax hipertensivo
+- **Insuficiencia respiratoria y ventilación mecánica** (5 ítems)
+  - Insuficiencia respiratoria crónica
+  - Insuficiencia respiratoria aguda o crónica reagudizada que requiere ventilación mecánica
+  - Insuficiencia respiratoria aguda o crónica reagudizada, que no requiere ventilación mecánica
+  - Ventilación mecánica invasiva
+  - Ventilación mecánica no invasiva
+- **Otras enfermedades pulmonares y mediastínicas** (5 ítems)
+  - Absceso pulmonar
+  - Hidatidosis pulmonar
+  - Daño pulmonar secundario a drogas
+  - Edema pulmonar no cardiogénico
+  - Síndromes mediastínicos
+- **Paro cardiorespiratorio y reanimación** (2 ítems)
+  - Paro cardiorespiratorio
+  - Resucitación cardiorespiratoria
+- **Manejo avanzado de la vía aérea** (3 ítems)
+  - Cricoidostomía
+  - Intubación traqueal
+  - Aspiración traqueal
+- **Terapia inhalatoria** (2 ítems)
+  - Inhalación de aerosoles presurizados
+  - Nebulizaciones
+- **Procedimientos pleurales y broncoscopía** (4 ítems)
+  - Biopsia pleural
+  - Drenaje pleural
+  - Punción pleural
+  - Fibrobroncoscopia
+- **Pruebas funcionales respiratorias y alergológicas** (3 ítems)
+  - Flujo espiratorio máximo (PEF: Peak Expiratory Flow)
+  - Prueba de provocación bronquial con fármacos
+  - Pruebas cutáneas de alergia
+- **Estudios de imagen y microbiología torácica avanzada** (3 ítems)
+  - TAC de tórax
+  - Ecografía pleural
+  - Examen microbiológico de expectoración
+
+## Endocrinología (11 temas nuevos)
+
+- **Patología tiroidea funcional benigna** (4 ítems)
+  - Bocio
+  - Hipotiroidismo
+  - Hipertiroidismo
+  - Tiroiditis
+- **Nódulo tiroideo y cáncer de tiroides** (2 ítems)
+  - Nódulo tiroídeo
+  - Cáncer del tiroides
+- **Emergencias tiroideas** (2 ítems)
+  - Tormenta tiroidea
+  - Mixedema
+- **Estudio de la función tiroidea** (4 ítems)
+  - Ecografía tiroídea
+  - TSH, T4, T3
+  - T4 libre
+  - Anticuerpos antitiroideos (antitiroglobulina y antiiroperoxidasa)
+- **Patología suprarrenal** (5 ítems)
+  - Síndrome de Cushing
+  - Insuficiencia suprarrenal crónica
+  - Incidentaloma suprarrenal
+  - Insuficiencia suprarrenal aguda
+  - Hipertensión arterial de origen endocrino
+- **Estudio y complicaciones del eje suprarrenal** (3 ítems)
+  - Cortisol plasmático
+  - Cortisol libre 24 horas
+  - Complicaciones del tratamiento esteroidal
+- **Eje gonadal y trastornos reproductivos** (6 ítems)
+  - Hirsutismo
+  - Amenorrea
+  - Síndrome climatérico
+  - Hipogonadismo masculino
+  - Ginecomastia
+  - Pubertad normal
+- **Estudio hormonal gonadal** (2 ítems)
+  - FSH, estradiol y prolactina
+  - LH, testosterona
+- **Patología hipofisiaria** (5 ítems)
+  - Tumores hipofisiarios
+  - Hipopituitarismo
+  - Diabetes insípida
+  - Hiperprolactinemia
+  - Síndrome de secreción inapropiada de ADH
+- **Metabolismo óseo: osteoporosis** (4 ítems)
+  - Osteoporosis
+  - Osteoporosis secundaria
+  - Prevención de osteoporosis
+  - Densitometría ósea
+- **Metabolismo del calcio** (5 ítems)
+  - Hipercalcemias e hipocalcemias
+  - Hipercalcemia aguda
+  - Tetania
+  - PTH, calcemia
+  - Calciuria
+
+## Enfermedades Infecciosas (25 temas nuevos)
+
+- **Infecciones de piel y partes blandas** (5 ítems)
+  - Adenitis, adenoflegmón
+  - Ántrax
+  - Celulitis bacteriana
+  - Flegmón submaxilar, submandibular y del piso de la boca
+  - Infección invasiva de partes blandas: celulitis, fasceitis, miositis necrotizantes o septicémicas
+- **Infecciones osteoarticulares y endovasculares** (3 ítems)
+  - Osteomielitis
+  - Endocarditis bateriana
+  - Infecciones asociadas a catéteres vasculares
+- **Infecciones del sistema nervioso central** (5 ítems)
+  - Absceso cerebral
+  - Encefalitis aguda
+  - Meningitis aguda
+  - Estudio citoquímico de LCR
+  - Punción lumbar
+- **Sepsis y respuesta séptica** (2 ítems)
+  - Sepsis y shock séptico
+  - Neutropenia febril
+- **Tétanos y profilaxis antitetánica** (2 ítems)
+  - Tétanos
+  - Profilaxis de tétanos
+- **Enfermedades exantemáticas y virales** (3 ítems)
+  - Enfermedades eruptivas no complicadas (varicela, herpes zoster...)
+  - Varicela complicada: neumonitis, cerebelitis, encefalitis
+  - Síndrome mononucleósico
+- **COVID-19** (2 ítems)
+  - Enfermedad leve moderada por SARS Cov 2 COVID 19
+  - Enfermedad grave por SARS Cov 2 COVID 19
+- **Influenza y virus respiratorios emergentes** (2 ítems)
+  - Influenza
+  - Síndrome pulmonar por Hanta Virus
+- **Enfermedades de transmisión sexual** (3 ítems)
+  - Enfermedades de transmisión sexual
+  - Sífilis secundaria, terciaria y congénita
+  - Prevención de enfermedades de transmisión sexual
+- **VIH/SIDA** (2 ítems)
+  - Infección por virus de inmunodeficiencia humana (SIDA)
+  - Prevención de infecciones oportunistas en VIH (+)
+- **Micosis invasoras y oportunistas** (2 ítems)
+  - Candidiasis oral y esofágica
+  - Micosis invasora (aspergillosis, candidiasis, mucormicosis)
+- **Enfermedades entéricas bacterianas** (3 ítems)
+  - Cólera
+  - Fiebre tifoídea y paratifoídea
+  - Toxicoinfección alimentaria
+- **Diarrea asociada a antibióticos y prevención entérica** (2 ítems)
+  - Diarrea asociada a antibióticos
+  - Prevención de enfermedades entéricas
+- **Parasitosis y zoonosis helmínticas** (4 ítems)
+  - Parasitosis intestinales
+  - Hidatidosis
+  - Triquinosis
+  - Parasitológico de deposiciones
+- **Zoonosis bacterianas y por vectores** (5 ítems)
+  - Brucelosis
+  - Leptospirosis
+  - Malaria
+  - Dengue
+  - Mordeduras de animales
+- **Tuberculosis extrapulmonar y su profilaxis** (2 ítems)
+  - Tuberculosis extrapulmonar
+  - Profilaxis de tuberculosis
+- **Síndrome febril prolongado** (1 ítems)
+  - Síndrome febril prolongado
+- **Infecciones hospitalarias y en personal sanitario** (2 ítems)
+  - Manejo y prevención de infecciones en personal sanitario
+  - Prevención de infecciones hospitalarias
+- **Profilaxis antimicrobiana específica** (3 ítems)
+  - Profilaxis de endocarditis infecciosa
+  - Profilaxis en contactos de infecciones meningocócicas
+  - Uso y abuso de antibióticos
+- **Inmunizaciones** (2 ítems)
+  - Vacunas especiales (neumococo, influenza, hepatitis A y B, varicela, rabia, meningococo)
+  - Vacunas incluidas en el PNI (Plan Nacional de Inmunizaciones)
+- **Cultivos microbiológicos** (6 ítems)
+  - Cultivo de heridas o abscesos
+  - Cultivos de hongos
+  - Cultivo de expectoración
+  - Hemocultivo
+  - Urocultivo y antibiograma
+  - Pruebas rápidas para diagnóstico de estreptococo grupo A
+- **Tinción de Gram y examen directo** (2 ítems)
+  - Gram
+  - Tinción de Gram
+- **Diagnóstico serológico, antigénico y molecular** (5 ítems)
+  - Antigenemia
+  - Deteccción de antígeno de Cryptococcus en LCR y test de tinta china
+  - Detección de agentes virales por inmunofluorescencia
+  - Serología de enfermedades infecciosas
+  - Reacción de polimerasa en cadena
+- **Marcadores inflamatorios generales** (2 ítems)
+  - Hemograma y velocidad de hemosedimentación (VHS)
+  - Proteína C reactiva
+- **Toma y siembra de muestras, drenaje de abscesos** (2 ítems)
+  - Drenaje de abscesos superficiales
+  - Sembrar muestras para cultivo
+
+---
+
+Total: 135 temas nuevos, 404 ítems.
