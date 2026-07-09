@@ -1,12 +1,13 @@
 "use client";
 
 /**
- * <RecencyHeatmap> — "sin avance reciente": un cuadrito por ítem, agrupado
- * por especialidad. Mientras más tenue, más tiempo pasó desde el último
- * avance (nunca estudiado = lo más tenue). Clic en un cuadrito abre el
- * detalle de ese ítem. Celdas de 44px (target táctil) pegadas entre sí, sin
- * gap ni relleno interno — el color llena toda la celda para que se lea
- * como mosaico continuo, no puntos sueltos.
+ * <RecencyHeatmap> — "sin avance reciente": una fila por especialidad
+ * (nombre a la izquierda, como llave) + tira horizontal de cuadritos, uno
+ * por ítem. Mientras más tenue, más tiempo pasó desde el último avance
+ * (nunca estudiado = lo más tenue). Clic en un cuadrito abre el detalle de
+ * ese ítem. Celdas de 44px (target táctil) pegadas entre sí, sin gap — cada
+ * fila es una sola línea con scroll horizontal propio cuando no caben todos
+ * los ítems (evita tener que achicar los cuadros bajo el mínimo táctil).
  */
 import { cn, todayISO } from "@/lib/utils";
 import {
@@ -41,15 +42,17 @@ export function RecencyHeatmap({
         Más tenue = más tiempo sin tocar ese ítem. Toca un cuadrito para ver
         el detalle.
       </p>
-      <div className="mt-4 flex flex-col gap-4">
+      <div className="mt-4 flex flex-col divide-y divide-border">
         {populated.map((spec) => (
-          <div key={spec.id}>
-            <h3 className="mb-1.5 text-[13px] font-bold text-muted">
+          <div key={spec.id} className="flex items-center gap-2 py-1.5">
+            <span
+              className="w-20 shrink-0 truncate text-[11.5px] font-bold text-muted sm:w-32"
+              title={spec.name}
+            >
               {spec.name}
-            </h3>
+            </span>
             <div
-              className="grid gap-0"
-              style={{ gridTemplateColumns: "repeat(auto-fill, 44px)" }}
+              className="flex flex-1 gap-0 overflow-x-auto"
               role="group"
               aria-label={`Avance reciente de ${spec.name}`}
             >
