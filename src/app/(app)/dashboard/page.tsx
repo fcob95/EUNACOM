@@ -183,13 +183,6 @@ export default function DashboardPage() {
         />
       </section>
 
-      {/* sin avance reciente */}
-      <RecencyHeatmap
-        specialties={content.data?.specialties ?? []}
-        progressMap={progressMap}
-        onOpenItem={setOpenItem}
-      />
-
       {/* avance por área (destaca la prioritaria = primera) */}
       {stats.areas.length > 1 && (
         <section className="flex flex-col gap-2">
@@ -282,6 +275,13 @@ export default function DashboardPage() {
           1 = No lo conozco · 5 = Lo manejo muy bien
         </p>
       </section>
+
+      {/* sin avance reciente */}
+      <RecencyHeatmap
+        specialties={content.data?.specialties ?? []}
+        progressMap={progressMap}
+        onOpenItem={setOpenItem}
+      />
 
       <ItemDetailSheet
         item={openItem}
