@@ -29,3 +29,12 @@ export function formatShortDate(iso: string | null): string {
   const date = new Date(y ?? 2026, (m ?? 1) - 1, d ?? 1);
   return date.toLocaleDateString("es-CL", { day: "numeric", month: "short" });
 }
+
+/** Días entre dos fechas YYYY-MM-DD (b - a). */
+export function daysBetweenISO(a: string, b: string): number {
+  const [ay, am, ad] = a.split("-").map(Number);
+  const [by, bm, bd] = b.split("-").map(Number);
+  const dateA = new Date(ay ?? 2026, (am ?? 1) - 1, ad ?? 1).getTime();
+  const dateB = new Date(by ?? 2026, (bm ?? 1) - 1, bd ?? 1).getTime();
+  return Math.round((dateB - dateA) / 86_400_000);
+}

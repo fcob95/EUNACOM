@@ -5,6 +5,7 @@
  * Ver .claude/skills/progress-model.
  */
 import type { Item, ItemProgress } from "@/types/domain";
+import { daysBetweenISO } from "@/lib/utils";
 
 /** Las 5 dimensiones de seguimiento; cada una aporta 20%. */
 export const PROGRESS_DIMS = [
@@ -119,4 +120,28 @@ export function emptyProgress(profileId: string, itemId: number): ItemProgress {
     notes: "",
     updated_at: new Date().toISOString(),
   };
+}
+
+/**
+ * Opacidad (0.1–1) según hace cuánto fue el último avance — para el mapa de
+ * calor de "sin avance reciente" del Dashboard. Más tenue = más tiempo sin
+ * tocar el ítem; nunca estudiado es lo más tenue de todo.
+ */
+export function recencyOpacity(lastStudiedAt: string | null, todayIso: string): number {
+  if (!lastStudiedAt) return 0.1;
+  const days = daysBetweenISO(lastStudiedAt, todayIso);
+  if (days <= 7) return 1;
+  if (days <= 14) return 0.85;
+  if (days <= 30) return 0.65;
+  if (days <= 60) return 0.45;
+  return 0.25;
+}
+
+/** "Nunca estudiado" / "Hoy" / "Ayer" / "hace N días", para aria-label. */
+export function formatDaysAgo(lastStudiedAt: string | null, todayIso: string): string {
+  if (!lastStudiedAt) return "Nunca estudiado";
+  const days = daysBetweenISO(lastStudiedAt, todayIso);
+  if (days <= 0) return "Hoy";
+  if (days === 1) return "Ayer";
+  return `hace ${days} días`;
 }

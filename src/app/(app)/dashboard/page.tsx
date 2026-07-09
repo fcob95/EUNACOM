@@ -5,7 +5,7 @@
  * (Recharts, barras horizontales) + distribución de dominio con los colores
  * de la escala. El área prioritaria (menor sort_order) se destaca.
  */
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import {
   Bar,
   BarChart,
@@ -20,6 +20,8 @@ import { Button } from "@/components/ui/button";
 import { ProgressRing } from "@/components/ProgressRing";
 import { KpiCard } from "@/components/KpiCard";
 import { ProgressBar } from "@/components/ProgressBar";
+import { RecencyHeatmap } from "@/components/RecencyHeatmap";
+import { ItemDetailSheet } from "@/components/ItemDetailSheet";
 import { useContent } from "@/features/content/useContent";
 import { useProgressMap } from "@/features/progress/useProgress";
 import {
@@ -28,6 +30,7 @@ import {
   type ProgressMap,
 } from "@/features/progress/model";
 import { DIM_LABELS, PROGRESS_DIMS } from "@/features/progress/model";
+import type { Item } from "@/types/domain";
 
 const DOMAIN_COLORS = [
   "var(--domain-1)",
@@ -40,6 +43,7 @@ const DOMAIN_COLORS = [
 export default function DashboardPage() {
   const content = useContent();
   const progress = useProgressMap();
+  const [openItem, setOpenItem] = useState<Item | null>(null);
 
   const progressMap: ProgressMap = useMemo(
     () => progress.data ?? new Map(),
@@ -126,6 +130,9 @@ export default function DashboardPage() {
 
   const { global } = stats;
   const specialtyChartHeight = Math.max(220, stats.bySpecialty.length * 36);
+  const openItemSpecialty = openItem
+    ? content.data?.specialtyById.get(openItem.specialty_id)
+    : undefined;
 
   return (
     <div className="flex flex-col gap-4">
@@ -175,6 +182,13 @@ export default function DashboardPage() {
           className="col-span-2 sm:col-span-1"
         />
       </section>
+
+      {/* sin avance reciente */}
+      <RecencyHeatmap
+        specialties={content.data?.specialties ?? []}
+        progressMap={progressMap}
+        onOpenItem={setOpenItem}
+      />
 
       {/* avance por área (destaca la prioritaria = primera) */}
       {stats.areas.length > 1 && (
@@ -268,6 +282,13 @@ export default function DashboardPage() {
           1 = No lo conozco · 5 = Lo manejo muy bien
         </p>
       </section>
+
+      <ItemDetailSheet
+        item={openItem}
+        progress={openItem ? progressMap.get(openItem.id) : undefined}
+        specialtyName={openItemSpecialty?.name ?? ""}
+        onClose={() => setOpenItem(null)}
+      />
     </div>
   );
 }
