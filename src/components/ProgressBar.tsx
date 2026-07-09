@@ -47,16 +47,22 @@ export function ProgressBar({
   );
 }
 
-/** Texto companion estándar: "3/5 · 60%" */
+/**
+ * Texto companion estándar: "3/5 · 60%". Si se pasa `stage` (nombre de la
+ * etapa más avanzada, ej. "1er repaso"), lo muestra en vez del conteo crudo
+ * — más útil de un vistazo que "2/5" solo.
+ */
 export function ProgressLabel({
   done,
   total,
   pct,
+  stage,
   className,
 }: {
   done: number;
   total: number;
   pct: number;
+  stage?: string;
   className?: string;
 }) {
   return (
@@ -66,7 +72,7 @@ export function ProgressLabel({
         className,
       )}
     >
-      {done}/{total} · {Math.round(pct)}%
+      {stage ? `${stage} · ${Math.round(pct)}%` : `${done}/${total} · ${Math.round(pct)}%`}
     </span>
   );
 }

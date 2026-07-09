@@ -2,7 +2,8 @@
 
 /**
  * <ItemCard> — tarjeta de ítem del panel maestro.
- * Dot semáforo + título + badge EXAMEN + ProgressBar thin con "n/5 · pct%"
+ * Dot semáforo + título + badge EXAMEN + ProgressBar thin con "etapa · pct%"
+ * (nombre de la etapa más avanzada, ej. "1er repaso")
  * + chip de dominio (tap sube nivel) + MatrixChips (móvil: solo activos)
  * + avance rápido (cada tap marca la siguiente dimensión pendiente, cicla
  * a 0/5 al llegar a completo). Tap en la card abre el detalle.
@@ -10,6 +11,7 @@
 import { Check } from "lucide-react";
 import type { Item, ItemProgress } from "@/types/domain";
 import {
+  currentStageLabel,
   DIM_LABELS,
   dimsDone,
   itemPct,
@@ -111,7 +113,12 @@ export function ItemCard({
 
       <div className="mt-2.5 flex items-center gap-2.5 pl-[22px]">
         <ProgressBar value={pct} variant="thin" className="flex-1" label={`Avance de ${item.title}`} />
-        <ProgressLabel done={dimsDone(progress)} total={5} pct={pct} />
+        <ProgressLabel
+          done={dimsDone(progress)}
+          total={5}
+          pct={pct}
+          stage={currentStageLabel(progress)}
+        />
       </div>
 
       {item.requirements.length > 0 && (

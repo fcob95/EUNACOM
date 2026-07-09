@@ -45,6 +45,21 @@ export function nextIncompleteDim(p: ItemProgress | undefined): ProgressDim | nu
   return null;
 }
 
+/**
+ * Etapa más avanzada ya marcada ("Estudiado", "1er repaso", ...), para
+ * mostrar en qué va el ítem de un vistazo. "Sin iniciar" con 0/5,
+ * "Completado" con 5/5. Recorre PROGRESS_DIMS en reversa (no por índice de
+ * conteo) para seguir siendo correcto si se marcó algo fuera de orden desde
+ * el popup.
+ */
+export function currentStageLabel(p: ItemProgress | undefined): string {
+  const done = dimsDone(p);
+  if (done === 0) return "Sin iniciar";
+  if (done >= PROGRESS_DIMS.length) return "Completado";
+  const dim = [...PROGRESS_DIMS].reverse().find((d) => p?.[d]);
+  return dim ? DIM_LABELS[dim] : "Sin iniciar";
+}
+
 /** % de avance de un ítem: 0, 20, 40, 60, 80 o 100. */
 export function itemPct(p: ItemProgress | undefined): number {
   return dimsDone(p) * 20;
